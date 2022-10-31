@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+clk_gen instance_name (
+    .clk(clk), 
+    .clk_calc(clk_calc), 
+    .clk_uart(clk_uart), 
+    .locked(locked)
+    );
+
+

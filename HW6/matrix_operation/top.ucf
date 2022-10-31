@@ -1,0 +1,18 @@
+# PlanAhead Generated physical constraints 
+NET "clk" LOC = P50;
+NET "rx_A" LOC = P81;
+NET "rx_B" LOC = P83;
+NET "tx_C" LOC = P85;
+NET "Op_start" LOC = P111;
+NET "Op[2]" LOC = P114;
+NET "Op[1]" LOC = P115;
+NET "Op[0]" LOC = P116;
+NET "write_start" LOC = P119;
+NET "transmit_output" LOC = P120;
+#Created by Constraints Editor (xc6slx9-tqg144-3) - 2020/07/31
+NET "clk" TNM_NET = clk;
+TIMESPEC TS_clk = PERIOD "clk" 50 MHz HIGH 50%;
+NET "clk_gen/clk_calc" TNM_NET = clk_gen/clk_calc;
+TIMESPEC TS_clk_gen_clk_calc = PERIOD "clk_gen/clk_calc" 251 MHz HIGH 50%;
+NET "clk_gen/clk_uart" TNM_NET = clk_gen/clk_uart;
+TIMESPEC TS_clk_gen_clk_uart = PERIOD "clk_gen/clk_uart" 35 MHz HIGH 50%;

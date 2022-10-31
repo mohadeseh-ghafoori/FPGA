@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj matrix_operation -o E:/fpga/matrix_operation/memory.tfi -lib work C:/Users/Mohaddeseh/Desktop/HW6/ipcore_dir//memory.v -module memory -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

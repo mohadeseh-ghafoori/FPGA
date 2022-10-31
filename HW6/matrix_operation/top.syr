@@ -1,0 +1,1031 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\fpga\matrix_operation\ipcore_dir\my_dcm.v" into library work
+Parsing module <my_dcm>.
+Analyzing Verilog file "E:\fpga\matrix_operation\UART_trans.v" into library work
+Parsing module <UART_rec>.
+Analyzing Verilog file "E:\fpga\matrix_operation\UART_rec.v" into library work
+Parsing module <UART_trans>.
+WARNING:HDLCompiler:327 - "E:\fpga\matrix_operation\UART_rec.v" Line 44: Concatenation with unsized literal; will interpret as 32 bits
+Analyzing Verilog file "E:\fpga\matrix_operation\ipcore_dir\block_memc.v" into library work
+Parsing module <block_memc>.
+Analyzing Verilog file "E:\fpga\matrix_operation\ipcore_dir\block_memb.v" into library work
+Parsing module <block_memb>.
+Analyzing Verilog file "E:\fpga\matrix_operation\ipcore_dir\block_mema.v" into library work
+Parsing module <block_mema>.
+Analyzing Verilog file "E:\fpga\matrix_operation\clk_gen.v" into library work
+Parsing module <clk_gen>.
+Analyzing Verilog file "E:\fpga\matrix_operation\calc.v" into library work
+Parsing module <calc>.
+Analyzing Verilog file "E:\fpga\matrix_operation\top.v" into library work
+Parsing module <top>.
+WARNING:HDLCompiler:751 - "E:\fpga\matrix_operation\top.v" Line 36: Redeclaration of ansi port addr_B is not allowed
+WARNING:HDLCompiler:751 - "E:\fpga\matrix_operation\top.v" Line 37: Redeclaration of ansi port clk_uart is not allowed
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top>.
+
+Elaborating module <clk_gen>.
+
+Elaborating module <my_dcm>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=21,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=7,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DIVIDE=5,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5,CLKIN_PERIOD=41.666,REF_JITTER=0.01)>.
+WARNING:HDLCompiler:1127 - "E:\fpga\matrix_operation\ipcore_dir\my_dcm.v" Line 121: Assignment to clkout2_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\fpga\matrix_operation\ipcore_dir\my_dcm.v" Line 122: Assignment to clkout3_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\fpga\matrix_operation\ipcore_dir\my_dcm.v" Line 123: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\fpga\matrix_operation\ipcore_dir\my_dcm.v" Line 124: Assignment to clkout5_unused ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\clk_gen.v" Line 44: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:634 - "E:\fpga\matrix_operation\clk_gen.v" Line 37: Net <RESET> does not have a driver.
+
+Elaborating module <UART_rec>.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\UART_trans.v" Line 41: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\UART_trans.v" Line 45: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\UART_trans.v" Line 55: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\UART_trans.v" Line 57: Result of 12-bit expression is truncated to fit in 11-bit target.
+
+Elaborating module <block_mema>.
+WARNING:HDLCompiler:1499 - "E:\fpga\matrix_operation\ipcore_dir\block_mema.v" Line 39: Empty module <block_mema> remains a black box.
+
+Elaborating module <block_memb>.
+WARNING:HDLCompiler:1499 - "E:\fpga\matrix_operation\ipcore_dir\block_memb.v" Line 39: Empty module <block_memb> remains a black box.
+
+Elaborating module <calc>.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 61: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 63: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 64: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 65: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 77: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 79: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 80: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 81: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 93: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 95: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 96: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 97: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 112: Result of 13-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 113: Result of 13-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 114: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 116: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 120: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 123: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 129: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 145: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 156: Result of 13-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 157: Result of 13-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 158: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 162: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 171: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 182: Result of 13-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 183: Result of 13-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 184: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 188: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 197: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 208: Result of 13-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 209: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 220: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 231: Result of 13-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\calc.v" Line 232: Result of 8-bit expression is truncated to fit in 7-bit target.
+
+Elaborating module <block_memc>.
+WARNING:HDLCompiler:1499 - "E:\fpga\matrix_operation\ipcore_dir\block_memc.v" Line 39: Empty module <block_memc> remains a black box.
+WARNING:HDLCompiler:327 - "E:\fpga\matrix_operation\UART_rec.v" Line 44: Concatenation with unsized literal; will interpret as 32 bits
+
+Elaborating module <UART_trans>.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\UART_rec.v" Line 44: Result of 41-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\UART_rec.v" Line 51: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\UART_rec.v" Line 56: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\UART_rec.v" Line 57: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:1127 - "E:\fpga\matrix_operation\top.v" Line 126: Assignment to busy ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "E:\fpga\matrix_operation\top.v" Line 136: Result of 15-bit expression is truncated to fit in 14-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top>.
+    Related source file is "E:\fpga\matrix_operation\top.v".
+INFO:Xst:3210 - "E:\fpga\matrix_operation\top.v" line 119: Output port <busy> of the instance <trans_matrix_C> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <data_valid>.
+    Found 14-bit register for signal <counter>.
+    Found 1-bit register for signal <start_send_c>.
+    Found 14-bit adder for signal <counter[13]_GND_1_o_add_1_OUT> created at line 136.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+Unit <top> synthesized.
+
+Synthesizing Unit <clk_gen>.
+    Related source file is "E:\fpga\matrix_operation\clk_gen.v".
+WARNING:Xst:653 - Signal <RESET> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 1-bit register for signal <clk_uart>.
+    Found 1-bit register for signal <clk_calc>.
+    Found 10-bit register for signal <cnt>.
+    Found 10-bit adder for signal <cnt[9]_GND_2_o_add_2_OUT> created at line 44.
+    Found 10-bit comparator greater for signal <cnt[9]_PWR_2_o_LessThan_2_o> created at line 44
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <clk_gen> synthesized.
+
+Synthesizing Unit <my_dcm>.
+    Related source file is "E:\fpga\matrix_operation\ipcore_dir\my_dcm.v".
+    Summary:
+	no macro.
+Unit <my_dcm> synthesized.
+
+Synthesizing Unit <UART_rec>.
+    Related source file is "E:\fpga\matrix_operation\UART_trans.v".
+    Found 1024x8-bit dual-port RAM <Mram_matrix> for signal <matrix>.
+    Found 4-bit register for signal <cnt>.
+    Found 11-bit register for signal <counter>.
+    Found 1-bit register for signal <start>.
+    Found 10-bit register for signal <addr>.
+    Found 8-bit register for signal <data[7]_dff_38_OUT>.
+    Found 1-bit register for signal <i[10]_clk_DFF_37>.
+    Found 1-bit register for signal <i[10]_clk_DFF_38>.
+    Found 1-bit register for signal <i[10]_clk_DFF_39>.
+    Found 1-bit register for signal <i[10]_clk_DFF_40>.
+    Found 1-bit register for signal <i[10]_clk_DFF_41>.
+    Found 1-bit register for signal <i[10]_clk_DFF_42>.
+    Found 1-bit register for signal <i[10]_clk_DFF_43>.
+    Found 1-bit register for signal <i[10]_clk_DFF_44>.
+    Found 11-bit register for signal <i>.
+    Found 1-bit register for signal <data_valid>.
+    Found 10-bit register for signal <register>.
+    Found 4-bit adder for signal <cnt[3]_GND_7_o_add_3_OUT> created at line 41.
+    Found 11-bit adder for signal <counter[10]_GND_7_o_add_5_OUT> created at line 45.
+    Found 11-bit adder for signal <i[10]_GND_7_o_add_21_OUT> created at line 57.
+    Found 1-bit tristate buffer for signal <data<7>> created at line 36
+    Found 1-bit tristate buffer for signal <data<6>> created at line 36
+    Found 1-bit tristate buffer for signal <data<5>> created at line 36
+    Found 1-bit tristate buffer for signal <data<4>> created at line 36
+    Found 1-bit tristate buffer for signal <data<3>> created at line 36
+    Found 1-bit tristate buffer for signal <data<2>> created at line 36
+    Found 1-bit tristate buffer for signal <data<1>> created at line 36
+    Found 1-bit tristate buffer for signal <data<0>> created at line 36
+    Found 11-bit comparator greater for signal <counter[10]_PWR_7_o_LessThan_2_o> created at line 38
+    Found 4-bit comparator greater for signal <cnt[3]_PWR_7_o_LessThan_3_o> created at line 39
+    Found 11-bit comparator greater for signal <i[10]_PWR_7_o_LessThan_20_o> created at line 54
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  64 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred   3 Multiplexer(s).
+	inferred   8 Tristate(s).
+Unit <UART_rec> synthesized.
+
+Synthesizing Unit <calc>.
+    Related source file is "E:\fpga\matrix_operation\calc.v".
+    Found 10-bit register for signal <addra_r>.
+    Found 10-bit register for signal <addrb_r>.
+    Found 10-bit register for signal <addrc_w>.
+    Found 7-bit register for signal <j>.
+    Found 7-bit register for signal <i>.
+    Found 7-bit register for signal <m>.
+    Found 1-bit register for signal <wec>.
+    Found 16-bit register for signal <cnt>.
+    Found 5-bit register for signal <temp3>.
+    Found 8-bit register for signal <result>.
+    Found 11-bit register for signal <temp2>.
+    Found 1-bit register for signal <flag>.
+    Found 1-bit register for signal <finish>.
+    Found 8-bit subtractor for signal <din_A[7]_din_B[7]_sub_30_OUT> created at line 78.
+    Found 8-bit subtractor for signal <din_B[7]_din_A[7]_sub_48_OUT> created at line 94.
+    Found 8-bit adder for signal <din_A[7]_din_B[7]_add_11_OUT> created at line 62.
+    Found 10-bit adder for signal <addra_r[9]_GND_26_o_add_48_OUT> created at line 95.
+    Found 10-bit adder for signal <addrb_r[9]_GND_26_o_add_49_OUT> created at line 96.
+    Found 19-bit adder for signal <result[7]_GND_26_o_add_67_OUT> created at line 111.
+    Found 12-bit adder for signal <n0204> created at line 112.
+    Found 12-bit adder for signal <n0205> created at line 113.
+    Found 10-bit adder for signal <addrc_w[9]_GND_26_o_add_76_OUT> created at line 116.
+    Found 7-bit adder for signal <m[6]_GND_26_o_add_87_OUT> created at line 129.
+    Found 12-bit adder for signal <n0230> created at line 156.
+    Found 12-bit adder for signal <n0238> created at line 183.
+    Found 7-bit adder for signal <j[6]_GND_26_o_add_142_OUT> created at line 184.
+    Found 13-bit adder for signal <result[7]_GND_26_o_add_159_OUT> created at line 198.
+    Found 16-bit adder for signal <cnt[15]_GND_26_o_add_179_OUT> created at line 220.
+    Found 13-bit adder for signal <result[7]_GND_26_o_add_180_OUT> created at line 221.
+    Found 7-bit adder for signal <i[6]_GND_26_o_add_191_OUT> created at line 232.
+    Found 8x8-bit multiplier for signal <din_A[7]_din_B[7]_MuLt_65_OUT> created at line 110.
+    Found 8x8-bit multiplier for signal <din_A[7]_din_B[7]_MuLt_66_OUT> created at line 111.
+    Found 6x7-bit multiplier for signal <n0256> created at line 208.
+    Found 10-bit 7-to-1 multiplexer for signal <op[2]_addrb_r[9]_wide_mux_204_OUT> created at line 57.
+    Found 10-bit 7-to-1 multiplexer for signal <op[2]_addra_r[9]_wide_mux_206_OUT> created at line 57.
+    Found 8-bit 8-to-1 multiplexer for signal <_n0385> created at line 57.
+    Found 16-bit comparator greater for signal <cnt[15]_GND_26_o_LessThan_46_o> created at line 92
+    Found 16-bit comparator greater for signal <n0027> created at line 109
+    Found 7-bit comparator greater for signal <j[6]_GND_26_o_LessThan_140_o> created at line 181
+    Found 7-bit comparator greater for signal <i[6]_GND_26_o_LessThan_169_o> created at line 207
+    Found 16-bit comparator greater for signal <cnt[15]_GND_26_o_LessThan_179_o> created at line 219
+    Summary:
+	inferred   3 Multiplier(s).
+	inferred  15 Adder/Subtractor(s).
+	inferred  94 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+	inferred 115 Multiplexer(s).
+Unit <calc> synthesized.
+
+Synthesizing Unit <UART_trans>.
+    Related source file is "E:\fpga\matrix_operation\UART_rec.v".
+WARNING:Xst:647 - Input <data> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 11-bit register for signal <counter>.
+    Found 10-bit register for signal <addr>.
+    Found 10-bit register for signal <shift_reg>.
+    Found 1-bit register for signal <busy>.
+    Found 4-bit register for signal <cnt>.
+    Found 1-bit register for signal <transmit_output>.
+    Found 4-bit adder for signal <cnt[3]_GND_31_o_add_5_OUT> created at line 51.
+    Found 10-bit adder for signal <addr[9]_GND_31_o_add_9_OUT> created at line 56.
+    Found 11-bit adder for signal <counter[10]_GND_31_o_add_10_OUT> created at line 57.
+    Found 11-bit comparator greater for signal <counter[10]_PWR_22_o_LessThan_4_o> created at line 42
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  37 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   6 Multiplexer(s).
+Unit <UART_trans> synthesized.
+
+Synthesizing Unit <mod_14u_4u>.
+    Related source file is "".
+    Found 18-bit adder for signal <GND_32_o_b[3]_add_1_OUT> created at line 0.
+    Found 17-bit adder for signal <GND_32_o_b[3]_add_3_OUT> created at line 0.
+    Found 16-bit adder for signal <GND_32_o_b[3]_add_5_OUT> created at line 0.
+    Found 15-bit adder for signal <GND_32_o_b[3]_add_7_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_b[3]_add_9_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_32_o_add_11_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_32_o_add_13_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_32_o_add_15_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_32_o_add_17_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_32_o_add_19_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_32_o_add_21_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_32_o_add_23_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_32_o_add_25_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_32_o_add_27_OUT> created at line 0.
+    Found 14-bit adder for signal <a[13]_GND_32_o_add_29_OUT> created at line 0.
+    Found 18-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 17-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Summary:
+	inferred  15 Adder/Subtractor(s).
+	inferred  15 Comparator(s).
+	inferred 197 Multiplexer(s).
+Unit <mod_14u_4u> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 1024x8-bit dual-port RAM                              : 2
+# Multipliers                                          : 3
+ 7x6-bit multiplier                                    : 1
+ 8x8-bit multiplier                                    : 2
+# Adders/Subtractors                                   : 41
+ 10-bit adder                                          : 5
+ 11-bit adder                                          : 5
+ 12-bit adder                                          : 4
+ 13-bit adder                                          : 2
+ 14-bit adder                                          : 12
+ 15-bit adder                                          : 1
+ 16-bit adder                                          : 2
+ 17-bit adder                                          : 1
+ 18-bit adder                                          : 1
+ 19-bit adder                                          : 1
+ 4-bit adder                                           : 3
+ 7-bit adder                                           : 3
+ 8-bit addsub                                          : 1
+# Registers                                            : 57
+ 1-bit register                                        : 29
+ 10-bit register                                       : 10
+ 11-bit register                                       : 6
+ 14-bit register                                       : 1
+ 16-bit register                                       : 1
+ 4-bit register                                        : 3
+ 5-bit register                                        : 1
+ 7-bit register                                        : 3
+ 8-bit register                                        : 3
+# Comparators                                          : 28
+ 10-bit comparator greater                             : 1
+ 11-bit comparator greater                             : 5
+ 14-bit comparator lessequal                           : 11
+ 15-bit comparator lessequal                           : 1
+ 16-bit comparator greater                             : 3
+ 16-bit comparator lessequal                           : 1
+ 17-bit comparator lessequal                           : 1
+ 18-bit comparator lessequal                           : 1
+ 4-bit comparator greater                              : 2
+ 7-bit comparator greater                              : 2
+# Multiplexers                                         : 324
+ 1-bit 2-to-1 multiplexer                              : 219
+ 10-bit 2-to-1 multiplexer                             : 32
+ 10-bit 7-to-1 multiplexer                             : 2
+ 11-bit 2-to-1 multiplexer                             : 3
+ 16-bit 2-to-1 multiplexer                             : 9
+ 4-bit 2-to-1 multiplexer                              : 2
+ 5-bit 2-to-1 multiplexer                              : 1
+ 7-bit 2-to-1 multiplexer                              : 32
+ 8-bit 2-to-1 multiplexer                              : 24
+# Tristates                                            : 16
+ 1-bit tristate buffer                                 : 16
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/block_memc.ngc>.
+Reading core <ipcore_dir/block_mema.ngc>.
+Reading core <ipcore_dir/block_memb.ngc>.
+Loading core <block_memc> for timing and area information for instance <block_c>.
+Loading core <block_mema> for timing and area information for instance <block_a>.
+Loading core <block_memb> for timing and area information for instance <block_b>.
+INFO:Xst:2261 - The FF/Latch <i[10]_clk_DFF_37> in Unit <rec_matrix_A> is equivalent to the following 7 FFs/Latches, which will be removed : <i[10]_clk_DFF_38> <i[10]_clk_DFF_39> <i[10]_clk_DFF_40> <i[10]_clk_DFF_41> <i[10]_clk_DFF_42> <i[10]_clk_DFF_43> <i[10]_clk_DFF_44> 
+INFO:Xst:2261 - The FF/Latch <i[10]_clk_DFF_37> in Unit <rec_matrix_B> is equivalent to the following 7 FFs/Latches, which will be removed : <i[10]_clk_DFF_38> <i[10]_clk_DFF_39> <i[10]_clk_DFF_40> <i[10]_clk_DFF_41> <i[10]_clk_DFF_42> <i[10]_clk_DFF_43> <i[10]_clk_DFF_44> 
+
+Synthesizing (advanced) Unit <UART_rec>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+The following registers are absorbed into counter <i>: 1 register on signal <i>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_matrix> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND_7_o_GND_7_o_MUX_55_o_0_0> | high     |
+    |     addrA          | connected to signal <counter<9:0>>  |          |
+    |     diA            | connected to signal <register<8:1>> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     addrB          | connected to signal <i<9:0>>        |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <UART_rec> synthesized (advanced).
+
+Synthesizing (advanced) Unit <UART_trans>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <UART_trans> synthesized (advanced).
+
+Synthesizing (advanced) Unit <calc>.
+	Multiplier <Mmult_din_A[7]_din_B[7]_MuLt_66_OUT> in block <calc> and adder/subtractor <Madd_result[7]_GND_26_o_add_67_OUT> in block <calc> are combined into a MAC<Maddsub_din_A[7]_din_B[7]_MuLt_66_OUT>.
+Unit <calc> synthesized (advanced).
+
+Synthesizing (advanced) Unit <clk_gen>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <clk_gen> synthesized (advanced).
+
+Synthesizing (advanced) Unit <top>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <top> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 1024x8-bit dual-port distributed RAM                  : 2
+# MACs                                                 : 1
+ 8x8-to-19-bit MAC                                     : 1
+# Multipliers                                          : 2
+ 7x6-bit multiplier                                    : 1
+ 8x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 31
+ 10-bit adder                                          : 8
+ 11-bit adder                                          : 1
+ 13-bit adder                                          : 2
+ 14-bit adder                                          : 14
+ 16-bit adder                                          : 1
+ 4-bit adder                                           : 1
+ 7-bit adder                                           : 3
+ 8-bit addsub                                          : 1
+# Counters                                             : 9
+ 10-bit up counter                                     : 1
+ 11-bit up counter                                     : 4
+ 14-bit up counter                                     : 1
+ 4-bit up counter                                      : 3
+# Registers                                            : 207
+ Flip-Flops                                            : 207
+# Comparators                                          : 28
+ 10-bit comparator greater                             : 1
+ 11-bit comparator greater                             : 5
+ 14-bit comparator lessequal                           : 11
+ 15-bit comparator lessequal                           : 1
+ 16-bit comparator greater                             : 3
+ 16-bit comparator lessequal                           : 1
+ 17-bit comparator lessequal                           : 1
+ 18-bit comparator lessequal                           : 1
+ 4-bit comparator greater                              : 2
+ 7-bit comparator greater                              : 2
+# Multiplexers                                         : 321
+ 1-bit 2-to-1 multiplexer                              : 217
+ 10-bit 2-to-1 multiplexer                             : 32
+ 10-bit 7-to-1 multiplexer                             : 2
+ 11-bit 2-to-1 multiplexer                             : 3
+ 16-bit 2-to-1 multiplexer                             : 9
+ 4-bit 2-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 1
+ 7-bit 2-to-1 multiplexer                              : 32
+ 8-bit 2-to-1 multiplexer                              : 24
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <i[10]_clk_DFF_37> in Unit <UART_rec> is equivalent to the following 7 FFs/Latches, which will be removed : <i[10]_clk_DFF_38> <i[10]_clk_DFF_39> <i[10]_clk_DFF_40> <i[10]_clk_DFF_41> <i[10]_clk_DFF_42> <i[10]_clk_DFF_43> <i[10]_clk_DFF_44> 
+INFO:Xst:1901 - Instance clk_generator/pll_base_inst in unit clk_generator/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
+WARNING:Xst:2042 - Unit UART_rec: 8 internal tristates are replaced by logic (pull-up yes): data<0>, data<1>, data<2>, data<3>, data<4>, data<5>, data<6>, data<7>.
+
+Optimizing unit <top> ...
+
+Optimizing unit <calc> ...
+
+Optimizing unit <clk_gen> ...
+
+Optimizing unit <UART_rec> ...
+
+Optimizing unit <UART_trans> ...
+
+Optimizing unit <mod_14u_4u> ...
+WARNING:Xst:1293 - FF/Latch <matrix_calc/j_6> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <matrix_calc/m_6> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/i_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/i_0> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/i_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/i_1> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/i_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/i_2> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/i_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/i_3> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/i_4> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/i_4> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/i_5> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/i_5> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/i_6> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/i_6> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/i_7> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/i_7> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/i_8> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/i_8> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/i_9> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/i_9> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/cnt_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/cnt_0> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/cnt_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/cnt_1> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/cnt_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/cnt_2> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/cnt_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/cnt_3> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/counter_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/counter_0> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/counter_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/counter_1> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/counter_10> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/counter_10> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/counter_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/counter_2> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/counter_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/counter_3> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/start> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/start> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/counter_4> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/counter_4> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/counter_5> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/counter_5> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/counter_6> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/counter_6> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/counter_7> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/counter_7> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/counter_8> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/counter_8> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/counter_9> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/counter_9> 
+INFO:Xst:2261 - The FF/Latch <trans_matrix_C/addr_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <trans_matrix_C/counter_0> 
+INFO:Xst:2261 - The FF/Latch <trans_matrix_C/addr_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <trans_matrix_C/counter_1> 
+INFO:Xst:2261 - The FF/Latch <trans_matrix_C/addr_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <trans_matrix_C/counter_2> 
+INFO:Xst:2261 - The FF/Latch <trans_matrix_C/addr_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <trans_matrix_C/counter_3> 
+INFO:Xst:2261 - The FF/Latch <trans_matrix_C/addr_4> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <trans_matrix_C/counter_4> 
+INFO:Xst:2261 - The FF/Latch <trans_matrix_C/addr_5> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <trans_matrix_C/counter_5> 
+INFO:Xst:2261 - The FF/Latch <trans_matrix_C/addr_6> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <trans_matrix_C/counter_6> 
+INFO:Xst:2261 - The FF/Latch <trans_matrix_C/addr_7> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <trans_matrix_C/counter_7> 
+INFO:Xst:2261 - The FF/Latch <trans_matrix_C/addr_8> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <trans_matrix_C/counter_8> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/i[10]_clk_DFF_37> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <rec_matrix_B/data_valid> <rec_matrix_A/i[10]_clk_DFF_37> <rec_matrix_A/data_valid> 
+INFO:Xst:2261 - The FF/Latch <trans_matrix_C/addr_9> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <trans_matrix_C/counter_9> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/i_10> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/i_10> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/addr_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/addr_0> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/addr_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/addr_1> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/addr_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/addr_2> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/addr_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/addr_3> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/addr_4> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/addr_4> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/addr_5> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/addr_5> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/addr_6> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/addr_6> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/addr_7> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/addr_7> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/addr_8> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/addr_8> 
+INFO:Xst:2261 - The FF/Latch <rec_matrix_B/addr_9> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <rec_matrix_A/addr_9> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 25.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 221
+ Flip-Flops                                            : 221
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1027
+#      GND                         : 4
+#      INV                         : 13
+#      LUT1                        : 67
+#      LUT2                        : 57
+#      LUT3                        : 27
+#      LUT4                        : 129
+#      LUT5                        : 148
+#      LUT6                        : 311
+#      MUXCY                       : 99
+#      MUXF7                       : 44
+#      MUXF8                       : 16
+#      VCC                         : 4
+#      XORCY                       : 108
+# FlipFlops/Latches                : 221
+#      FD                          : 71
+#      FDE                         : 65
+#      FDR                         : 3
+#      FDRE                        : 62
+#      FDSE                        : 20
+# RAMS                             : 131
+#      RAM64M                      : 64
+#      RAM64X1D                    : 64
+#      RAMB8BWER                   : 3
+# Clock Buffers                    : 5
+#      BUFG                        : 5
+# IO Buffers                       : 22
+#      IBUF                        : 7
+#      IBUFG                       : 1
+#      OBUF                        : 14
+# DSPs                             : 2
+#      DSP48A1                     : 2
+# Others                           : 1
+#      PLL_ADV                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             220  out of  11440     1%  
+ Number of Slice LUTs:                 1136  out of   5720    19%  
+    Number used as Logic:               752  out of   5720    13%  
+    Number used as Memory:              384  out of   1440    26%  
+       Number used as RAM:              384
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1166
+   Number with an unused Flip Flop:     946  out of   1166    81%  
+   Number with an unused LUT:            30  out of   1166     2%  
+   Number of fully used LUT-FF pairs:   190  out of   1166    16%  
+   Number of unique control sets:        23
+
+IO Utilization: 
+ Number of IOs:                          22
+ Number of bonded IOBs:                  22  out of    102    21%  
+    IOB Flip Flops/Latches:               1
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                2  out of     32     6%  
+    Number using Block RAM only:          2
+ Number of BUFG/BUFGCTRLs:                5  out of     16    31%  
+ Number of DSP48A1s:                      2  out of     16    12%  
+ Number of PLL_ADVs:                      1  out of      2    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------+------------------------+-------+
+Clock Signal                               | Clock buffer(FF name)  | Load  |
+-------------------------------------------+------------------------+-------+
+clk_gen/clk_uart                           | BUFG                   | 248   |
+clk_gen/clk_calc                           | BUFG                   | 95    |
+clk_gen/clk_generator/pll_base_inst/CLKOUT0| BUFG                   | 11    |
+clk_gen/clk_generator/pll_base_inst/CLKOUT1| BUFG                   | 1     |
+-------------------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 13.036ns (Maximum Frequency: 76.710MHz)
+   Minimum input arrival time before clock: 7.483ns
+   Maximum output required time after clock: 3.668ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_gen/clk_uart'
+  Clock period: 13.036ns (frequency: 76.710MHz)
+  Total number of paths / destination ports: 1075661 / 1852
+-------------------------------------------------------------------------
+Delay:               13.036ns (Levels of Logic = 12)
+  Source:            counter_10 (FF)
+  Destination:       data_valid (FF)
+  Source Clock:      clk_gen/clk_uart rising
+  Destination Clock: clk_gen/clk_uart rising
+
+  Data Path: counter_10 to data_valid
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             6   0.447   1.089  counter_10 (counter_10)
+     LUT5:I0->O           12   0.203   1.273  counter[13]_PWR_1_o_mod_2/Mmux_a[10]_a[13]_MUX_351_o11 (counter[13]_PWR_1_o_mod_2/Madd_a[13]_GND_32_o_add_15_OUT_lut<10>)
+     LUT6:I0->O            1   0.203   0.000  counter[13]_PWR_1_o_mod_2/BUS_0010_INV_172_o14_F (N243)
+     MUXF7:I0->O          19   0.131   1.072  counter[13]_PWR_1_o_mod_2/BUS_0010_INV_172_o14 (counter[13]_PWR_1_o_mod_2/BUS_0010_INV_172_o)
+     LUT5:I4->O            8   0.205   0.803  counter[13]_PWR_1_o_mod_2/Mmux_a[8]_a[13]_MUX_395_o11 (counter[13]_PWR_1_o_mod_2/a[8]_a[13]_MUX_395_o)
+     LUT6:I5->O           12   0.205   0.909  counter[13]_PWR_1_o_mod_2/Mmux_a[9]_a[13]_MUX_408_o11 (counter[13]_PWR_1_o_mod_2/a[9]_a[13]_MUX_408_o)
+     LUT6:I5->O            7   0.205   0.774  counter[13]_PWR_1_o_mod_2/BUS_0014_INV_232_o12 (counter[13]_PWR_1_o_mod_2/BUS_0014_INV_232_o12)
+     LUT6:I5->O            9   0.205   0.830  counter[13]_PWR_1_o_mod_2/Mmux_a[10]_a[13]_MUX_421_o1 (counter[13]_PWR_1_o_mod_2/a[10]_a[13]_MUX_421_o)
+     LUT5:I4->O           16   0.205   1.005  counter[13]_PWR_1_o_mod_2/BUS_0013_INV_217_o14 (counter[13]_PWR_1_o_mod_2/BUS_0013_INV_217_o)
+     LUT3:I2->O            1   0.205   0.827  _n0064<0>4_SW0_SW1 (N200)
+     LUT6:I2->O            2   0.203   0.845  _n0064<0>4_SW0 (N45)
+     LUT5:I2->O            1   0.205   0.684  counter[13]_PWR_1_o_mod_2/BUS_0015_INV_247_o27_SW0 (N147)
+     LUT6:I4->O            1   0.203   0.000  _n0064<0>4 (_n0064)
+     FDR:D                     0.102          data_valid
+    ----------------------------------------
+    Total                     13.036ns (2.927ns logic, 10.109ns route)
+                                       (22.5% logic, 77.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_gen/clk_calc'
+  Clock period: 9.931ns (frequency: 100.695MHz)
+  Total number of paths / destination ports: 14729 / 187
+-------------------------------------------------------------------------
+Delay:               9.931ns (Levels of Logic = 12)
+  Source:            block_b/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SDP.SIMPLE_PRIM9.ram (RAM)
+  Destination:       matrix_calc/result_7 (FF)
+  Source Clock:      clk_gen/clk_calc rising
+  Destination Clock: clk_gen/clk_calc rising
+
+  Data Path: block_b/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SDP.SIMPLE_PRIM9.ram to matrix_calc/result_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB8BWER:CLKBRDCLK->DOBDO7   16   1.850   1.004  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SDP.SIMPLE_PRIM9.ram (doutb<7>)
+     end scope: 'block_b:doutb<7>'
+     DSP48A1:A7->P11       2   4.560   0.961  matrix_calc/Maddsub_din_A[7]_din_B[7]_MuLt_66_OUT (matrix_calc/result[7]_GND_26_o_add_67_OUT<11>)
+     LUT6:I1->O            1   0.203   0.000  matrix_calc/Mmux__n03853_rs_lut<0> (matrix_calc/Mmux__n03853_rs_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  matrix_calc/Mmux__n03853_rs_cy<0> (matrix_calc/Mmux__n03853_rs_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  matrix_calc/Mmux__n03853_rs_cy<1> (matrix_calc/Mmux__n03853_rs_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  matrix_calc/Mmux__n03853_rs_cy<2> (matrix_calc/Mmux__n03853_rs_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  matrix_calc/Mmux__n03853_rs_cy<3> (matrix_calc/Mmux__n03853_rs_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  matrix_calc/Mmux__n03853_rs_cy<4> (matrix_calc/Mmux__n03853_rs_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  matrix_calc/Mmux__n03853_rs_cy<5> (matrix_calc/Mmux__n03853_rs_cy<5>)
+     MUXCY:CI->O           0   0.019   0.000  matrix_calc/Mmux__n03853_rs_cy<6> (matrix_calc/Mmux__n03853_rs_cy<6>)
+     XORCY:CI->O           1   0.180   0.580  matrix_calc/Mmux__n03853_rs_xor<7> (matrix_calc/Mmux__n03853_split<7>)
+     LUT4:I3->O            1   0.205   0.000  matrix_calc/Mmux__n03857163 (matrix_calc/Mmux__n03857_split<7>)
+     FDE:D                     0.102          matrix_calc/result_7
+    ----------------------------------------
+    Total                      9.931ns (7.386ns logic, 2.545ns route)
+                                       (74.4% logic, 25.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_gen/clk_generator/pll_base_inst/CLKOUT0'
+  Clock period: 4.538ns (frequency: 220.347MHz)
+  Total number of paths / destination ports: 266 / 32
+-------------------------------------------------------------------------
+Delay:               4.538ns (Levels of Logic = 3)
+  Source:            clk_gen/cnt_0 (FF)
+  Destination:       clk_gen/cnt_0 (FF)
+  Source Clock:      clk_gen/clk_generator/pll_base_inst/CLKOUT0 rising
+  Destination Clock: clk_gen/clk_generator/pll_base_inst/CLKOUT0 rising
+
+  Data Path: clk_gen/cnt_0 to clk_gen/cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.447   0.995  clk_gen/cnt_0 (clk_gen/cnt_0)
+     LUT5:I0->O            1   0.203   0.580  clk_gen/_n0031_SW0 (N25)
+     LUT6:I5->O            2   0.205   0.617  clk_gen/_n0031 (clk_gen/_n0031)
+     LUT2:I1->O           10   0.205   0.856  clk_gen/Mcount_cnt_val1 (clk_gen/Mcount_cnt_val)
+     FDRE:R                    0.430          clk_gen/cnt_0
+    ----------------------------------------
+    Total                      4.538ns (1.490ns logic, 3.048ns route)
+                                       (32.8% logic, 67.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_gen/clk_generator/pll_base_inst/CLKOUT1'
+  Clock period: 1.913ns (frequency: 522.821MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.913ns (Levels of Logic = 1)
+  Source:            clk_gen/clk_calc (FF)
+  Destination:       clk_gen/clk_calc (FF)
+  Source Clock:      clk_gen/clk_generator/pll_base_inst/CLKOUT1 rising
+  Destination Clock: clk_gen/clk_generator/pll_base_inst/CLKOUT1 rising
+
+  Data Path: clk_gen/clk_calc to clk_gen/clk_calc
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.447   0.579  clk_gen/clk_calc (clk_gen/clk_calc)
+     INV:I->O              1   0.206   0.579  clk_gen/clk_calc_INV_3_o1_INV_0 (clk_gen/clk_calc_INV_3_o)
+     FDR:D                     0.102          clk_gen/clk_calc
+    ----------------------------------------
+    Total                      1.913ns (0.755ns logic, 1.158ns route)
+                                       (39.5% logic, 60.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_gen/clk_calc'
+  Total number of paths / destination ports: 1330 / 111
+-------------------------------------------------------------------------
+Offset:              7.483ns (Levels of Logic = 13)
+  Source:            op<1> (PAD)
+  Destination:       matrix_calc/result_7 (FF)
+  Destination Clock: clk_gen/clk_calc rising
+
+  Data Path: op<1> to matrix_calc/result_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           133   1.222   2.308  op_1_IBUF (op_1_IBUF)
+     LUT6:I1->O            4   0.203   1.048  matrix_calc/Mmux__n03853_A21 (matrix_calc/Mmux__n03853_A2)
+     LUT6:I0->O            1   0.203   0.944  matrix_calc/Mmux__n03853_A22_SW3 (N145)
+     LUT6:I0->O            1   0.203   0.000  matrix_calc/Mmux__n03853_rs_lut<0> (matrix_calc/Mmux__n03853_rs_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  matrix_calc/Mmux__n03853_rs_cy<0> (matrix_calc/Mmux__n03853_rs_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  matrix_calc/Mmux__n03853_rs_cy<1> (matrix_calc/Mmux__n03853_rs_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  matrix_calc/Mmux__n03853_rs_cy<2> (matrix_calc/Mmux__n03853_rs_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  matrix_calc/Mmux__n03853_rs_cy<3> (matrix_calc/Mmux__n03853_rs_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  matrix_calc/Mmux__n03853_rs_cy<4> (matrix_calc/Mmux__n03853_rs_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  matrix_calc/Mmux__n03853_rs_cy<5> (matrix_calc/Mmux__n03853_rs_cy<5>)
+     MUXCY:CI->O           0   0.019   0.000  matrix_calc/Mmux__n03853_rs_cy<6> (matrix_calc/Mmux__n03853_rs_cy<6>)
+     XORCY:CI->O           1   0.180   0.580  matrix_calc/Mmux__n03853_rs_xor<7> (matrix_calc/Mmux__n03853_split<7>)
+     LUT4:I3->O            1   0.205   0.000  matrix_calc/Mmux__n03857163 (matrix_calc/Mmux__n03857_split<7>)
+     FDE:D                     0.102          matrix_calc/result_7
+    ----------------------------------------
+    Total                      7.483ns (2.604ns logic, 4.879ns route)
+                                       (34.8% logic, 65.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_gen/clk_uart'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              2.109ns (Levels of Logic = 2)
+  Source:            write_start (PAD)
+  Destination:       rec_matrix_B/start (FF)
+  Destination Clock: clk_gen/clk_uart rising
+
+  Data Path: write_start to rec_matrix_B/start
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.580  write_start_IBUF (write_start_IBUF)
+     LUT2:I1->O            1   0.205   0.000  rec_matrix_B/start_glue_set (rec_matrix_B/start_glue_set)
+     FD:D                      0.102          rec_matrix_B/start
+    ----------------------------------------
+    Total                      2.109ns (1.529ns logic, 0.580ns route)
+                                       (72.5% logic, 27.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_gen/clk_uart'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              3.668ns (Levels of Logic = 1)
+  Source:            rec_matrix_B/addr_9 (FF)
+  Destination:       addr_B<9> (PAD)
+  Source Clock:      clk_gen/clk_uart rising
+
+  Data Path: rec_matrix_B/addr_9 to addr_B<9>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              3   0.447   0.650  rec_matrix_B/addr_9 (rec_matrix_B/addr_9)
+     OBUF:I->O                 2.571          addr_B_9_OBUF (addr_B<9>)
+    ----------------------------------------
+    Total                      3.668ns (3.018ns logic, 0.650ns route)
+                                       (82.3% logic, 17.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_gen/clk_generator/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            clk_gen/clk_uart (FF)
+  Destination:       clk_uart (PAD)
+  Source Clock:      clk_gen/clk_generator/pll_base_inst/CLKOUT0 rising
+
+  Data Path: clk_gen/clk_uart to clk_uart
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.447   0.616  clk_gen/clk_uart (clk_gen/clk_uart)
+     OBUF:I->O                 2.571          clk_uart_OBUF (clk_uart)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk_gen/clk_calc
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+clk_gen/clk_calc|    9.931|         |         |         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_gen/clk_generator/pll_base_inst/CLKOUT0
+-------------------------------------------+---------+---------+---------+---------+
+                                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------+---------+---------+---------+---------+
+clk_gen/clk_generator/pll_base_inst/CLKOUT0|    4.538|         |         |         |
+-------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_gen/clk_generator/pll_base_inst/CLKOUT1
+-------------------------------------------+---------+---------+---------+---------+
+                                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------------+---------+---------+---------+---------+
+clk_gen/clk_generator/pll_base_inst/CLKOUT1|    1.913|         |         |         |
+-------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_gen/clk_uart
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+clk_gen/clk_calc|    3.152|         |         |         |
+clk_gen/clk_uart|   13.036|         |         |         |
+----------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 14.19 secs
+ 
+--> 
+
+Total memory usage is 4529800 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   63 (   0 filtered)
+Number of infos    :   55 (   0 filtered)
+

@@ -1,0 +1,80 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sat Aug 01 00:15:38 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "op<2>" LOCATE = SITE "P114" LEVEL 1;
+COMP "write_start" LOCATE = SITE "P119" LEVEL 1;
+COMP "op_start" LOCATE = SITE "P111" LEVEL 1;
+COMP "clk" LOCATE = SITE "P50" LEVEL 1;
+COMP "tx_C" LOCATE = SITE "P85" LEVEL 1;
+COMP "transmit_output" LOCATE = SITE "P120" LEVEL 1;
+COMP "op<0>" LOCATE = SITE "P116" LEVEL 1;
+COMP "op<1>" LOCATE = SITE "P115" LEVEL 1;
+TIMEGRP clk_gen/clk_uart = BEL "start_send_c" BEL "data_valid" BEL "counter_1"
+        BEL "counter_2" BEL "counter_3" BEL "counter_4" BEL "counter_5" BEL
+        "counter_6" BEL "counter_7" BEL "counter_8" BEL "counter_9" BEL
+        "counter_10" BEL "counter_11" BEL "counter_12" BEL "counter_13" BEL
+        "clk_gen/clk_uart" BEL "rec_matrix_B/i_10" BEL "rec_matrix_B/i_9" BEL
+        "rec_matrix_B/i_8" BEL "rec_matrix_B/i_7" BEL "rec_matrix_B/i_6" BEL
+        "rec_matrix_B/i_5" BEL "rec_matrix_B/i_4" BEL "rec_matrix_B/i_3" BEL
+        "rec_matrix_B/i_2" BEL "rec_matrix_B/i_1" BEL "rec_matrix_B/i_0" BEL
+        "rec_matrix_B/counter_10" BEL "rec_matrix_B/counter_9" BEL
+        "rec_matrix_B/counter_8" BEL "rec_matrix_B/counter_7" BEL
+        "rec_matrix_B/counter_6" BEL "rec_matrix_B/counter_5" BEL
+        "rec_matrix_B/counter_4" BEL "rec_matrix_B/counter_3" BEL
+        "rec_matrix_B/counter_2" BEL "rec_matrix_B/counter_1" BEL
+        "rec_matrix_B/counter_0" BEL "rec_matrix_B/cnt_3" BEL
+        "rec_matrix_B/cnt_2" BEL "rec_matrix_B/cnt_1" BEL "rec_matrix_B/cnt_0"
+        BEL "rec_matrix_B/addr_9" BEL "rec_matrix_B/addr_8" BEL
+        "rec_matrix_B/addr_7" BEL "rec_matrix_B/addr_6" BEL
+        "rec_matrix_B/addr_5" BEL "rec_matrix_B/addr_4" BEL
+        "rec_matrix_B/addr_3" BEL "rec_matrix_B/addr_2" BEL
+        "rec_matrix_B/addr_1" BEL "rec_matrix_B/addr_0" BEL
+        "trans_matrix_C/cnt_3" BEL "trans_matrix_C/cnt_2" BEL
+        "trans_matrix_C/cnt_1" BEL "trans_matrix_C/cnt_0" BEL
+        "trans_matrix_C/addr_9" BEL "trans_matrix_C/addr_8" BEL
+        "trans_matrix_C/addr_7" BEL "trans_matrix_C/addr_6" BEL
+        "trans_matrix_C/addr_5" BEL "trans_matrix_C/addr_4" BEL
+        "trans_matrix_C/addr_3" BEL "trans_matrix_C/addr_2" BEL
+        "trans_matrix_C/addr_1" BEL "trans_matrix_C/addr_0" BEL
+        "trans_matrix_C/counter_10" BEL "trans_matrix_C/shift_reg_9" BEL
+        "trans_matrix_C/transmit_output" BEL "counter_0" BEL
+        "rec_matrix_B/start" BEL "trans_matrix_C/shift_reg_8" BEL
+        "trans_matrix_C/shift_reg_7" BEL "trans_matrix_C/shift_reg_6" BEL
+        "trans_matrix_C/shift_reg_5" BEL "trans_matrix_C/shift_reg_4" BEL
+        "trans_matrix_C/shift_reg_3" BEL "trans_matrix_C/shift_reg_2" BEL
+        "trans_matrix_C/shift_reg_1" BEL "trans_matrix_C/shift_reg_0" BEL
+        "trans_matrix_C/busy" BEL "clk_gen/clk_uart_BUFG" BEL "clk_uart";
+TIMEGRP clk_gen/clk_calc = BEL "matrix_calc/finish" BEL "matrix_calc/cnt_15"
+        BEL "matrix_calc/cnt_14" BEL "matrix_calc/cnt_13" BEL
+        "matrix_calc/cnt_12" BEL "matrix_calc/cnt_11" BEL "matrix_calc/cnt_10"
+        BEL "matrix_calc/cnt_9" BEL "matrix_calc/cnt_8" BEL
+        "matrix_calc/cnt_7" BEL "matrix_calc/cnt_6" BEL "matrix_calc/cnt_5"
+        BEL "matrix_calc/cnt_4" BEL "matrix_calc/cnt_3" BEL
+        "matrix_calc/cnt_2" BEL "matrix_calc/cnt_1" BEL "matrix_calc/cnt_0"
+        BEL "matrix_calc/wec" BEL "clk_gen/clk_calc" BEL
+        "clk_gen/clk_calc_BUFG";
+TIMEGRP clk_gen_clk_generator_clkout0 = BEL
+        "clk_gen/clk_generator/clkout1_buf" BEL "clk_gen/cnt_0" BEL
+        "clk_gen/cnt_9" BEL "clk_gen/cnt_8" BEL "clk_gen/cnt_7" BEL
+        "clk_gen/cnt_6" BEL "clk_gen/cnt_5" BEL "clk_gen/cnt_4" BEL
+        "clk_gen/cnt_3" BEL "clk_gen/cnt_2" BEL "clk_gen/cnt_1" BEL
+        "clk_gen/clk_uart";
+TIMEGRP clk_gen_clk_generator_clkout1 = BEL
+        "clk_gen/clk_generator/clkout2_buf" BEL "clk_gen/clk_calc";
+PIN SP6_BUFIO2_INSERT_PLL1_ML_BUFIO2_0_pins<0> = BEL
+        "SP6_BUFIO2_INSERT_PLL1_ML_BUFIO2_0" PINNAME DIVCLK;
+PIN clk_gen/clk_generator/pll_base_inst/PLL_ADV_pins<2> = BEL
+        "clk_gen/clk_generator/pll_base_inst/PLL_ADV" PINNAME CLKIN1;
+TIMEGRP clk = PIN "SP6_BUFIO2_INSERT_PLL1_ML_BUFIO2_0_pins<0>" PIN
+        "clk_gen/clk_generator/pll_base_inst/PLL_ADV_pins<2>";
+TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
+TS_clk_gen_clk_calc = PERIOD TIMEGRP "clk_gen/clk_calc" 251 MHz HIGH 50%;
+TS_clk_gen_clk_uart = PERIOD TIMEGRP "clk_gen/clk_uart" 35 MHz HIGH 50%;
+TS_clk_gen_clk_generator_clkout1 = PERIOD TIMEGRP
+        "clk_gen_clk_generator_clkout1" TS_clk * 4.2 HIGH 50%;
+TS_clk_gen_clk_generator_clkout0 = PERIOD TIMEGRP
+        "clk_gen_clk_generator_clkout0" TS_clk * 3 HIGH 50%;
+SCHEMATIC END;
+

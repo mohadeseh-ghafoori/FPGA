@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj HW6 -o "D:/My Courses/IUT982/FPGA/HomeWorks/1398-2/HW6/UART_trans.tfi" -lib work "D:/My Courses/IUT982/FPGA/HomeWorks/1398-2/HW6//UART_rec.v" -module UART_trans -template D:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

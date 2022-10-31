@@ -1,0 +1,2629 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'top'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+Target Device  : xc6slx9
+Target Package : tqg144
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Sat Aug 01 00:15:29 2020
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    2
+Slice Logic Utilization:
+  Number of Slice Registers:                   109 out of  11,440    1%
+    Number used as Flip Flops:                 109
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                        267 out of   5,720    4%
+    Number used as logic:                      262 out of   5,720    4%
+      Number using O6 output only:             188
+      Number using O5 output only:              52
+      Number using O5 and O6:                   22
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of   1,440    0%
+    Number used exclusively as route-thrus:      5
+      Number with same-slice register load:      0
+      Number with same-slice carry load:         5
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                    87 out of   1,430    6%
+  Number of MUXCYs used:                        80 out of   2,860    2%
+  Number of LUT Flip Flop pairs used:          277
+    Number with an unused Flip Flop:           172 out of     277   62%
+    Number with an unused LUT:                  10 out of     277    3%
+    Number of fully used LUT-FF pairs:          95 out of     277   34%
+    Number of unique control sets:              17
+    Number of slice register sites lost
+      to control set restrictions:              91 out of  11,440    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        20 out of     102   19%
+    Number of LOCed IOBs:                        8 out of      20   40%
+    IOB Flip Flops:                              1
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      32    0%
+  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             1 out of      32    3%
+    Number used as BUFIO2FBs:                    1
+    Number used as BUFIO2FB_2CLKs:               0
+  Number of BUFG/BUFGMUXs:                       5 out of      16   31%
+    Number used as BUFGs:                        5
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     200    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
+  Number of OLOGIC2/OSERDES2s:                   1 out of     200    1%
+    Number used as OLOGIC2s:                     1
+    Number used as OSERDES2s:                    0
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      16    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            1 out of       2   50%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                4.04
+
+Peak Memory Usage:  4534 MB
+Total REAL time to MAP completion:  9 secs 
+Total CPU time to MAP completion:   9 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:MapLib:701 - Signal rx_A connected to top level port rx_A has been
+   removed.
+WARNING:MapLib:701 - Signal rx_B connected to top level port rx_B has been
+   removed.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network rec_matrix_B/Mram_matrix481/SPO has no load.
+INFO:LIT:395 - The above info message is repeated 71 more times for the
+   following (max. 5 shown):
+   rec_matrix_B/Mram_matrix472/SPO,
+   rec_matrix_B/Mram_matrix482/SPO,
+   rec_matrix_B/Mram_matrix462/SPO,
+   rec_matrix_B/Mram_matrix461/SPO,
+   rec_matrix_B/Mram_matrix471/SPO
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Place:834 - Only a subset of IOs are locked. Out of 20 IOs, 8 are locked
+   and 12 are not locked. If you would like to print the names of these IOs,
+   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 845 block(s) removed
+   2 block(s) optimized away
+1027 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "block_c/doutb<7>" is sourceless and has been removed.
+The signal "block_c/doutb<6>" is sourceless and has been removed.
+The signal "block_c/doutb<5>" is sourceless and has been removed.
+The signal "block_c/doutb<4>" is sourceless and has been removed.
+The signal "block_c/doutb<3>" is sourceless and has been removed.
+The signal "block_c/doutb<2>" is sourceless and has been removed.
+The signal "block_c/doutb<1>" is sourceless and has been removed.
+The signal "block_c/doutb<0>" is sourceless and has been removed.
+The signal "block_c/N0" is sourceless and has been removed.
+The signal "block_c/N1" is sourceless and has been removed.
+The signal "block_a/N0" is sourceless and has been removed.
+The signal "block_a/N1" is sourceless and has been removed.
+The signal "block_b/N0" is sourceless and has been removed.
+The signal "block_b/N1" is sourceless and has been removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "rx_A_IBUF" is unused and has been removed.
+ Unused block "rx_A_IBUF" (BUF) removed.
+  The signal "rx_A" is unused and has been removed.
+   Unused block "rx_A" (PAD) removed.
+The signal "rx_B_IBUF" is unused and has been removed.
+ Unused block "rx_B_IBUF" (BUF) removed.
+  The signal "rx_B" is unused and has been removed.
+   Unused block "rx_B" (PAD) removed.
+The signal "matrix_calc/addrc_w<9>" is unused and has been removed.
+ Unused block "matrix_calc/addrc_w_9" (FF) removed.
+  The signal "matrix_calc/op[2]_addrc_w[9]_wide_mux_207_OUT<9>" is unused and has
+been removed.
+   Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT203" (ROM)
+removed.
+    The signal "N217" is unused and has been removed.
+     Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT203_SW0" (ROM)
+removed.
+      The signal "matrix_calc/addrc_w<7>" is unused and has been removed.
+       Unused block "matrix_calc/addrc_w_7" (FF) removed.
+        The signal "matrix_calc/op[2]_addrc_w[9]_wide_mux_207_OUT<7>" is unused and has
+been removed.
+         Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT162" (ROM)
+removed.
+          The signal "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT43" is unused and has
+been removed.
+           Unused block "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT431" (ROM) removed.
+            The signal "matrix_calc/j<5>" is unused and has been removed.
+             Unused block "matrix_calc/j_5" (FF) removed.
+              The signal "matrix_calc/op[2]_j[6]_wide_mux_208_OUT<5>" is unused and has been
+removed.
+               Unused block "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT124" (ROM) removed.
+                The signal "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT123" is unused and has
+been removed.
+                 Unused block "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT123" (ROM) removed.
+                  The signal "matrix_calc/Madd_j[6]_GND_26_o_add_142_OUT_cy<4>" is unused and has
+been removed.
+                   Unused block "matrix_calc/Madd_j[6]_GND_26_o_add_142_OUT_cy<4>11" (ROM) removed.
+                    The signal "matrix_calc/j<4>" is unused and has been removed.
+                     Unused block "matrix_calc/j_4" (FF) removed.
+                      The signal "matrix_calc/op[2]_j[6]_wide_mux_208_OUT<4>" is unused and has been
+removed.
+                       Unused block "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT10" (ROM) removed.
+                        The signal "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT103" is unused and has
+been removed.
+                         Unused block "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT1031" (ROM) removed.
+                          The signal "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT111" is unused and has
+been removed.
+                           Unused block "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT1111" (ROM) removed.
+                            The signal "matrix_calc/GND_26_o_GND_26_o_equal_65_o<6>1" is unused and has been
+removed.
+                             Unused block "matrix_calc/GND_26_o_GND_26_o_equal_65_o<6>11" (ROM) removed.
+                              The signal "matrix_calc/m<0>" is unused and has been removed.
+                               Unused block "matrix_calc/m_0" (SFF) removed.
+                                The signal "matrix_calc/_n0442_inv" is unused and has been removed.
+                                 Unused block "matrix_calc/_n0442_inv1" (ROM) removed.
+                                The signal "matrix_calc/op[2]_m[6]_wide_mux_211_OUT<0>" is unused and has been
+removed.
+                                 Unused block "matrix_calc/Mmux_op[2]_m[6]_wide_mux_211_OUT12" (ROM) removed.
+                                  The signal "matrix_calc/m<5>" is unused and has been removed.
+                                   Unused block "matrix_calc/m_5" (SFF) removed.
+                                    The signal "matrix_calc/op[2]_m[6]_wide_mux_211_OUT<5>" is unused and has been
+removed.
+                                     Unused block "matrix_calc/Mmux_op[2]_m[6]_wide_mux_211_OUT61" (ROM) removed.
+                                      The signal "N221" is unused and has been removed.
+                                       Unused block "matrix_calc/Mmux_op[2]_m[6]_wide_mux_211_OUT61_SW0" (ROM) removed.
+                                        The signal "matrix_calc/m<1>" is unused and has been removed.
+                                         Unused block "matrix_calc/m_1" (SFF) removed.
+                                          The signal "matrix_calc/op[2]_m[6]_wide_mux_211_OUT<1>" is unused and has been
+removed.
+                                           Unused block "matrix_calc/Mmux_op[2]_m[6]_wide_mux_211_OUT21" (ROM) removed.
+                                          The signal "matrix_calc/_n0391" is unused and has been removed.
+                                           Unused block "matrix_calc/_n03911" (ROM) removed.
+                                        The signal "matrix_calc/m<2>" is unused and has been removed.
+                                         Unused block "matrix_calc/m_2" (SFF) removed.
+                                          The signal "matrix_calc/op[2]_m[6]_wide_mux_211_OUT<2>" is unused and has been
+removed.
+                                           Unused block "matrix_calc/Mmux_op[2]_m[6]_wide_mux_211_OUT31" (ROM) removed.
+                                        The signal "matrix_calc/m<3>" is unused and has been removed.
+                                         Unused block "matrix_calc/m_3" (SFF) removed.
+                                          The signal "matrix_calc/op[2]_m[6]_wide_mux_211_OUT<3>" is unused and has been
+removed.
+                                           Unused block "matrix_calc/Mmux_op[2]_m[6]_wide_mux_211_OUT41" (ROM) removed.
+                                            The signal "matrix_calc/Mmux_op[2]_m[6]_wide_mux_211_OUT11" is unused and has
+been removed.
+                                             Unused block "matrix_calc/Mmux_op[2]_m[6]_wide_mux_211_OUT111" (ROM) removed.
+                                        The signal "matrix_calc/m<4>" is unused and has been removed.
+                                         Unused block "matrix_calc/m_4" (SFF) removed.
+                                          The signal "matrix_calc/op[2]_m[6]_wide_mux_211_OUT<4>" is unused and has been
+removed.
+                                           Unused block "matrix_calc/Mmux_op[2]_m[6]_wide_mux_211_OUT51" (ROM) removed.
+                            The signal "matrix_calc/GND_26_o_GND_26_o_equal_144_o" is unused and has been
+removed.
+                             Unused block "matrix_calc/GND_26_o_GND_26_o_equal_144_o<6>1" (ROM) removed.
+                              The signal "matrix_calc/j<3>" is unused and has been removed.
+                               Unused block "matrix_calc/j_3" (FF) removed.
+                                The signal "matrix_calc/op[2]_j[6]_wide_mux_208_OUT<3>" is unused and has been
+removed.
+                                 Unused block "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT81" (ROM) removed.
+                                  The signal "matrix_calc/j<0>" is unused and has been removed.
+                                   Unused block "matrix_calc/j_0" (FF) removed.
+                                    The signal "matrix_calc/op[2]_j[6]_wide_mux_208_OUT<0>" is unused and has been
+removed.
+                                     Unused block "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT23" (ROM) removed.
+                                      The signal "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT2" is unused and has
+been removed.
+                                       Unused block "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT102_SW0" (ROM)
+removed.
+                                      The signal "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT21" is unused and has
+been removed.
+                                       Unused block "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT22" (ROM) removed.
+                                        The signal "matrix_calc/GND_26_o_GND_26_o_equal_79_o" is unused and has been
+removed.
+                                         Unused block "matrix_calc/GND_26_o_GND_26_o_equal_79_o<6>1" (ROM) removed.
+                                  The signal "matrix_calc/j<1>" is unused and has been removed.
+                                   Unused block "matrix_calc/j_1" (FF) removed.
+                                    The signal "matrix_calc/op[2]_j[6]_wide_mux_208_OUT<1>" is unused and has been
+removed.
+                                     Unused block "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT45" (ROM) removed.
+                                      The signal "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT45" is unused and has
+been removed.
+                                       Unused block "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT44" (ROM) removed.
+                                        The signal "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT44" is unused and has
+been removed.
+                                         Unused block "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT43" (ROM) removed.
+                                      The signal "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT42" is unused and has
+been removed.
+                                       Unused block "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT42" (ROM) removed.
+                                        The signal "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT4" is unused and has
+been removed.
+                                         Unused block "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT41" (ROM) removed.
+                                  The signal "matrix_calc/j<2>" is unused and has been removed.
+                                   Unused block "matrix_calc/j_2" (FF) removed.
+                                    The signal "matrix_calc/op[2]_j[6]_wide_mux_208_OUT<2>" is unused and has been
+removed.
+                                     Unused block "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT61" (ROM) removed.
+                                      The signal "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT102" is unused and has
+been removed.
+                                       Unused block "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT102" (ROM) removed.
+                        The signal "N5" is unused and has been removed.
+                         Unused block "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT10_SW0" (ROM) removed.
+                The signal "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT12" is unused and has
+been removed.
+                 Unused block "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT121" (ROM) removed.
+          The signal "matrix_calc/i<2>" is unused and has been removed.
+           Unused block "matrix_calc/i_2" (FF) removed.
+            The signal "matrix_calc/op[2]_i[6]_wide_mux_205_OUT<2>" is unused and has been
+removed.
+             Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT92" (ROM) removed.
+              The signal "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT123" is unused and has
+been removed.
+               Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT1231" (ROM) removed.
+                The signal "matrix_calc/i<6>" is unused and has been removed.
+                 Unused block "matrix_calc/i_6" (FF) removed.
+                  The signal "matrix_calc/op[2]_i[6]_wide_mux_205_OUT<6>" is unused and has been
+removed.
+                   Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT21" (ROM) removed.
+                    The signal "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT122" is unused and has
+been removed.
+                     Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT1222" (ROM) removed.
+                      The signal "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT1221" is unused and has
+been removed.
+                       Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT12211" (ROM) removed.
+                      The signal "matrix_calc/GND_26_o_GND_26_o_equal_174_o" is unused and has been
+removed.
+                       Unused block "matrix_calc/GND_26_o_GND_26_o_equal_174_o<6>" (ROM) removed.
+                        The signal "matrix_calc/i<5>" is unused and has been removed.
+                         Unused block "matrix_calc/i_5" (FF) removed.
+                          The signal "matrix_calc/op[2]_i[6]_wide_mux_205_OUT<5>" is unused and has been
+removed.
+                           Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT183" (ROM) removed.
+                            The signal "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT181" is unused and has
+been removed.
+                             Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT1811" (ROM) removed.
+                              The signal "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT32" is unused and has
+been removed.
+                               Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT321" (ROM) removed.
+                            The signal "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT18" is unused and has
+been removed.
+                             Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT181" (ROM) removed.
+                              The signal "matrix_calc/Madd_i[6]_GND_26_o_add_191_OUT_cy<4>" is unused and has
+been removed.
+                               Unused block "matrix_calc/Madd_i[6]_GND_26_o_add_191_OUT_cy<4>11" (ROM) removed.
+                                The signal "matrix_calc/i<4>" is unused and has been removed.
+                                 Unused block "matrix_calc/i_4" (FF) removed.
+                                  The signal "matrix_calc/op[2]_i[6]_wide_mux_205_OUT<4>" is unused and has been
+removed.
+                                   Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT154" (ROM) removed.
+                                    The signal "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT152" is unused and has
+been removed.
+                                     Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT153" (ROM) removed.
+                                      The signal "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT151" is unused and has
+been removed.
+                                       Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT152" (ROM) removed.
+                                        The signal "matrix_calc/i<3>" is unused and has been removed.
+                                         Unused block "matrix_calc/i_3" (FF) removed.
+                                          The signal "matrix_calc/op[2]_i[6]_wide_mux_205_OUT<3>" is unused and has been
+removed.
+                                           Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT124" (ROM) removed.
+                                            The signal "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT124" is unused and has
+been removed.
+                                             Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT123" (ROM) removed.
+                                              The signal "matrix_calc/i<1>" is unused and has been removed.
+                                               Unused block "matrix_calc/i_1" (FF) removed.
+                                                The signal "matrix_calc/op[2]_i[6]_wide_mux_205_OUT<1>" is unused and has been
+removed.
+                                                 Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT62" (ROM) removed.
+*The signal "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT121" is unused and has
+been removed.
+* Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT121" (ROM) removed.
+*  The signal "N3" is unused and has been removed.
+*   Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT121_SW0" (ROM)
+removed.
+*The signal "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT6" is unused and has
+been removed.
+* Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT61" (ROM) removed.
+*  The signal "matrix_calc/i<0>" is unused and has been removed.
+*   Unused block "matrix_calc/i_0" (FF) removed.
+*    The signal "matrix_calc/op[2]_i[6]_wide_mux_205_OUT<0>" is unused and has been
+removed.
+*     Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT33" (ROM) removed.
+*      The signal "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT3" is unused and has
+been removed.
+*       Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT31" (ROM) removed.
+*        The signal "matrix_calc/GND_26_o_GND_26_o_equal_144_o_mmx_out" is unused and has
+been removed.
+*         Unused block "matrix_calc/GND_26_o_GND_26_o_equal_144_o1" (ROM) removed.
+*      The signal "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT31" is unused and has
+been removed.
+*       Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT32" (ROM) removed.
+                                            The signal "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT12" is unused and has
+been removed.
+                                             Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT122" (ROM) removed.
+                                    The signal "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT15" is unused and has
+been removed.
+                                     Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT151" (ROM) removed.
+                            The signal "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT182" is unused and has
+been removed.
+                             Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT182" (ROM) removed.
+                        The signal "N21" is unused and has been removed.
+                         Unused block "matrix_calc/GND_26_o_GND_26_o_equal_174_o<6>_SW0" (ROM) removed.
+                    The signal "N19" is unused and has been removed.
+                     Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT21_SW0" (ROM) removed.
+              The signal "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT9" is unused and has
+been removed.
+               Unused block "matrix_calc/Mmux_op[2]_i[6]_wide_mux_205_OUT91" (ROM) removed.
+          The signal "matrix_calc/Madd_n0238_Madd_cy<5>" is unused and has been removed.
+           Unused block "matrix_calc/Madd_n0238_Madd_cy<5>11" (ROM) removed.
+          The signal "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT16" is unused and
+has been removed.
+           Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT161" (ROM)
+removed.
+            The signal "matrix_calc/Madd_addrc_w[9]_GND_26_o_add_76_OUT_cy<6>" is unused and
+has been removed.
+             Unused block "matrix_calc/Madd_addrc_w[9]_GND_26_o_add_76_OUT_cy<6>11" (ROM)
+removed.
+              The signal "matrix_calc/addrc_w<6>" is unused and has been removed.
+               Unused block "matrix_calc/addrc_w_6" (FF) removed.
+                The signal "matrix_calc/op[2]_addrc_w[9]_wide_mux_207_OUT<6>" is unused and has
+been removed.
+                 Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT143" (ROM)
+removed.
+                  The signal "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT141" is unused and
+has been removed.
+                   Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT142" (ROM)
+removed.
+                    The signal "matrix_calc/Madd_addrc_w[9]_GND_26_o_add_76_OUT_cy<2>" is unused and
+has been removed.
+                     Unused block "matrix_calc/Madd_addrc_w[9]_GND_26_o_add_76_OUT_cy<2>11" (ROM)
+removed.
+                      The signal "matrix_calc/addrc_w<2>" is unused and has been removed.
+                       Unused block "matrix_calc/addrc_w_2" (FF) removed.
+                        The signal "matrix_calc/op[2]_addrc_w[9]_wide_mux_207_OUT<2>" is unused and has
+been removed.
+                         Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT63" (ROM)
+removed.
+                          The signal "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT61" is unused and
+has been removed.
+                           Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT62" (ROM)
+removed.
+                            The signal "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT111" is unused and
+has been removed.
+                             Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT1111" (ROM)
+removed.
+                              The signal "matrix_calc/flag" is unused and has been removed.
+                               Unused block "matrix_calc/flag" (FF) removed.
+                                The signal "matrix_calc/_n0433_inv" is unused and has been removed.
+                                 Unused block "matrix_calc/_n0433_inv1" (ROM) removed.
+                            The signal "matrix_calc/addrc_w<0>" is unused and has been removed.
+                             Unused block "matrix_calc/addrc_w_0" (FF) removed.
+                              The signal "matrix_calc/op[2]_addrc_w[9]_wide_mux_207_OUT<0>" is unused and has
+been removed.
+                               Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT22" (ROM)
+removed.
+                                The signal "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT2" is unused and
+has been removed.
+                                 Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT21" (ROM)
+removed.
+                            The signal "matrix_calc/addrc_w<1>" is unused and has been removed.
+                             Unused block "matrix_calc/addrc_w_1" (FF) removed.
+                              The signal "matrix_calc/op[2]_addrc_w[9]_wide_mux_207_OUT<1>" is unused and has
+been removed.
+                               Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT42" (ROM)
+removed.
+                                The signal "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT4" is unused and
+has been removed.
+                                 Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT41" (ROM)
+removed.
+                            The signal "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT6" is unused and
+has been removed.
+                             Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT61" (ROM)
+removed.
+                    The signal "N225" is unused and has been removed.
+                     Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT142_SW0" (ROM)
+removed.
+                      The signal "matrix_calc/addrc_w<3>" is unused and has been removed.
+                       Unused block "matrix_calc/addrc_w_3" (FF) removed.
+                        The signal "matrix_calc/op[2]_addrc_w[9]_wide_mux_207_OUT<3>" is unused and has
+been removed.
+                         Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT82" (ROM)
+removed.
+                          The signal "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT8" is unused and
+has been removed.
+                           Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT81" (ROM)
+removed.
+                      The signal "matrix_calc/addrc_w<4>" is unused and has been removed.
+                       Unused block "matrix_calc/addrc_w_4" (FF) removed.
+                        The signal "matrix_calc/op[2]_addrc_w[9]_wide_mux_207_OUT<4>" is unused and has
+been removed.
+                         Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT103" (ROM)
+removed.
+                          The signal "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT101" is unused and
+has been removed.
+                           Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT102" (ROM)
+removed.
+                            The signal "N219" is unused and has been removed.
+                             Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT102_SW0" (ROM)
+removed.
+                      The signal "matrix_calc/addrc_w<5>" is unused and has been removed.
+                       Unused block "matrix_calc/addrc_w_5" (FF) removed.
+                        The signal "matrix_calc/op[2]_addrc_w[9]_wide_mux_207_OUT<5>" is unused and has
+been removed.
+                         Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT122" (ROM)
+removed.
+                          The signal "matrix_calc/Madd_addrc_w[9]_GND_26_o_add_76_OUT_cy<4>" is unused and
+has been removed.
+                           Unused block "matrix_calc/Madd_addrc_w[9]_GND_26_o_add_76_OUT_cy<4>11" (ROM)
+removed.
+                          The signal "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT12" is unused and
+has been removed.
+                           Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT121" (ROM)
+removed.
+                            The signal "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT102" is unused and
+has been removed.
+                             Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT1021" (ROM)
+removed.
+      The signal "matrix_calc/addrc_w<8>" is unused and has been removed.
+       Unused block "matrix_calc/addrc_w_8" (FF) removed.
+        The signal "matrix_calc/op[2]_addrc_w[9]_wide_mux_207_OUT<8>" is unused and has
+been removed.
+         Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT182" (ROM)
+removed.
+          The signal "matrix_calc/Madd_n0238_Madd_cy<7>" is unused and has been removed.
+           Unused block "matrix_calc/Madd_n0238_Madd_cy<7>11" (ROM) removed.
+          The signal "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT18" is unused and
+has been removed.
+           Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT181" (ROM)
+removed.
+            The signal "matrix_calc/Madd_addrc_w[9]_GND_26_o_add_76_OUT_cy<7>" is unused and
+has been removed.
+             Unused block "matrix_calc/Madd_addrc_w[9]_GND_26_o_add_76_OUT_cy<7>11" (ROM)
+removed.
+    The signal "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT20" is unused and
+has been removed.
+     Unused block "matrix_calc/Mmux_op[2]_addrc_w[9]_wide_mux_207_OUT201" (ROM)
+removed.
+The signal "matrix_calc/addra_r<9>" is unused and has been removed.
+ Unused block "matrix_calc/addra_r_9" (FF) removed.
+  The signal "matrix_calc/op[2]_addra_r[9]_wide_mux_206_OUT<9>" is unused and has
+been removed.
+   Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT204" (ROM)
+removed.
+    The signal "matrix_calc/Madd_n0204_Madd_cy<7>" is unused and has been removed.
+     Unused block "matrix_calc/Madd_n0204_Madd_cy<7>11" (ROM) removed.
+    The signal "N213" is unused and has been removed.
+     Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT204_SW0" (ROM)
+removed.
+      The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT191" is unused and
+has been removed.
+       Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT1912" (ROM)
+removed.
+        The signal "matrix_calc/Madd_n0230_Madd_cy<7>" is unused and has been removed.
+         Unused block "matrix_calc/Madd_n0230_Madd_cy<7>11" (ROM) removed.
+        The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT1911" is unused
+and has been removed.
+         Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT1911" (ROM)
+removed.
+      The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT111" is unused and
+has been removed.
+       Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT1111" (ROM)
+removed.
+      The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT20" is unused and
+has been removed.
+       Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT201" (ROM)
+removed.
+        The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT16" is unused and
+has been removed.
+         Unused block "matrix_calc/Mmux_op[2]_j[6]_wide_mux_208_OUT411" (ROM) removed.
+        The signal "matrix_calc/addra_r<8>" is unused and has been removed.
+         Unused block "matrix_calc/addra_r_8" (FF) removed.
+          The signal "matrix_calc/op[2]_addra_r[9]_wide_mux_206_OUT<8>" is unused and has
+been removed.
+           Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT184" (ROM)
+removed.
+            The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT182" is unused and
+has been removed.
+             Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT183" (ROM)
+removed.
+              The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT171" is unused and
+has been removed.
+               Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT171" (ROM)
+removed.
+                The signal "N15" is unused and has been removed.
+                 Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT171_SW0" (ROM)
+removed.
+              The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT181" is unused and
+has been removed.
+               Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT182" (ROM)
+removed.
+                The signal "matrix_calc/Madd_addra_r[9]_GND_26_o_add_48_OUT_cy<7>" is unused and
+has been removed.
+                 Unused block "matrix_calc/Madd_addra_r[9]_GND_26_o_add_48_OUT_cy<7>11" (ROM)
+removed.
+                  The signal "matrix_calc/addra_r<7>" is unused and has been removed.
+                   Unused block "matrix_calc/addra_r_7" (FF) removed.
+                    The signal "matrix_calc/op[2]_addra_r[9]_wide_mux_206_OUT<7>" is unused and has
+been removed.
+                     Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT165" (ROM)
+removed.
+                      The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT163" is unused and
+has been removed.
+                       Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT164" (MUX)
+removed.
+                        The signal "N229" is unused and has been removed.
+                         Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT164_F" (ROM)
+removed.
+                          The signal "matrix_calc/Madd_n0204_Madd_cy<5>" is unused and has been removed.
+                           Unused block "matrix_calc/Madd_n0204_Madd_cy<5>11" (ROM) removed.
+                          The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT161" is unused and
+has been removed.
+                           Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT162" (ROM)
+removed.
+                            The signal "matrix_calc/addra_r<5>" is unused and has been removed.
+                             Unused block "matrix_calc/addra_r_5" (FF) removed.
+                              The signal "matrix_calc/op[2]_addra_r[9]_wide_mux_206_OUT<5>" is unused and has
+been removed.
+                               Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT123" (MUX)
+removed.
+                                The signal "N233" is unused and has been removed.
+                                 Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT123_F" (ROM)
+removed.
+                                  The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT121" is unused and
+has been removed.
+                                   Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT122" (ROM)
+removed.
+                                    The signal "matrix_calc/Madd_addra_r[9]_GND_26_o_add_48_OUT_cy<4>" is unused and
+has been removed.
+                                     Unused block "matrix_calc/Madd_addra_r[9]_GND_26_o_add_48_OUT_cy<4>11" (ROM)
+removed.
+                                      The signal "matrix_calc/addra_r<4>" is unused and has been removed.
+                                       Unused block "matrix_calc/addra_r_4" (FF) removed.
+                                        The signal "matrix_calc/op[2]_addra_r[9]_wide_mux_206_OUT<4>" is unused and has
+been removed.
+                                         Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT103" (ROM)
+removed.
+                                          The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT102" is unused and
+has been removed.
+                                           Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT102" (ROM)
+removed.
+                                          The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT10" is unused and
+has been removed.
+                                           Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT101" (ROM)
+removed.
+                                            The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT104" is unused and
+has been removed.
+                                             Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT1041" (ROM)
+removed.
+                                            The signal "matrix_calc/Madd_addra_r[9]_GND_26_o_add_48_OUT_cy<3>" is unused and
+has been removed.
+                                             Unused block "matrix_calc/Madd_addra_r[9]_GND_26_o_add_48_OUT_cy<3>11" (ROM)
+removed.
+                                              The signal "matrix_calc/addra_r<3>" is unused and has been removed.
+                                               Unused block "matrix_calc/addra_r_3" (FF) removed.
+                                                The signal "matrix_calc/op[2]_addra_r[9]_wide_mux_206_OUT<3>" is unused and has
+been removed.
+                                                 Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT83" (ROM)
+removed.
+*The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT8" is unused and
+has been removed.
+* Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT81" (ROM)
+removed.
+*  The signal "matrix_calc/addra_r<1>" is unused and has been removed.
+*   Unused block "matrix_calc/addra_r_1" (FF) removed.
+*    The signal "matrix_calc/op[2]_addra_r[9]_wide_mux_206_OUT<1>" is unused and has
+been removed.
+*     Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT43" (ROM)
+removed.
+*      The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT42" is unused and
+has been removed.
+*       Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT42" (ROM)
+removed.
+*      The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT4" is unused and
+has been removed.
+*       Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT41" (ROM)
+removed.
+*        The signal "matrix_calc/addra_r<0>" is unused and has been removed.
+*         Unused block "matrix_calc/addra_r_0" (FF) removed.
+*          The signal "matrix_calc/op[2]_addra_r[9]_wide_mux_206_OUT<0>" is unused and has
+been removed.
+*           Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT22" (ROM)
+removed.
+*            The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT21" is unused and
+has been removed.
+*             Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT211" (ROM)
+removed.
+*            The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT2" is unused and
+has been removed.
+*             Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT21" (ROM)
+removed.
+*            The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT113" is unused and
+has been removed.
+*             Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT1131" (ROM)
+removed.
+*        The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT41" is unused and
+has been removed.
+*         Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT411" (ROM)
+removed.
+*  The signal "matrix_calc/addra_r<2>" is unused and has been removed.
+*   Unused block "matrix_calc/addra_r_2" (FF) removed.
+*    The signal "matrix_calc/op[2]_addra_r[9]_wide_mux_206_OUT<2>" is unused and has
+been removed.
+*     Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT63" (ROM)
+removed.
+*      The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT62" is unused and
+has been removed.
+*       Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT62" (ROM)
+removed.
+*      The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT6" is unused and
+has been removed.
+*       Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT61" (ROM)
+removed.
+*        The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT61" is unused and
+has been removed.
+*         Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT611" (ROM)
+removed.
+*The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT82" is unused and
+has been removed.
+* Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT82" (ROM)
+removed.
+                                            The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT101" is unused and
+has been removed.
+                                             Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT1011" (ROM)
+removed.
+                                The signal "N234" is unused and has been removed.
+                                 Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT123_G" (ROM)
+removed.
+                                  The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT112" is unused and
+has been removed.
+                                   Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT112" (MUX)
+removed.
+                                    The signal "N237" is unused and has been removed.
+                                     Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT112_F" (ROM)
+removed.
+                                    The signal "N238" is unused and has been removed.
+                                     Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT112_G" (ROM)
+removed.
+                                  The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT110" is unused and
+has been removed.
+                                   Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT1101" (ROM)
+removed.
+                            The signal "matrix_calc/addra_r<6>" is unused and has been removed.
+                             Unused block "matrix_calc/addra_r_6" (FF) removed.
+                              The signal "matrix_calc/op[2]_addra_r[9]_wide_mux_206_OUT<6>" is unused and has
+been removed.
+                               Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT144" (ROM)
+removed.
+                                The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT142" is unused and
+has been removed.
+                                 Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT143" (MUX)
+removed.
+                                  The signal "N231" is unused and has been removed.
+                                   Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT143_F" (ROM)
+removed.
+                                    The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT14" is unused and
+has been removed.
+                                     Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT141" (ROM)
+removed.
+                                  The signal "N232" is unused and has been removed.
+                                   Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT143_G" (ROM)
+removed.
+                                    The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT131" is unused and
+has been removed.
+                                     Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT131" (MUX)
+removed.
+                                      The signal "N241" is unused and has been removed.
+                                       Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT131_F" (ROM)
+removed.
+                                      The signal "N242" is unused and has been removed.
+                                       Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT131_G" (ROM)
+removed.
+                                        The signal "matrix_calc/Mmult_n0256_Madd_cy<5>" is unused and has been removed.
+                                         Unused block "matrix_calc/Mmult_n0256_Madd_cy<5>11" (ROM) removed.
+                        The signal "N230" is unused and has been removed.
+                         Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT164_G" (ROM)
+removed.
+                          The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT151" is unused and
+has been removed.
+                           Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT1513" (MUX)
+removed.
+                            The signal "N239" is unused and has been removed.
+                             Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT1513_F" (ROM)
+removed.
+                            The signal "N240" is unused and has been removed.
+                             Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT1513_G" (ROM)
+removed.
+                The signal "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT18" is unused and
+has been removed.
+                 Unused block "matrix_calc/Mmux_op[2]_addra_r[9]_wide_mux_206_OUT181" (ROM)
+removed.
+The signal "matrix_calc/addrb_r<9>" is unused and has been removed.
+ Unused block "matrix_calc/addrb_r_9" (FF) removed.
+  The signal "matrix_calc/op[2]_addrb_r[9]_wide_mux_204_OUT<9>" is unused and has
+been removed.
+   Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT204" (ROM)
+removed.
+    The signal "matrix_calc/Madd_n0205_Madd_cy<7>" is unused and has been removed.
+     Unused block "matrix_calc/Madd_n0205_Madd_cy<7>11" (ROM) removed.
+    The signal "N215" is unused and has been removed.
+     Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT204_SW0" (ROM)
+removed.
+      The signal "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT20" is unused and
+has been removed.
+       Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT201" (ROM)
+removed.
+        The signal "matrix_calc/addrb_r<8>" is unused and has been removed.
+         Unused block "matrix_calc/addrb_r_8" (FF) removed.
+          The signal "matrix_calc/op[2]_addrb_r[9]_wide_mux_204_OUT<8>" is unused and has
+been removed.
+           Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT184" (ROM)
+removed.
+            The signal "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT182" is unused and
+has been removed.
+             Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT183" (ROM)
+removed.
+              The signal "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT181" is unused and
+has been removed.
+               Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT182" (ROM)
+removed.
+                The signal "matrix_calc/Madd_addrb_r[9]_GND_26_o_add_49_OUT_cy<7>" is unused and
+has been removed.
+                 Unused block "matrix_calc/Madd_addrb_r[9]_GND_26_o_add_49_OUT_cy<7>11" (ROM)
+removed.
+                  The signal "matrix_calc/addrb_r<7>" is unused and has been removed.
+                   Unused block "matrix_calc/addrb_r_7" (FF) removed.
+                    The signal "matrix_calc/op[2]_addrb_r[9]_wide_mux_204_OUT<7>" is unused and has
+been removed.
+                     Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT165" (ROM)
+removed.
+                      The signal "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT163" is unused and
+has been removed.
+                       Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT164" (ROM)
+removed.
+                        The signal "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT162" is unused and
+has been removed.
+                         Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT163" (ROM)
+removed.
+                          The signal "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT161" is unused and
+has been removed.
+                           Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT162" (ROM)
+removed.
+                            The signal "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT16" is unused and
+has been removed.
+                             Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT161" (ROM)
+removed.
+                            The signal "matrix_calc/addrb_r<5>" is unused and has been removed.
+                             Unused block "matrix_calc/addrb_r_5" (FF) removed.
+                              The signal "matrix_calc/op[2]_addrb_r[9]_wide_mux_204_OUT<5>" is unused and has
+been removed.
+                               Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT123" (MUX)
+removed.
+                                The signal "N235" is unused and has been removed.
+                                 Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT123_F" (ROM)
+removed.
+                                  The signal "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT121" is unused and
+has been removed.
+                                   Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT122" (ROM)
+removed.
+                                    The signal "matrix_calc/Madd_addrb_r[9]_GND_26_o_add_49_OUT_cy<4>" is unused and
+has been removed.
+                                     Unused block "matrix_calc/Madd_addrb_r[9]_GND_26_o_add_49_OUT_cy<4>11" (ROM)
+removed.
+                                      The signal "matrix_calc/addrb_r<4>" is unused and has been removed.
+                                       Unused block "matrix_calc/addrb_r_4" (FF) removed.
+                                        The signal "matrix_calc/op[2]_addrb_r[9]_wide_mux_204_OUT<4>" is unused and has
+been removed.
+                                         Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT103" (ROM)
+removed.
+                                          The signal "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT101" is unused and
+has been removed.
+                                           Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT102" (ROM)
+removed.
+                                          The signal "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT10" is unused and
+has been removed.
+                                           Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT101" (ROM)
+removed.
+                                            The signal "matrix_calc/Madd_addrb_r[9]_GND_26_o_add_49_OUT_cy<3>" is unused and
+has been removed.
+                                             Unused block "matrix_calc/Madd_addrb_r[9]_GND_26_o_add_49_OUT_cy<3>11" (ROM)
+removed.
+                                              The signal "matrix_calc/addrb_r<3>" is unused and has been removed.
+                                               Unused block "matrix_calc/addrb_r_3" (FF) removed.
+                                                The signal "matrix_calc/op[2]_addrb_r[9]_wide_mux_204_OUT<3>" is unused and has
+been removed.
+                                                 Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT83" (ROM)
+removed.
+*The signal "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT8" is unused and
+has been removed.
+* Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT81" (ROM)
+removed.
+*  The signal "matrix_calc/addrb_r<1>" is unused and has been removed.
+*   Unused block "matrix_calc/addrb_r_1" (FF) removed.
+*    The signal "matrix_calc/op[2]_addrb_r[9]_wide_mux_204_OUT<1>" is unused and has
+been removed.
+*     Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT43" (ROM)
+removed.
+*      The signal "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT41" is unused and
+has been removed.
+*       Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT42" (ROM)
+removed.
+*      The signal "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT4" is unused and
+has been removed.
+*       Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT41" (ROM)
+removed.
+*        The signal "matrix_calc/addrb_r<0>" is unused and has been removed.
+*         Unused block "matrix_calc/addrb_r_0" (FF) removed.
+*          The signal "matrix_calc/op[2]_addrb_r[9]_wide_mux_204_OUT<0>" is unused and has
+been removed.
+*           Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT22" (ROM)
+removed.
+*            The signal "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT2" is unused and
+has been removed.
+*             Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT21" (ROM)
+removed.
+*            The signal "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT111" is unused and
+has been removed.
+*             Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT1111" (ROM)
+removed.
+*  The signal "matrix_calc/addrb_r<2>" is unused and has been removed.
+*   Unused block "matrix_calc/addrb_r_2" (FF) removed.
+*    The signal "matrix_calc/op[2]_addrb_r[9]_wide_mux_204_OUT<2>" is unused and has
+been removed.
+*     Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT63" (ROM)
+removed.
+*      The signal "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT61" is unused and
+has been removed.
+*       Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT62" (ROM)
+removed.
+*      The signal "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT6" is unused and
+has been removed.
+*       Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT61" (ROM)
+removed.
+*The signal "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT81" is unused and
+has been removed.
+* Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT82" (ROM)
+removed.
+                                The signal "N236" is unused and has been removed.
+                                 Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT123_G" (ROM)
+removed.
+                                  The signal "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT110" is unused and
+has been removed.
+                                   Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT1101" (ROM)
+removed.
+                            The signal "matrix_calc/addrb_r<6>" is unused and has been removed.
+                             Unused block "matrix_calc/addrb_r_6" (FF) removed.
+                              The signal "matrix_calc/op[2]_addrb_r[9]_wide_mux_204_OUT<6>" is unused and has
+been removed.
+                               Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT143" (MUX)
+removed.
+                                The signal "N227" is unused and has been removed.
+                                 Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT143_F" (ROM)
+removed.
+                                  The signal "matrix_calc/Madd_n0205_Madd_cy<5>" is unused and has been removed.
+                                   Unused block "matrix_calc/Madd_n0205_Madd_cy<5>11" (ROM) removed.
+                                  The signal "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT141" is unused and
+has been removed.
+                                   Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT142" (ROM)
+removed.
+                                The signal "N228" is unused and has been removed.
+                                 Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT143_G" (ROM)
+removed.
+                The signal "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT18" is unused and
+has been removed.
+                 Unused block "matrix_calc/Mmux_op[2]_addrb_r[9]_wide_mux_204_OUT181" (ROM)
+removed.
+The signal "matrix_calc/result<7>" is unused and has been removed.
+ Unused block "matrix_calc/result_7" (FF) removed.
+  The signal "matrix_calc/Mmux__n03857_split<7>" is unused and has been removed.
+   Unused block "matrix_calc/Mmux__n03857163" (ROM) removed.
+    The signal "matrix_calc/Mmux__n0385716" is unused and has been removed.
+     Unused block "matrix_calc/Mmux__n03857161" (ROM) removed.
+      The signal "matrix_calc/result[7]_GND_26_o_add_159_OUT<12>" is unused and has
+been removed.
+       Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_xor<12>" (XOR)
+removed.
+        The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<11>" is unused
+and has been removed.
+         Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<11>" (MUX)
+removed.
+          The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<10>" is unused
+and has been removed.
+           Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<10>" (MUX)
+removed.
+            The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<9>" is unused and
+has been removed.
+             Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<9>" (MUX)
+removed.
+              The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<8>" is unused and
+has been removed.
+               Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<8>" (MUX)
+removed.
+                The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<7>" is unused and
+has been removed.
+                 Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<7>" (MUX)
+removed.
+                  The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<6>" is unused and
+has been removed.
+                   Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<6>" (MUX)
+removed.
+                    The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<5>" is unused and
+has been removed.
+                     Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<5>" (MUX)
+removed.
+                      The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<4>" is unused and
+has been removed.
+                       Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<4>" (MUX)
+removed.
+                        The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<3>" is unused and
+has been removed.
+                         Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<3>" (MUX)
+removed.
+                          The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<2>" is unused and
+has been removed.
+                           Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<2>" (MUX)
+removed.
+                            The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<1>" is unused and
+has been removed.
+                             Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<1>" (MUX)
+removed.
+                              The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<0>" is unused and
+has been removed.
+                               Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<0>" (MUX)
+removed.
+                                The signal "matrix_calc/temp3<0>" is unused and has been removed.
+                                 Unused block "matrix_calc/temp3_0" (FF) removed.
+                                  The signal "matrix_calc/_n0421_inv" is unused and has been removed.
+                                   Unused block "matrix_calc/_n0421_inv1" (ROM) removed.
+                                  The signal "matrix_calc/_n0401<0>" is unused and has been removed.
+                                   Unused block "matrix_calc/Mmux__n040111" (ROM) removed.
+                                    The signal "matrix_calc/result[7]_GND_26_o_add_159_OUT<0>" is unused and has
+been removed.
+                                     Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_xor<0>" (XOR)
+removed.
+                                      The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_lut<0>" is unused
+and has been removed.
+                                       Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_lut<0>" (ROM)
+removed.
+                                        The signal "douta<0>" is unused and has been removed.
+                                    The signal "matrix_calc/result[7]_GND_26_o_add_180_OUT<0>" is unused and has
+been removed.
+                                     Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_xor<0>" (XOR)
+removed.
+                                      The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_lut<0>" is unused
+and has been removed.
+                                       Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_lut<0>" (ROM)
+removed.
+                                        The signal "doutb<0>" is unused and has been removed.
+                              The signal "matrix_calc/temp3<1>" is unused and has been removed.
+                               Unused block "matrix_calc/temp3_1" (FF) removed.
+                                The signal "matrix_calc/_n0401<1>" is unused and has been removed.
+                                 Unused block "matrix_calc/Mmux__n040121" (ROM) removed.
+                                  The signal "matrix_calc/result[7]_GND_26_o_add_159_OUT<1>" is unused and has
+been removed.
+                                   Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_xor<1>" (XOR)
+removed.
+                                    The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_lut<1>" is unused
+and has been removed.
+                                     Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_lut<1>" (ROM)
+removed.
+                                      The signal "douta<1>" is unused and has been removed.
+                                  The signal "matrix_calc/result[7]_GND_26_o_add_180_OUT<1>" is unused and has
+been removed.
+                                   Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_xor<1>" (XOR)
+removed.
+                                    The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<0>" is unused and
+has been removed.
+                                     Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<0>" (MUX)
+removed.
+                                    The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_lut<1>" is unused
+and has been removed.
+                                     Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_lut<1>" (ROM)
+removed.
+                                      The signal "doutb<1>" is unused and has been removed.
+                            The signal "matrix_calc/temp3<2>" is unused and has been removed.
+                             Unused block "matrix_calc/temp3_2" (FF) removed.
+                              The signal "matrix_calc/_n0401<2>" is unused and has been removed.
+                               Unused block "matrix_calc/Mmux__n040131" (ROM) removed.
+                                The signal "matrix_calc/result[7]_GND_26_o_add_159_OUT<2>" is unused and has
+been removed.
+                                 Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_xor<2>" (XOR)
+removed.
+                                  The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_lut<2>" is unused
+and has been removed.
+                                   Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_lut<2>" (ROM)
+removed.
+                                    The signal "douta<2>" is unused and has been removed.
+                                The signal "matrix_calc/result[7]_GND_26_o_add_180_OUT<2>" is unused and has
+been removed.
+                                 Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_xor<2>" (XOR)
+removed.
+                                  The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<1>" is unused and
+has been removed.
+                                   Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<1>" (MUX)
+removed.
+                                  The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_lut<2>" is unused
+and has been removed.
+                                   Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_lut<2>" (ROM)
+removed.
+                                    The signal "doutb<2>" is unused and has been removed.
+                          The signal "matrix_calc/temp3<3>" is unused and has been removed.
+                           Unused block "matrix_calc/temp3_3" (FF) removed.
+                            The signal "matrix_calc/_n0401<3>" is unused and has been removed.
+                             Unused block "matrix_calc/Mmux__n040141" (ROM) removed.
+                              The signal "matrix_calc/result[7]_GND_26_o_add_159_OUT<3>" is unused and has
+been removed.
+                               Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_xor<3>" (XOR)
+removed.
+                                The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_lut<3>" is unused
+and has been removed.
+                                 Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_lut<3>" (ROM)
+removed.
+                                  The signal "douta<3>" is unused and has been removed.
+                              The signal "matrix_calc/result[7]_GND_26_o_add_180_OUT<3>" is unused and has
+been removed.
+                               Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_xor<3>" (XOR)
+removed.
+                                The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<2>" is unused and
+has been removed.
+                                 Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<2>" (MUX)
+removed.
+                                The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_lut<3>" is unused
+and has been removed.
+                                 Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_lut<3>" (ROM)
+removed.
+                                  The signal "doutb<3>" is unused and has been removed.
+                        The signal "matrix_calc/temp3<4>" is unused and has been removed.
+                         Unused block "matrix_calc/temp3_4" (FF) removed.
+                          The signal "matrix_calc/_n0401<4>" is unused and has been removed.
+                           Unused block "matrix_calc/Mmux__n040151" (ROM) removed.
+                            The signal "matrix_calc/result[7]_GND_26_o_add_159_OUT<4>" is unused and has
+been removed.
+                             Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_xor<4>" (XOR)
+removed.
+                              The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_lut<4>" is unused
+and has been removed.
+                               Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_lut<4>" (ROM)
+removed.
+                                The signal "douta<4>" is unused and has been removed.
+                            The signal "matrix_calc/result[7]_GND_26_o_add_180_OUT<4>" is unused and has
+been removed.
+                             Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_xor<4>" (XOR)
+removed.
+                              The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<3>" is unused and
+has been removed.
+                               Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<3>" (MUX)
+removed.
+                              The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_lut<4>" is unused
+and has been removed.
+                               Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_lut<4>" (ROM)
+removed.
+                                The signal "doutb<4>" is unused and has been removed.
+                      The signal "matrix_calc/result<0>" is unused and has been removed.
+                       Unused block "matrix_calc/result_0" (FF) removed.
+                        The signal "matrix_calc/Mmux__n03857_split<0>" is unused and has been removed.
+                         Unused block "matrix_calc/Mmux__n0385723" (ROM) removed.
+                          The signal "matrix_calc/Mmux__n038572" is unused and has been removed.
+                           Unused block "matrix_calc/Mmux__n0385721" (ROM) removed.
+                            The signal "matrix_calc/result[7]_GND_26_o_add_159_OUT<5>" is unused and has
+been removed.
+                             Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_xor<5>" (XOR)
+removed.
+                              The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_lut<5>" is unused
+and has been removed.
+                               Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_lut<5>" (ROM)
+removed.
+                                The signal "douta<5>" is unused and has been removed.
+                            The signal "matrix_calc/result[7]_GND_26_o_add_180_OUT<5>" is unused and has
+been removed.
+                             Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_xor<5>" (XOR)
+removed.
+                              The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<4>" is unused and
+has been removed.
+                               Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<4>" (MUX)
+removed.
+                              The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_lut<5>" is unused
+and has been removed.
+                               Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_lut<5>" (ROM)
+removed.
+                                The signal "doutb<5>" is unused and has been removed.
+                          The signal "matrix_calc/Mmux__n0385721" is unused and has been removed.
+                           Unused block "matrix_calc/Mmux__n0385722" (ROM) removed.
+                          The signal "matrix_calc/Mmux__n03853_split<0>" is unused and has been removed.
+                           Unused block "matrix_calc/Mmux__n03853_rs_xor<0>" (XOR) removed.
+                            The signal "matrix_calc/Mmux__n03853_rs_AS_inv" is unused and has been removed.
+                             Unused block "matrix_calc/Mmux__n03853_rs_AS_inv2" (ROM) removed.
+                            The signal "matrix_calc/Mmux__n03853_rs_lut<0>" is unused and has been removed.
+                             Unused block "matrix_calc/Mmux__n03853_rs_lut<0>" (ROM) removed.
+                              The signal "N145" is unused and has been removed.
+                               Unused block "matrix_calc/Mmux__n03853_A22_SW3" (ROM) removed.
+                                The signal "matrix_calc/Mmux__n03853_A2" is unused and has been removed.
+                                 Unused block "matrix_calc/Mmux__n03853_A21" (ROM) removed.
+                                The signal "matrix_calc/Mmux__n03853_rs_B<0>" is unused and has been removed.
+                                 Unused block "matrix_calc/Mmux__n03853_B11" (ROM) removed.
+                                The signal "matrix_calc/n0027" is unused and has been removed.
+                                 Unused block "matrix_calc/n002722" (ROM) removed.
+                              The signal "matrix_calc/result[7]_GND_26_o_add_67_OUT<11>" is unused and has
+been removed.
+                              The signal "matrix_calc/din_A[7]_din_B[7]_MuLt_65_OUT<11>" is unused and has
+been removed.
+                              The signal "N144" is unused and has been removed.
+                               Unused block "matrix_calc/Mmux__n03853_A22_SW2" (ROM) removed.
+                    The signal "matrix_calc/result<1>" is unused and has been removed.
+                     Unused block "matrix_calc/result_1" (FF) removed.
+                      The signal "matrix_calc/Mmux__n03857_split<1>" is unused and has been removed.
+                       Unused block "matrix_calc/Mmux__n0385743" (ROM) removed.
+                        The signal "matrix_calc/Mmux__n038574" is unused and has been removed.
+                         Unused block "matrix_calc/Mmux__n0385741" (ROM) removed.
+                          The signal "matrix_calc/result[7]_GND_26_o_add_159_OUT<6>" is unused and has
+been removed.
+                           Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_xor<6>" (XOR)
+removed.
+                            The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_lut<6>" is unused
+and has been removed.
+                             Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_lut<6>" (ROM)
+removed.
+                              The signal "douta<6>" is unused and has been removed.
+                          The signal "matrix_calc/result[7]_GND_26_o_add_180_OUT<6>" is unused and has
+been removed.
+                           Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_xor<6>" (XOR)
+removed.
+                            The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<5>" is unused and
+has been removed.
+                             Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<5>" (MUX)
+removed.
+                            The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_lut<6>" is unused
+and has been removed.
+                             Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_lut<6>" (ROM)
+removed.
+                              The signal "doutb<6>" is unused and has been removed.
+                        The signal "matrix_calc/Mmux__n0385741" is unused and has been removed.
+                         Unused block "matrix_calc/Mmux__n0385742" (ROM) removed.
+                        The signal "matrix_calc/Mmux__n03853_split<1>" is unused and has been removed.
+                         Unused block "matrix_calc/Mmux__n03853_rs_xor<1>" (XOR) removed.
+                          The signal "matrix_calc/Mmux__n03853_rs_cy<0>" is unused and has been removed.
+                           Unused block "matrix_calc/Mmux__n03853_rs_cy<0>" (MUX) removed.
+                            The signal "matrix_calc/Mmux__n03853_rs_A<0>" is unused and has been removed.
+                             Unused block "matrix_calc/Mmux__n03853_A23" (ROM) removed.
+                              The signal "N120" is unused and has been removed.
+                               Unused block "matrix_calc/Mmux__n03853_A22_SW1" (ROM) removed.
+                              The signal "N119" is unused and has been removed.
+                               Unused block "matrix_calc/Mmux__n03853_A22_SW0" (ROM) removed.
+                          The signal "matrix_calc/Mmux__n03853_rs_lut<1>" is unused and has been removed.
+                           Unused block "matrix_calc/Mmux__n03853_rs_lut<1>" (ROM) removed.
+                            The signal "N151" is unused and has been removed.
+                             Unused block "matrix_calc/Mmux__n03853_A42_SW3" (ROM) removed.
+                              The signal "matrix_calc/Mmux__n03853_A4" is unused and has been removed.
+                               Unused block "matrix_calc/Mmux__n03853_A41" (ROM) removed.
+                              The signal "matrix_calc/Mmux__n03853_rs_B<1>" is unused and has been removed.
+                               Unused block "matrix_calc/Mmux__n03853_B21" (ROM) removed.
+                            The signal "matrix_calc/result[7]_GND_26_o_add_67_OUT<12>" is unused and has
+been removed.
+                            The signal "matrix_calc/din_A[7]_din_B[7]_MuLt_65_OUT<12>" is unused and has
+been removed.
+                            The signal "N150" is unused and has been removed.
+                             Unused block "matrix_calc/Mmux__n03853_A42_SW2" (ROM) removed.
+                  The signal "matrix_calc/result<2>" is unused and has been removed.
+                   Unused block "matrix_calc/result_2" (FF) removed.
+                    The signal "matrix_calc/Mmux__n03857_split<2>" is unused and has been removed.
+                     Unused block "matrix_calc/Mmux__n0385763" (ROM) removed.
+                      The signal "matrix_calc/Mmux__n038576" is unused and has been removed.
+                       Unused block "matrix_calc/Mmux__n0385761" (ROM) removed.
+                        The signal "matrix_calc/result[7]_GND_26_o_add_159_OUT<7>" is unused and has
+been removed.
+                         Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_xor<7>" (XOR)
+removed.
+                          The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_lut<7>" is unused
+and has been removed.
+                           Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_lut<7>" (ROM)
+removed.
+                            The signal "douta<7>" is unused and has been removed.
+                        The signal "matrix_calc/result[7]_GND_26_o_add_180_OUT<7>" is unused and has
+been removed.
+                         Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_xor<7>" (XOR)
+removed.
+                          The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<6>" is unused and
+has been removed.
+                           Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<6>" (MUX)
+removed.
+                          The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_lut<7>" is unused
+and has been removed.
+                           Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_lut<7>" (ROM)
+removed.
+                            The signal "doutb<7>" is unused and has been removed.
+                      The signal "matrix_calc/Mmux__n0385761" is unused and has been removed.
+                       Unused block "matrix_calc/Mmux__n0385762" (ROM) removed.
+                      The signal "matrix_calc/Mmux__n03853_split<2>" is unused and has been removed.
+                       Unused block "matrix_calc/Mmux__n03853_rs_xor<2>" (XOR) removed.
+                        The signal "matrix_calc/Mmux__n03853_rs_cy<1>" is unused and has been removed.
+                         Unused block "matrix_calc/Mmux__n03853_rs_cy<1>" (MUX) removed.
+                          The signal "matrix_calc/Mmux__n03853_rs_A<1>" is unused and has been removed.
+                           Unused block "matrix_calc/Mmux__n03853_A43" (ROM) removed.
+                            The signal "N123" is unused and has been removed.
+                             Unused block "matrix_calc/Mmux__n03853_A42_SW1" (ROM) removed.
+                            The signal "N122" is unused and has been removed.
+                             Unused block "matrix_calc/Mmux__n03853_A42_SW0" (ROM) removed.
+                        The signal "matrix_calc/Mmux__n03853_rs_lut<2>" is unused and has been removed.
+                         Unused block "matrix_calc/Mmux__n03853_rs_lut<2>" (ROM) removed.
+                          The signal "N154" is unused and has been removed.
+                           Unused block "matrix_calc/Mmux__n03853_A62_SW3" (ROM) removed.
+                            The signal "matrix_calc/Mmux__n03853_A6" is unused and has been removed.
+                             Unused block "matrix_calc/Mmux__n03853_A61" (ROM) removed.
+                            The signal "matrix_calc/Mmux__n03853_rs_B<2>" is unused and has been removed.
+                             Unused block "matrix_calc/Mmux__n03853_B31" (ROM) removed.
+                          The signal "matrix_calc/result[7]_GND_26_o_add_67_OUT<13>" is unused and has
+been removed.
+                          The signal "matrix_calc/din_A[7]_din_B[7]_MuLt_65_OUT<13>" is unused and has
+been removed.
+                          The signal "N153" is unused and has been removed.
+                           Unused block "matrix_calc/Mmux__n03853_A62_SW2" (ROM) removed.
+                The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<8>_rt" is unused
+and has been removed.
+                 Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<8>_rt" (ROM)
+removed.
+                  The signal "matrix_calc/result<3>" is unused and has been removed.
+                   Unused block "matrix_calc/result_3" (FF) removed.
+                    The signal "matrix_calc/Mmux__n03857_split<3>" is unused and has been removed.
+                     Unused block "matrix_calc/Mmux__n0385783" (ROM) removed.
+                      The signal "matrix_calc/Mmux__n038578" is unused and has been removed.
+                       Unused block "matrix_calc/Mmux__n0385781" (ROM) removed.
+                        The signal "matrix_calc/result[7]_GND_26_o_add_159_OUT<8>" is unused and has
+been removed.
+                         Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_xor<8>" (XOR)
+removed.
+                        The signal "matrix_calc/result[7]_GND_26_o_add_180_OUT<8>" is unused and has
+been removed.
+                         Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_xor<8>" (XOR)
+removed.
+                          The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<7>" is unused and
+has been removed.
+                           Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<7>" (MUX)
+removed.
+                          The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<8>_rt" is unused
+and has been removed.
+                           Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<8>_rt" (ROM)
+removed.
+                      The signal "matrix_calc/Mmux__n0385781" is unused and has been removed.
+                       Unused block "matrix_calc/Mmux__n0385782" (ROM) removed.
+                      The signal "matrix_calc/Mmux__n03853_split<3>" is unused and has been removed.
+                       Unused block "matrix_calc/Mmux__n03853_rs_xor<3>" (XOR) removed.
+                        The signal "matrix_calc/Mmux__n03853_rs_cy<2>" is unused and has been removed.
+                         Unused block "matrix_calc/Mmux__n03853_rs_cy<2>" (MUX) removed.
+                          The signal "matrix_calc/Mmux__n03853_rs_A<2>" is unused and has been removed.
+                           Unused block "matrix_calc/Mmux__n03853_A63" (ROM) removed.
+                            The signal "N126" is unused and has been removed.
+                             Unused block "matrix_calc/Mmux__n03853_A62_SW1" (ROM) removed.
+                            The signal "N125" is unused and has been removed.
+                             Unused block "matrix_calc/Mmux__n03853_A62_SW0" (ROM) removed.
+                        The signal "matrix_calc/Mmux__n03853_rs_lut<3>" is unused and has been removed.
+                         Unused block "matrix_calc/Mmux__n03853_rs_lut<3>" (ROM) removed.
+                          The signal "N157" is unused and has been removed.
+                           Unused block "matrix_calc/Mmux__n03853_A82_SW3" (ROM) removed.
+                            The signal "matrix_calc/Mmux__n03853_A8" is unused and has been removed.
+                             Unused block "matrix_calc/Mmux__n03853_A81" (ROM) removed.
+                            The signal "matrix_calc/Mmux__n03853_rs_B<3>" is unused and has been removed.
+                             Unused block "matrix_calc/Mmux__n03853_B41" (ROM) removed.
+                          The signal "matrix_calc/result[7]_GND_26_o_add_67_OUT<14>" is unused and has
+been removed.
+                          The signal "matrix_calc/din_A[7]_din_B[7]_MuLt_65_OUT<14>" is unused and has
+been removed.
+                          The signal "N156" is unused and has been removed.
+                           Unused block "matrix_calc/Mmux__n03853_A82_SW2" (ROM) removed.
+              The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<9>_rt" is unused
+and has been removed.
+               Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<9>_rt" (ROM)
+removed.
+                The signal "matrix_calc/result<4>" is unused and has been removed.
+                 Unused block "matrix_calc/result_4" (FF) removed.
+                  The signal "matrix_calc/Mmux__n03857_split<4>" is unused and has been removed.
+                   Unused block "matrix_calc/Mmux__n03857103" (ROM) removed.
+                    The signal "matrix_calc/Mmux__n0385710" is unused and has been removed.
+                     Unused block "matrix_calc/Mmux__n03857101" (ROM) removed.
+                      The signal "matrix_calc/result[7]_GND_26_o_add_159_OUT<9>" is unused and has
+been removed.
+                       Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_xor<9>" (XOR)
+removed.
+                      The signal "matrix_calc/result[7]_GND_26_o_add_180_OUT<9>" is unused and has
+been removed.
+                       Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_xor<9>" (XOR)
+removed.
+                        The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<8>" is unused and
+has been removed.
+                         Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<8>" (MUX)
+removed.
+                        The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<9>_rt" is unused
+and has been removed.
+                         Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<9>_rt" (ROM)
+removed.
+                    The signal "matrix_calc/Mmux__n03857101" is unused and has been removed.
+                     Unused block "matrix_calc/Mmux__n03857102" (ROM) removed.
+                    The signal "matrix_calc/Mmux__n03853_split<4>" is unused and has been removed.
+                     Unused block "matrix_calc/Mmux__n03853_rs_xor<4>" (XOR) removed.
+                      The signal "matrix_calc/Mmux__n03853_rs_cy<3>" is unused and has been removed.
+                       Unused block "matrix_calc/Mmux__n03853_rs_cy<3>" (MUX) removed.
+                        The signal "matrix_calc/Mmux__n03853_rs_A<3>" is unused and has been removed.
+                         Unused block "matrix_calc/Mmux__n03853_A83" (ROM) removed.
+                          The signal "N129" is unused and has been removed.
+                           Unused block "matrix_calc/Mmux__n03853_A82_SW1" (ROM) removed.
+                          The signal "N128" is unused and has been removed.
+                           Unused block "matrix_calc/Mmux__n03853_A82_SW0" (ROM) removed.
+                      The signal "matrix_calc/Mmux__n03853_rs_lut<4>" is unused and has been removed.
+                       Unused block "matrix_calc/Mmux__n03853_rs_lut<4>" (ROM) removed.
+                        The signal "matrix_calc/Mmux__n03853_A10" is unused and has been removed.
+                         Unused block "matrix_calc/Mmux__n03853_A101" (ROM) removed.
+                        The signal "matrix_calc/Mmux__n03853_A101" is unused and has been removed.
+                         Unused block "matrix_calc/Mmux__n03853_A102" (ROM) removed.
+                          The signal "matrix_calc/din_A[7]_din_B[7]_MuLt_65_OUT<15>" is unused and has
+been removed.
+                          The signal "N132" is unused and has been removed.
+                           Unused block "matrix_calc/Mmux__n03853_A1111_SW1" (ROM) removed.
+                          The signal "N131" is unused and has been removed.
+                           Unused block "matrix_calc/Mmux__n03853_A1111_SW0" (ROM) removed.
+                        The signal "N159" is unused and has been removed.
+                         Unused block "matrix_calc/Mmux__n03853_A103_SW0" (ROM) removed.
+                        The signal "matrix_calc/result[7]_GND_26_o_add_67_OUT<15>" is unused and has
+been removed.
+                        The signal "matrix_calc/Mmux__n03853_A1011" is unused and has been removed.
+                         Unused block "matrix_calc/Mmux__n03853_A10111" (ROM) removed.
+                        The signal "N160" is unused and has been removed.
+                         Unused block "matrix_calc/Mmux__n03853_A103_SW1" (ROM) removed.
+            The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<10>_rt" is unused
+and has been removed.
+             Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<10>_rt" (ROM)
+removed.
+              The signal "matrix_calc/result<5>" is unused and has been removed.
+               Unused block "matrix_calc/result_5" (FF) removed.
+                The signal "matrix_calc/Mmux__n03857_split<5>" is unused and has been removed.
+                 Unused block "matrix_calc/Mmux__n03857123" (ROM) removed.
+                  The signal "matrix_calc/Mmux__n0385712" is unused and has been removed.
+                   Unused block "matrix_calc/Mmux__n03857121" (ROM) removed.
+                    The signal "matrix_calc/result[7]_GND_26_o_add_159_OUT<10>" is unused and has
+been removed.
+                     Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_xor<10>" (XOR)
+removed.
+                    The signal "matrix_calc/result[7]_GND_26_o_add_180_OUT<10>" is unused and has
+been removed.
+                     Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_xor<10>" (XOR)
+removed.
+                      The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<9>" is unused and
+has been removed.
+                       Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<9>" (MUX)
+removed.
+                      The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<10>_rt" is unused
+and has been removed.
+                       Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<10>_rt" (ROM)
+removed.
+                  The signal "matrix_calc/Mmux__n03857121" is unused and has been removed.
+                   Unused block "matrix_calc/Mmux__n03857122" (ROM) removed.
+                  The signal "matrix_calc/Mmux__n03853_split<5>" is unused and has been removed.
+                   Unused block "matrix_calc/Mmux__n03853_rs_xor<5>" (XOR) removed.
+                    The signal "matrix_calc/Mmux__n03853_rs_cy<4>" is unused and has been removed.
+                     Unused block "matrix_calc/Mmux__n03853_rs_cy<4>" (MUX) removed.
+                      The signal "matrix_calc/Mmux__n03853_rs_A<4>" is unused and has been removed.
+                       Unused block "matrix_calc/Mmux__n03853_A103" (ROM) removed.
+                    The signal "matrix_calc/Mmux__n03853_rs_lut<5>" is unused and has been removed.
+                     Unused block "matrix_calc/Mmux__n03853_rs_lut<5>" (ROM) removed.
+                      The signal "matrix_calc/Mmux__n03853_A12" is unused and has been removed.
+                       Unused block "matrix_calc/Mmux__n03853_A121" (ROM) removed.
+                      The signal "matrix_calc/Mmux__n03853_A121" is unused and has been removed.
+                       Unused block "matrix_calc/Mmux__n03853_A122" (ROM) removed.
+                        The signal "N134" is unused and has been removed.
+                         Unused block "matrix_calc/Mmux__n03853_A1111_SW2" (ROM) removed.
+                      The signal "N162" is unused and has been removed.
+                       Unused block "matrix_calc/Mmux__n03853_A123_SW0" (ROM) removed.
+                      The signal "matrix_calc/result[7]_GND_26_o_add_67_OUT<16>" is unused and has
+been removed.
+                      The signal "N163" is unused and has been removed.
+                       Unused block "matrix_calc/Mmux__n03853_A123_SW1" (ROM) removed.
+          The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<11>_rt" is unused
+and has been removed.
+           Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_cy<11>_rt" (ROM)
+removed.
+            The signal "matrix_calc/result<6>" is unused and has been removed.
+             Unused block "matrix_calc/result_6" (FF) removed.
+              The signal "matrix_calc/Mmux__n03857_split<6>" is unused and has been removed.
+               Unused block "matrix_calc/Mmux__n03857143" (ROM) removed.
+                The signal "matrix_calc/Mmux__n0385714" is unused and has been removed.
+                 Unused block "matrix_calc/Mmux__n03857141" (ROM) removed.
+                  The signal "matrix_calc/result[7]_GND_26_o_add_159_OUT<11>" is unused and has
+been removed.
+                   Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_xor<11>" (XOR)
+removed.
+                  The signal "matrix_calc/result[7]_GND_26_o_add_180_OUT<11>" is unused and has
+been removed.
+                   Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_xor<11>" (XOR)
+removed.
+                    The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<10>" is unused
+and has been removed.
+                     Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<10>" (MUX)
+removed.
+                    The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<11>_rt" is unused
+and has been removed.
+                     Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<11>_rt" (ROM)
+removed.
+                The signal "matrix_calc/Mmux__n03857141" is unused and has been removed.
+                 Unused block "matrix_calc/Mmux__n03857142" (ROM) removed.
+                The signal "matrix_calc/Mmux__n03853_split<6>" is unused and has been removed.
+                 Unused block "matrix_calc/Mmux__n03853_rs_xor<6>" (XOR) removed.
+                  The signal "matrix_calc/Mmux__n03853_rs_cy<5>" is unused and has been removed.
+                   Unused block "matrix_calc/Mmux__n03853_rs_cy<5>" (MUX) removed.
+                    The signal "matrix_calc/Mmux__n03853_rs_A<5>" is unused and has been removed.
+                     Unused block "matrix_calc/Mmux__n03853_A123" (ROM) removed.
+                  The signal "matrix_calc/Mmux__n03853_rs_lut<6>" is unused and has been removed.
+                   Unused block "matrix_calc/Mmux__n03853_rs_lut<6>" (ROM) removed.
+                    The signal "matrix_calc/Mmux__n03853_A14" is unused and has been removed.
+                     Unused block "matrix_calc/Mmux__n03853_A141" (ROM) removed.
+                    The signal "matrix_calc/Mmux__n03853_A141" is unused and has been removed.
+                     Unused block "matrix_calc/Mmux__n03853_A142" (ROM) removed.
+                      The signal "N137" is unused and has been removed.
+                       Unused block "matrix_calc/Mmux__n03853_A1111_SW4" (ROM) removed.
+                    The signal "N165" is unused and has been removed.
+                     Unused block "matrix_calc/Mmux__n03853_A143_SW0" (ROM) removed.
+                    The signal "matrix_calc/result[7]_GND_26_o_add_67_OUT<17>" is unused and has
+been removed.
+                    The signal "N166" is unused and has been removed.
+                     Unused block "matrix_calc/Mmux__n03853_A143_SW1" (ROM) removed.
+        The signal "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_xor<12>_rt" is
+unused and has been removed.
+         Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_159_OUT_xor<12>_rt" (ROM)
+removed.
+      The signal "matrix_calc/result[7]_GND_26_o_add_180_OUT<12>" is unused and has
+been removed.
+       Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_xor<12>" (XOR)
+removed.
+        The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<11>" is unused
+and has been removed.
+         Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_cy<11>" (MUX)
+removed.
+        The signal "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_xor<12>_rt" is
+unused and has been removed.
+         Unused block "matrix_calc/Madd_result[7]_GND_26_o_add_180_OUT_xor<12>_rt" (ROM)
+removed.
+    The signal "matrix_calc/Mmux__n03857161" is unused and has been removed.
+     Unused block "matrix_calc/Mmux__n03857162" (ROM) removed.
+    The signal "matrix_calc/Mmux__n03853_split<7>" is unused and has been removed.
+     Unused block "matrix_calc/Mmux__n03853_rs_xor<7>" (XOR) removed.
+      The signal "matrix_calc/Mmux__n03853_rs_cy<6>" is unused and has been removed.
+       Unused block "matrix_calc/Mmux__n03853_rs_cy<6>" (MUX) removed.
+        The signal "matrix_calc/Mmux__n03853_rs_A<6>" is unused and has been removed.
+         Unused block "matrix_calc/Mmux__n03853_A143" (ROM) removed.
+      The signal "matrix_calc/Mmux__n03853_rs_lut<7>" is unused and has been removed.
+       Unused block "matrix_calc/Mmux__n03853_rs_lut<7>" (ROM) removed.
+        The signal "matrix_calc/Mmux__n03853_A16" is unused and has been removed.
+         Unused block "matrix_calc/Mmux__n03853_A161" (ROM) removed.
+        The signal "N93" is unused and has been removed.
+         Unused block "matrix_calc/Mmux__n03853_A163_SW0" (ROM) removed.
+        The signal "matrix_calc/Mmux__n03853_A161" is unused and has been removed.
+         Unused block "matrix_calc/Mmux__n03853_A162" (ROM) removed.
+          The signal "N168" is unused and has been removed.
+           Unused block "matrix_calc/Mmux__n03853_A1111_SW6" (ROM) removed.
+        The signal "matrix_calc/result[7]_GND_26_o_add_67_OUT<18>" is unused and has
+been removed.
+The signal "data_A<7>" is unused and has been removed.
+ Unused block "rec_matrix_A/data<7>LogicTrst1" (ROM) removed.
+  The signal "rec_matrix_B/i[10]_clk_DFF_37" is unused and has been removed.
+   Unused block "rec_matrix_B/i[10]_clk_DFF_37" (FF) removed.
+    The signal "rec_matrix_B/start_i[10]_AND_3_o" is unused and has been removed.
+     Unused block "rec_matrix_B/start_i[10]_AND_3_o1" (ROM) removed.
+    The signal "rec_matrix_B/i[10]_PWR_7_o_LessThan_20_o" is unused and has been
+removed.
+     Unused block "rec_matrix_B/i[10]_PWR_7_o_LessThan_20_o1_INV_0" (BUF) removed.
+  The signal "rec_matrix_A/data<7>" is unused and has been removed.
+   Unused block "rec_matrix_A/data_7" (FF) removed.
+    The signal "rec_matrix_A/n0114<7>" is unused and has been removed.
+     Unused block "rec_matrix_A/Mmux_n011481" (ROM) removed.
+      The signal "rec_matrix_B/_n01421" is unused and has been removed.
+       Unused block "rec_matrix_B/_n014213" (ROM) removed.
+      The signal "rec_matrix_A/_n0122[7:0]<7>" is unused and has been removed.
+       Unused block "rec_matrix_A/inst_LPM_MUX7_2_f8" (MUX) removed.
+        The signal "rec_matrix_A/inst_LPM_MUX7_4_f7" is unused and has been removed.
+         Unused block "rec_matrix_A/inst_LPM_MUX7_4_f7" (MUX) removed.
+          The signal "rec_matrix_A/inst_LPM_MUX7_6" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX7_6" (ROM) removed.
+            The signal "rec_matrix_A/N221" is unused and has been removed.
+            The signal "rec_matrix_A/N225" is unused and has been removed.
+            The signal "rec_matrix_A/N217" is unused and has been removed.
+            The signal "rec_matrix_A/N213" is unused and has been removed.
+          The signal "rec_matrix_A/inst_LPM_MUX7_51" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX7_51" (ROM) removed.
+            The signal "rec_matrix_A/N237" is unused and has been removed.
+            The signal "rec_matrix_A/N241" is unused and has been removed.
+            The signal "rec_matrix_A/N233" is unused and has been removed.
+            The signal "rec_matrix_A/N229" is unused and has been removed.
+        The signal "rec_matrix_A/inst_LPM_MUX7_3_f7" is unused and has been removed.
+         Unused block "rec_matrix_A/inst_LPM_MUX7_3_f7" (MUX) removed.
+          The signal "rec_matrix_A/inst_LPM_MUX7_5" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX7_5" (ROM) removed.
+            The signal "rec_matrix_A/N253" is unused and has been removed.
+            The signal "rec_matrix_A/N257" is unused and has been removed.
+            The signal "rec_matrix_A/N249" is unused and has been removed.
+            The signal "rec_matrix_A/N245" is unused and has been removed.
+          The signal "rec_matrix_A/inst_LPM_MUX7_4" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX7_4" (ROM) removed.
+            The signal "rec_matrix_A/N269" is unused and has been removed.
+            The signal "rec_matrix_A/N273" is unused and has been removed.
+            The signal "rec_matrix_A/N265" is unused and has been removed.
+            The signal "rec_matrix_A/N261" is unused and has been removed.
+The signal "data_A<6>" is unused and has been removed.
+ Unused block "rec_matrix_A/data<6>LogicTrst1" (ROM) removed.
+  The signal "rec_matrix_A/data<6>" is unused and has been removed.
+   Unused block "rec_matrix_A/data_6" (FF) removed.
+    The signal "rec_matrix_A/n0114<6>" is unused and has been removed.
+     Unused block "rec_matrix_A/Mmux_n011471" (ROM) removed.
+      The signal "rec_matrix_A/_n0122[7:0]<6>" is unused and has been removed.
+       Unused block "rec_matrix_A/inst_LPM_MUX6_2_f8" (MUX) removed.
+        The signal "rec_matrix_A/inst_LPM_MUX6_4_f7" is unused and has been removed.
+         Unused block "rec_matrix_A/inst_LPM_MUX6_4_f7" (MUX) removed.
+          The signal "rec_matrix_A/inst_LPM_MUX6_6" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX6_6" (ROM) removed.
+            The signal "rec_matrix_A/N220" is unused and has been removed.
+            The signal "rec_matrix_A/N224" is unused and has been removed.
+            The signal "rec_matrix_A/N216" is unused and has been removed.
+            The signal "rec_matrix_A/N212" is unused and has been removed.
+          The signal "rec_matrix_A/inst_LPM_MUX6_51" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX6_51" (ROM) removed.
+            The signal "rec_matrix_A/N236" is unused and has been removed.
+            The signal "rec_matrix_A/N240" is unused and has been removed.
+            The signal "rec_matrix_A/N232" is unused and has been removed.
+            The signal "rec_matrix_A/N228" is unused and has been removed.
+        The signal "rec_matrix_A/inst_LPM_MUX6_3_f7" is unused and has been removed.
+         Unused block "rec_matrix_A/inst_LPM_MUX6_3_f7" (MUX) removed.
+          The signal "rec_matrix_A/inst_LPM_MUX6_5" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX6_5" (ROM) removed.
+            The signal "rec_matrix_A/N252" is unused and has been removed.
+            The signal "rec_matrix_A/N256" is unused and has been removed.
+            The signal "rec_matrix_A/N248" is unused and has been removed.
+            The signal "rec_matrix_A/N244" is unused and has been removed.
+          The signal "rec_matrix_A/inst_LPM_MUX6_4" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX6_4" (ROM) removed.
+            The signal "rec_matrix_A/N268" is unused and has been removed.
+            The signal "rec_matrix_A/N272" is unused and has been removed.
+            The signal "rec_matrix_A/N264" is unused and has been removed.
+            The signal "rec_matrix_A/N260" is unused and has been removed.
+The signal "data_A<5>" is unused and has been removed.
+ Unused block "rec_matrix_A/data<5>LogicTrst1" (ROM) removed.
+  The signal "rec_matrix_A/data<5>" is unused and has been removed.
+   Unused block "rec_matrix_A/data_5" (FF) removed.
+    The signal "rec_matrix_A/n0114<5>" is unused and has been removed.
+     Unused block "rec_matrix_A/Mmux_n011461" (ROM) removed.
+      The signal "rec_matrix_A/_n0122[7:0]<5>" is unused and has been removed.
+       Unused block "rec_matrix_A/inst_LPM_MUX5_2_f8" (MUX) removed.
+        The signal "rec_matrix_A/inst_LPM_MUX5_4_f7" is unused and has been removed.
+         Unused block "rec_matrix_A/inst_LPM_MUX5_4_f7" (MUX) removed.
+          The signal "rec_matrix_A/inst_LPM_MUX5_6" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX5_6" (ROM) removed.
+            The signal "rec_matrix_A/N131" is unused and has been removed.
+            The signal "rec_matrix_A/N137" is unused and has been removed.
+            The signal "rec_matrix_A/N125" is unused and has been removed.
+            The signal "rec_matrix_A/N119" is unused and has been removed.
+          The signal "rec_matrix_A/inst_LPM_MUX5_51" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX5_51" (ROM) removed.
+            The signal "rec_matrix_A/N155" is unused and has been removed.
+            The signal "rec_matrix_A/N161" is unused and has been removed.
+            The signal "rec_matrix_A/N149" is unused and has been removed.
+            The signal "rec_matrix_A/N143" is unused and has been removed.
+        The signal "rec_matrix_A/inst_LPM_MUX5_3_f7" is unused and has been removed.
+         Unused block "rec_matrix_A/inst_LPM_MUX5_3_f7" (MUX) removed.
+          The signal "rec_matrix_A/inst_LPM_MUX5_5" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX5_5" (ROM) removed.
+            The signal "rec_matrix_A/N179" is unused and has been removed.
+            The signal "rec_matrix_A/N185" is unused and has been removed.
+            The signal "rec_matrix_A/N173" is unused and has been removed.
+            The signal "rec_matrix_A/N167" is unused and has been removed.
+          The signal "rec_matrix_A/inst_LPM_MUX5_4" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX5_4" (ROM) removed.
+            The signal "rec_matrix_A/N203" is unused and has been removed.
+            The signal "rec_matrix_A/N209" is unused and has been removed.
+            The signal "rec_matrix_A/N197" is unused and has been removed.
+            The signal "rec_matrix_A/N191" is unused and has been removed.
+The signal "data_A<4>" is unused and has been removed.
+ Unused block "rec_matrix_A/data<4>LogicTrst1" (ROM) removed.
+  The signal "rec_matrix_A/data<4>" is unused and has been removed.
+   Unused block "rec_matrix_A/data_4" (FF) removed.
+    The signal "rec_matrix_A/n0114<4>" is unused and has been removed.
+     Unused block "rec_matrix_A/Mmux_n011451" (ROM) removed.
+      The signal "rec_matrix_A/_n0122[7:0]<4>" is unused and has been removed.
+       Unused block "rec_matrix_A/inst_LPM_MUX4_2_f8" (MUX) removed.
+        The signal "rec_matrix_A/inst_LPM_MUX4_4_f7" is unused and has been removed.
+         Unused block "rec_matrix_A/inst_LPM_MUX4_4_f7" (MUX) removed.
+          The signal "rec_matrix_A/inst_LPM_MUX4_6" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX4_6" (ROM) removed.
+            The signal "rec_matrix_A/N130" is unused and has been removed.
+            The signal "rec_matrix_A/N136" is unused and has been removed.
+            The signal "rec_matrix_A/N124" is unused and has been removed.
+            The signal "rec_matrix_A/N118" is unused and has been removed.
+          The signal "rec_matrix_A/inst_LPM_MUX4_51" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX4_51" (ROM) removed.
+            The signal "rec_matrix_A/N154" is unused and has been removed.
+            The signal "rec_matrix_A/N160" is unused and has been removed.
+            The signal "rec_matrix_A/N148" is unused and has been removed.
+            The signal "rec_matrix_A/N142" is unused and has been removed.
+        The signal "rec_matrix_A/inst_LPM_MUX4_3_f7" is unused and has been removed.
+         Unused block "rec_matrix_A/inst_LPM_MUX4_3_f7" (MUX) removed.
+          The signal "rec_matrix_A/inst_LPM_MUX4_5" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX4_5" (ROM) removed.
+            The signal "rec_matrix_A/N178" is unused and has been removed.
+            The signal "rec_matrix_A/N184" is unused and has been removed.
+            The signal "rec_matrix_A/N172" is unused and has been removed.
+            The signal "rec_matrix_A/N166" is unused and has been removed.
+          The signal "rec_matrix_A/inst_LPM_MUX4_4" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX4_4" (ROM) removed.
+            The signal "rec_matrix_A/N202" is unused and has been removed.
+            The signal "rec_matrix_A/N208" is unused and has been removed.
+            The signal "rec_matrix_A/N196" is unused and has been removed.
+            The signal "rec_matrix_A/N190" is unused and has been removed.
+The signal "data_A<3>" is unused and has been removed.
+ Unused block "rec_matrix_A/data<3>LogicTrst1" (ROM) removed.
+  The signal "rec_matrix_A/data<3>" is unused and has been removed.
+   Unused block "rec_matrix_A/data_3" (FF) removed.
+    The signal "rec_matrix_A/n0114<3>" is unused and has been removed.
+     Unused block "rec_matrix_A/Mmux_n011441" (ROM) removed.
+      The signal "rec_matrix_A/_n0122[7:0]<3>" is unused and has been removed.
+       Unused block "rec_matrix_A/inst_LPM_MUX3_2_f8" (MUX) removed.
+        The signal "rec_matrix_A/inst_LPM_MUX3_4_f7" is unused and has been removed.
+         Unused block "rec_matrix_A/inst_LPM_MUX3_4_f7" (MUX) removed.
+          The signal "rec_matrix_A/inst_LPM_MUX3_6" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX3_6" (ROM) removed.
+            The signal "rec_matrix_A/N129" is unused and has been removed.
+            The signal "rec_matrix_A/N135" is unused and has been removed.
+            The signal "rec_matrix_A/N123" is unused and has been removed.
+            The signal "rec_matrix_A/N117" is unused and has been removed.
+          The signal "rec_matrix_A/inst_LPM_MUX3_51" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX3_51" (ROM) removed.
+            The signal "rec_matrix_A/N153" is unused and has been removed.
+            The signal "rec_matrix_A/N159" is unused and has been removed.
+            The signal "rec_matrix_A/N147" is unused and has been removed.
+            The signal "rec_matrix_A/N141" is unused and has been removed.
+        The signal "rec_matrix_A/inst_LPM_MUX3_3_f7" is unused and has been removed.
+         Unused block "rec_matrix_A/inst_LPM_MUX3_3_f7" (MUX) removed.
+          The signal "rec_matrix_A/inst_LPM_MUX3_5" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX3_5" (ROM) removed.
+            The signal "rec_matrix_A/N177" is unused and has been removed.
+            The signal "rec_matrix_A/N183" is unused and has been removed.
+            The signal "rec_matrix_A/N171" is unused and has been removed.
+            The signal "rec_matrix_A/N165" is unused and has been removed.
+          The signal "rec_matrix_A/inst_LPM_MUX3_4" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX3_4" (ROM) removed.
+            The signal "rec_matrix_A/N201" is unused and has been removed.
+            The signal "rec_matrix_A/N207" is unused and has been removed.
+            The signal "rec_matrix_A/N195" is unused and has been removed.
+            The signal "rec_matrix_A/N189" is unused and has been removed.
+The signal "data_A<2>" is unused and has been removed.
+ Unused block "rec_matrix_A/data<2>LogicTrst1" (ROM) removed.
+  The signal "rec_matrix_A/data<2>" is unused and has been removed.
+   Unused block "rec_matrix_A/data_2" (FF) removed.
+    The signal "rec_matrix_A/n0114<2>" is unused and has been removed.
+     Unused block "rec_matrix_A/Mmux_n011431" (ROM) removed.
+      The signal "rec_matrix_A/_n0122[7:0]<2>" is unused and has been removed.
+       Unused block "rec_matrix_A/inst_LPM_MUX2_2_f8" (MUX) removed.
+        The signal "rec_matrix_A/inst_LPM_MUX2_4_f7" is unused and has been removed.
+         Unused block "rec_matrix_A/inst_LPM_MUX2_4_f7" (MUX) removed.
+          The signal "rec_matrix_A/inst_LPM_MUX2_6" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX2_6" (ROM) removed.
+            The signal "rec_matrix_A/N35" is unused and has been removed.
+            The signal "rec_matrix_A/N41" is unused and has been removed.
+            The signal "rec_matrix_A/N29" is unused and has been removed.
+            The signal "rec_matrix_A/N23" is unused and has been removed.
+          The signal "rec_matrix_A/inst_LPM_MUX2_51" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX2_51" (ROM) removed.
+            The signal "rec_matrix_A/N59" is unused and has been removed.
+            The signal "rec_matrix_A/N65" is unused and has been removed.
+            The signal "rec_matrix_A/N53" is unused and has been removed.
+            The signal "rec_matrix_A/N47" is unused and has been removed.
+        The signal "rec_matrix_A/inst_LPM_MUX2_3_f7" is unused and has been removed.
+         Unused block "rec_matrix_A/inst_LPM_MUX2_3_f7" (MUX) removed.
+          The signal "rec_matrix_A/inst_LPM_MUX2_5" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX2_5" (ROM) removed.
+            The signal "rec_matrix_A/N83" is unused and has been removed.
+            The signal "rec_matrix_A/N89" is unused and has been removed.
+            The signal "rec_matrix_A/N77" is unused and has been removed.
+            The signal "rec_matrix_A/N71" is unused and has been removed.
+          The signal "rec_matrix_A/inst_LPM_MUX2_4" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX2_4" (ROM) removed.
+            The signal "rec_matrix_A/N107" is unused and has been removed.
+            The signal "rec_matrix_A/N113" is unused and has been removed.
+            The signal "rec_matrix_A/N101" is unused and has been removed.
+            The signal "rec_matrix_A/N95" is unused and has been removed.
+The signal "data_A<1>" is unused and has been removed.
+ Unused block "rec_matrix_A/data<1>LogicTrst1" (ROM) removed.
+  The signal "rec_matrix_A/data<1>" is unused and has been removed.
+   Unused block "rec_matrix_A/data_1" (FF) removed.
+    The signal "rec_matrix_A/n0114<1>" is unused and has been removed.
+     Unused block "rec_matrix_A/Mmux_n011421" (ROM) removed.
+      The signal "rec_matrix_A/_n0122[7:0]<1>" is unused and has been removed.
+       Unused block "rec_matrix_A/inst_LPM_MUX1_2_f8" (MUX) removed.
+        The signal "rec_matrix_A/inst_LPM_MUX1_4_f7" is unused and has been removed.
+         Unused block "rec_matrix_A/inst_LPM_MUX1_4_f7" (MUX) removed.
+          The signal "rec_matrix_A/inst_LPM_MUX1_6" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX1_6" (ROM) removed.
+            The signal "rec_matrix_A/N34" is unused and has been removed.
+            The signal "rec_matrix_A/N40" is unused and has been removed.
+            The signal "rec_matrix_A/N28" is unused and has been removed.
+            The signal "rec_matrix_A/N22" is unused and has been removed.
+          The signal "rec_matrix_A/inst_LPM_MUX1_51" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX1_51" (ROM) removed.
+            The signal "rec_matrix_A/N58" is unused and has been removed.
+            The signal "rec_matrix_A/N64" is unused and has been removed.
+            The signal "rec_matrix_A/N52" is unused and has been removed.
+            The signal "rec_matrix_A/N46" is unused and has been removed.
+        The signal "rec_matrix_A/inst_LPM_MUX1_3_f7" is unused and has been removed.
+         Unused block "rec_matrix_A/inst_LPM_MUX1_3_f7" (MUX) removed.
+          The signal "rec_matrix_A/inst_LPM_MUX1_5" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX1_5" (ROM) removed.
+            The signal "rec_matrix_A/N82" is unused and has been removed.
+            The signal "rec_matrix_A/N88" is unused and has been removed.
+            The signal "rec_matrix_A/N76" is unused and has been removed.
+            The signal "rec_matrix_A/N70" is unused and has been removed.
+          The signal "rec_matrix_A/inst_LPM_MUX1_4" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX1_4" (ROM) removed.
+            The signal "rec_matrix_A/N106" is unused and has been removed.
+            The signal "rec_matrix_A/N112" is unused and has been removed.
+            The signal "rec_matrix_A/N100" is unused and has been removed.
+            The signal "rec_matrix_A/N94" is unused and has been removed.
+The signal "data_A<0>" is unused and has been removed.
+ Unused block "rec_matrix_A/data<0>LogicTrst1" (ROM) removed.
+  The signal "rec_matrix_A/data<0>" is unused and has been removed.
+   Unused block "rec_matrix_A/data_0" (FF) removed.
+    The signal "rec_matrix_A/n0114<0>" is unused and has been removed.
+     Unused block "rec_matrix_A/Mmux_n011411" (ROM) removed.
+      The signal "rec_matrix_A/_n0122[7:0]<0>" is unused and has been removed.
+       Unused block "rec_matrix_A/inst_LPM_MUX_2_f8" (MUX) removed.
+        The signal "rec_matrix_A/inst_LPM_MUX_4_f7" is unused and has been removed.
+         Unused block "rec_matrix_A/inst_LPM_MUX_4_f7" (MUX) removed.
+          The signal "rec_matrix_A/inst_LPM_MUX_6" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX_6" (ROM) removed.
+            The signal "rec_matrix_A/N33" is unused and has been removed.
+            The signal "rec_matrix_A/N39" is unused and has been removed.
+            The signal "rec_matrix_A/N27" is unused and has been removed.
+            The signal "rec_matrix_A/N21" is unused and has been removed.
+          The signal "rec_matrix_A/inst_LPM_MUX_51" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX_51" (ROM) removed.
+            The signal "rec_matrix_A/N57" is unused and has been removed.
+            The signal "rec_matrix_A/N63" is unused and has been removed.
+            The signal "rec_matrix_A/N51" is unused and has been removed.
+            The signal "rec_matrix_A/N45" is unused and has been removed.
+        The signal "rec_matrix_A/inst_LPM_MUX_3_f7" is unused and has been removed.
+         Unused block "rec_matrix_A/inst_LPM_MUX_3_f7" (MUX) removed.
+          The signal "rec_matrix_A/inst_LPM_MUX_5" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX_5" (ROM) removed.
+            The signal "rec_matrix_A/N81" is unused and has been removed.
+            The signal "rec_matrix_A/N87" is unused and has been removed.
+            The signal "rec_matrix_A/N75" is unused and has been removed.
+            The signal "rec_matrix_A/N69" is unused and has been removed.
+          The signal "rec_matrix_A/inst_LPM_MUX_4" is unused and has been removed.
+           Unused block "rec_matrix_A/inst_LPM_MUX_4" (ROM) removed.
+            The signal "rec_matrix_A/N105" is unused and has been removed.
+            The signal "rec_matrix_A/N111" is unused and has been removed.
+            The signal "rec_matrix_A/N99" is unused and has been removed.
+            The signal "rec_matrix_A/N93" is unused and has been removed.
+The signal "data_B<7>" is unused and has been removed.
+ Unused block "rec_matrix_B/data<7>LogicTrst1" (ROM) removed.
+  The signal "rec_matrix_B/data<7>" is unused and has been removed.
+   Unused block "rec_matrix_B/data_7" (FF) removed.
+    The signal "rec_matrix_B/n0114<7>" is unused and has been removed.
+     Unused block "rec_matrix_B/Mmux_n011481" (ROM) removed.
+      The signal "rec_matrix_B/_n0122[7:0]<7>" is unused and has been removed.
+       Unused block "rec_matrix_B/inst_LPM_MUX7_2_f8" (MUX) removed.
+        The signal "rec_matrix_B/inst_LPM_MUX7_4_f7" is unused and has been removed.
+         Unused block "rec_matrix_B/inst_LPM_MUX7_4_f7" (MUX) removed.
+          The signal "rec_matrix_B/inst_LPM_MUX7_6" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX7_6" (ROM) removed.
+            The signal "rec_matrix_B/N221" is unused and has been removed.
+            The signal "rec_matrix_B/N225" is unused and has been removed.
+            The signal "rec_matrix_B/N217" is unused and has been removed.
+            The signal "rec_matrix_B/N213" is unused and has been removed.
+          The signal "rec_matrix_B/inst_LPM_MUX7_51" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX7_51" (ROM) removed.
+            The signal "rec_matrix_B/N237" is unused and has been removed.
+            The signal "rec_matrix_B/N241" is unused and has been removed.
+            The signal "rec_matrix_B/N233" is unused and has been removed.
+            The signal "rec_matrix_B/N229" is unused and has been removed.
+        The signal "rec_matrix_B/inst_LPM_MUX7_3_f7" is unused and has been removed.
+         Unused block "rec_matrix_B/inst_LPM_MUX7_3_f7" (MUX) removed.
+          The signal "rec_matrix_B/inst_LPM_MUX7_5" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX7_5" (ROM) removed.
+            The signal "rec_matrix_B/N253" is unused and has been removed.
+            The signal "rec_matrix_B/N257" is unused and has been removed.
+            The signal "rec_matrix_B/N249" is unused and has been removed.
+            The signal "rec_matrix_B/N245" is unused and has been removed.
+          The signal "rec_matrix_B/inst_LPM_MUX7_4" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX7_4" (ROM) removed.
+            The signal "rec_matrix_B/N269" is unused and has been removed.
+            The signal "rec_matrix_B/N273" is unused and has been removed.
+            The signal "rec_matrix_B/N265" is unused and has been removed.
+            The signal "rec_matrix_B/N261" is unused and has been removed.
+The signal "data_B<6>" is unused and has been removed.
+ Unused block "rec_matrix_B/data<6>LogicTrst1" (ROM) removed.
+  The signal "rec_matrix_B/data<6>" is unused and has been removed.
+   Unused block "rec_matrix_B/data_6" (FF) removed.
+    The signal "rec_matrix_B/n0114<6>" is unused and has been removed.
+     Unused block "rec_matrix_B/Mmux_n011471" (ROM) removed.
+      The signal "rec_matrix_B/_n0122[7:0]<6>" is unused and has been removed.
+       Unused block "rec_matrix_B/inst_LPM_MUX6_2_f8" (MUX) removed.
+        The signal "rec_matrix_B/inst_LPM_MUX6_4_f7" is unused and has been removed.
+         Unused block "rec_matrix_B/inst_LPM_MUX6_4_f7" (MUX) removed.
+          The signal "rec_matrix_B/inst_LPM_MUX6_6" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX6_6" (ROM) removed.
+            The signal "rec_matrix_B/N220" is unused and has been removed.
+            The signal "rec_matrix_B/N224" is unused and has been removed.
+            The signal "rec_matrix_B/N216" is unused and has been removed.
+            The signal "rec_matrix_B/N212" is unused and has been removed.
+          The signal "rec_matrix_B/inst_LPM_MUX6_51" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX6_51" (ROM) removed.
+            The signal "rec_matrix_B/N236" is unused and has been removed.
+            The signal "rec_matrix_B/N240" is unused and has been removed.
+            The signal "rec_matrix_B/N232" is unused and has been removed.
+            The signal "rec_matrix_B/N228" is unused and has been removed.
+        The signal "rec_matrix_B/inst_LPM_MUX6_3_f7" is unused and has been removed.
+         Unused block "rec_matrix_B/inst_LPM_MUX6_3_f7" (MUX) removed.
+          The signal "rec_matrix_B/inst_LPM_MUX6_5" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX6_5" (ROM) removed.
+            The signal "rec_matrix_B/N252" is unused and has been removed.
+            The signal "rec_matrix_B/N256" is unused and has been removed.
+            The signal "rec_matrix_B/N248" is unused and has been removed.
+            The signal "rec_matrix_B/N244" is unused and has been removed.
+          The signal "rec_matrix_B/inst_LPM_MUX6_4" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX6_4" (ROM) removed.
+            The signal "rec_matrix_B/N268" is unused and has been removed.
+            The signal "rec_matrix_B/N272" is unused and has been removed.
+            The signal "rec_matrix_B/N264" is unused and has been removed.
+            The signal "rec_matrix_B/N260" is unused and has been removed.
+The signal "data_B<5>" is unused and has been removed.
+ Unused block "rec_matrix_B/data<5>LogicTrst1" (ROM) removed.
+  The signal "rec_matrix_B/data<5>" is unused and has been removed.
+   Unused block "rec_matrix_B/data_5" (FF) removed.
+    The signal "rec_matrix_B/n0114<5>" is unused and has been removed.
+     Unused block "rec_matrix_B/Mmux_n011461" (ROM) removed.
+      The signal "rec_matrix_B/_n0122[7:0]<5>" is unused and has been removed.
+       Unused block "rec_matrix_B/inst_LPM_MUX5_2_f8" (MUX) removed.
+        The signal "rec_matrix_B/inst_LPM_MUX5_4_f7" is unused and has been removed.
+         Unused block "rec_matrix_B/inst_LPM_MUX5_4_f7" (MUX) removed.
+          The signal "rec_matrix_B/inst_LPM_MUX5_6" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX5_6" (ROM) removed.
+            The signal "rec_matrix_B/N131" is unused and has been removed.
+            The signal "rec_matrix_B/N137" is unused and has been removed.
+            The signal "rec_matrix_B/N125" is unused and has been removed.
+            The signal "rec_matrix_B/N119" is unused and has been removed.
+          The signal "rec_matrix_B/inst_LPM_MUX5_51" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX5_51" (ROM) removed.
+            The signal "rec_matrix_B/N155" is unused and has been removed.
+            The signal "rec_matrix_B/N161" is unused and has been removed.
+            The signal "rec_matrix_B/N149" is unused and has been removed.
+            The signal "rec_matrix_B/N143" is unused and has been removed.
+        The signal "rec_matrix_B/inst_LPM_MUX5_3_f7" is unused and has been removed.
+         Unused block "rec_matrix_B/inst_LPM_MUX5_3_f7" (MUX) removed.
+          The signal "rec_matrix_B/inst_LPM_MUX5_5" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX5_5" (ROM) removed.
+            The signal "rec_matrix_B/N179" is unused and has been removed.
+            The signal "rec_matrix_B/N185" is unused and has been removed.
+            The signal "rec_matrix_B/N173" is unused and has been removed.
+            The signal "rec_matrix_B/N167" is unused and has been removed.
+          The signal "rec_matrix_B/inst_LPM_MUX5_4" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX5_4" (ROM) removed.
+            The signal "rec_matrix_B/N203" is unused and has been removed.
+            The signal "rec_matrix_B/N209" is unused and has been removed.
+            The signal "rec_matrix_B/N197" is unused and has been removed.
+            The signal "rec_matrix_B/N191" is unused and has been removed.
+The signal "data_B<4>" is unused and has been removed.
+ Unused block "rec_matrix_B/data<4>LogicTrst1" (ROM) removed.
+  The signal "rec_matrix_B/data<4>" is unused and has been removed.
+   Unused block "rec_matrix_B/data_4" (FF) removed.
+    The signal "rec_matrix_B/n0114<4>" is unused and has been removed.
+     Unused block "rec_matrix_B/Mmux_n011451" (ROM) removed.
+      The signal "rec_matrix_B/_n0122[7:0]<4>" is unused and has been removed.
+       Unused block "rec_matrix_B/inst_LPM_MUX4_2_f8" (MUX) removed.
+        The signal "rec_matrix_B/inst_LPM_MUX4_4_f7" is unused and has been removed.
+         Unused block "rec_matrix_B/inst_LPM_MUX4_4_f7" (MUX) removed.
+          The signal "rec_matrix_B/inst_LPM_MUX4_6" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX4_6" (ROM) removed.
+            The signal "rec_matrix_B/N130" is unused and has been removed.
+            The signal "rec_matrix_B/N136" is unused and has been removed.
+            The signal "rec_matrix_B/N124" is unused and has been removed.
+            The signal "rec_matrix_B/N118" is unused and has been removed.
+          The signal "rec_matrix_B/inst_LPM_MUX4_51" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX4_51" (ROM) removed.
+            The signal "rec_matrix_B/N154" is unused and has been removed.
+            The signal "rec_matrix_B/N160" is unused and has been removed.
+            The signal "rec_matrix_B/N148" is unused and has been removed.
+            The signal "rec_matrix_B/N142" is unused and has been removed.
+        The signal "rec_matrix_B/inst_LPM_MUX4_3_f7" is unused and has been removed.
+         Unused block "rec_matrix_B/inst_LPM_MUX4_3_f7" (MUX) removed.
+          The signal "rec_matrix_B/inst_LPM_MUX4_5" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX4_5" (ROM) removed.
+            The signal "rec_matrix_B/N178" is unused and has been removed.
+            The signal "rec_matrix_B/N184" is unused and has been removed.
+            The signal "rec_matrix_B/N172" is unused and has been removed.
+            The signal "rec_matrix_B/N166" is unused and has been removed.
+          The signal "rec_matrix_B/inst_LPM_MUX4_4" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX4_4" (ROM) removed.
+            The signal "rec_matrix_B/N202" is unused and has been removed.
+            The signal "rec_matrix_B/N208" is unused and has been removed.
+            The signal "rec_matrix_B/N196" is unused and has been removed.
+            The signal "rec_matrix_B/N190" is unused and has been removed.
+The signal "data_B<3>" is unused and has been removed.
+ Unused block "rec_matrix_B/data<3>LogicTrst1" (ROM) removed.
+  The signal "rec_matrix_B/data<3>" is unused and has been removed.
+   Unused block "rec_matrix_B/data_3" (FF) removed.
+    The signal "rec_matrix_B/n0114<3>" is unused and has been removed.
+     Unused block "rec_matrix_B/Mmux_n011441" (ROM) removed.
+      The signal "rec_matrix_B/_n0122[7:0]<3>" is unused and has been removed.
+       Unused block "rec_matrix_B/inst_LPM_MUX3_2_f8" (MUX) removed.
+        The signal "rec_matrix_B/inst_LPM_MUX3_4_f7" is unused and has been removed.
+         Unused block "rec_matrix_B/inst_LPM_MUX3_4_f7" (MUX) removed.
+          The signal "rec_matrix_B/inst_LPM_MUX3_6" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX3_6" (ROM) removed.
+            The signal "rec_matrix_B/N129" is unused and has been removed.
+            The signal "rec_matrix_B/N135" is unused and has been removed.
+            The signal "rec_matrix_B/N123" is unused and has been removed.
+            The signal "rec_matrix_B/N117" is unused and has been removed.
+          The signal "rec_matrix_B/inst_LPM_MUX3_51" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX3_51" (ROM) removed.
+            The signal "rec_matrix_B/N153" is unused and has been removed.
+            The signal "rec_matrix_B/N159" is unused and has been removed.
+            The signal "rec_matrix_B/N147" is unused and has been removed.
+            The signal "rec_matrix_B/N141" is unused and has been removed.
+        The signal "rec_matrix_B/inst_LPM_MUX3_3_f7" is unused and has been removed.
+         Unused block "rec_matrix_B/inst_LPM_MUX3_3_f7" (MUX) removed.
+          The signal "rec_matrix_B/inst_LPM_MUX3_5" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX3_5" (ROM) removed.
+            The signal "rec_matrix_B/N177" is unused and has been removed.
+            The signal "rec_matrix_B/N183" is unused and has been removed.
+            The signal "rec_matrix_B/N171" is unused and has been removed.
+            The signal "rec_matrix_B/N165" is unused and has been removed.
+          The signal "rec_matrix_B/inst_LPM_MUX3_4" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX3_4" (ROM) removed.
+            The signal "rec_matrix_B/N201" is unused and has been removed.
+            The signal "rec_matrix_B/N207" is unused and has been removed.
+            The signal "rec_matrix_B/N195" is unused and has been removed.
+            The signal "rec_matrix_B/N189" is unused and has been removed.
+The signal "data_B<2>" is unused and has been removed.
+ Unused block "rec_matrix_B/data<2>LogicTrst1" (ROM) removed.
+  The signal "rec_matrix_B/data<2>" is unused and has been removed.
+   Unused block "rec_matrix_B/data_2" (FF) removed.
+    The signal "rec_matrix_B/n0114<2>" is unused and has been removed.
+     Unused block "rec_matrix_B/Mmux_n011431" (ROM) removed.
+      The signal "rec_matrix_B/_n0122[7:0]<2>" is unused and has been removed.
+       Unused block "rec_matrix_B/inst_LPM_MUX2_2_f8" (MUX) removed.
+        The signal "rec_matrix_B/inst_LPM_MUX2_4_f7" is unused and has been removed.
+         Unused block "rec_matrix_B/inst_LPM_MUX2_4_f7" (MUX) removed.
+          The signal "rec_matrix_B/inst_LPM_MUX2_6" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX2_6" (ROM) removed.
+            The signal "rec_matrix_B/N35" is unused and has been removed.
+            The signal "rec_matrix_B/N41" is unused and has been removed.
+            The signal "rec_matrix_B/N29" is unused and has been removed.
+            The signal "rec_matrix_B/N23" is unused and has been removed.
+          The signal "rec_matrix_B/inst_LPM_MUX2_51" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX2_51" (ROM) removed.
+            The signal "rec_matrix_B/N59" is unused and has been removed.
+            The signal "rec_matrix_B/N65" is unused and has been removed.
+            The signal "rec_matrix_B/N53" is unused and has been removed.
+            The signal "rec_matrix_B/N47" is unused and has been removed.
+        The signal "rec_matrix_B/inst_LPM_MUX2_3_f7" is unused and has been removed.
+         Unused block "rec_matrix_B/inst_LPM_MUX2_3_f7" (MUX) removed.
+          The signal "rec_matrix_B/inst_LPM_MUX2_5" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX2_5" (ROM) removed.
+            The signal "rec_matrix_B/N83" is unused and has been removed.
+            The signal "rec_matrix_B/N89" is unused and has been removed.
+            The signal "rec_matrix_B/N77" is unused and has been removed.
+            The signal "rec_matrix_B/N71" is unused and has been removed.
+          The signal "rec_matrix_B/inst_LPM_MUX2_4" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX2_4" (ROM) removed.
+            The signal "rec_matrix_B/N107" is unused and has been removed.
+            The signal "rec_matrix_B/N113" is unused and has been removed.
+            The signal "rec_matrix_B/N101" is unused and has been removed.
+            The signal "rec_matrix_B/N95" is unused and has been removed.
+The signal "data_B<1>" is unused and has been removed.
+ Unused block "rec_matrix_B/data<1>LogicTrst1" (ROM) removed.
+  The signal "rec_matrix_B/data<1>" is unused and has been removed.
+   Unused block "rec_matrix_B/data_1" (FF) removed.
+    The signal "rec_matrix_B/n0114<1>" is unused and has been removed.
+     Unused block "rec_matrix_B/Mmux_n011421" (ROM) removed.
+      The signal "rec_matrix_B/_n0122[7:0]<1>" is unused and has been removed.
+       Unused block "rec_matrix_B/inst_LPM_MUX1_2_f8" (MUX) removed.
+        The signal "rec_matrix_B/inst_LPM_MUX1_4_f7" is unused and has been removed.
+         Unused block "rec_matrix_B/inst_LPM_MUX1_4_f7" (MUX) removed.
+          The signal "rec_matrix_B/inst_LPM_MUX1_6" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX1_6" (ROM) removed.
+            The signal "rec_matrix_B/N34" is unused and has been removed.
+            The signal "rec_matrix_B/N40" is unused and has been removed.
+            The signal "rec_matrix_B/N28" is unused and has been removed.
+            The signal "rec_matrix_B/N22" is unused and has been removed.
+          The signal "rec_matrix_B/inst_LPM_MUX1_51" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX1_51" (ROM) removed.
+            The signal "rec_matrix_B/N58" is unused and has been removed.
+            The signal "rec_matrix_B/N64" is unused and has been removed.
+            The signal "rec_matrix_B/N52" is unused and has been removed.
+            The signal "rec_matrix_B/N46" is unused and has been removed.
+        The signal "rec_matrix_B/inst_LPM_MUX1_3_f7" is unused and has been removed.
+         Unused block "rec_matrix_B/inst_LPM_MUX1_3_f7" (MUX) removed.
+          The signal "rec_matrix_B/inst_LPM_MUX1_5" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX1_5" (ROM) removed.
+            The signal "rec_matrix_B/N82" is unused and has been removed.
+            The signal "rec_matrix_B/N88" is unused and has been removed.
+            The signal "rec_matrix_B/N76" is unused and has been removed.
+            The signal "rec_matrix_B/N70" is unused and has been removed.
+          The signal "rec_matrix_B/inst_LPM_MUX1_4" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX1_4" (ROM) removed.
+            The signal "rec_matrix_B/N106" is unused and has been removed.
+            The signal "rec_matrix_B/N112" is unused and has been removed.
+            The signal "rec_matrix_B/N100" is unused and has been removed.
+            The signal "rec_matrix_B/N94" is unused and has been removed.
+The signal "data_B<0>" is unused and has been removed.
+ Unused block "rec_matrix_B/data<0>LogicTrst1" (ROM) removed.
+  The signal "rec_matrix_B/data<0>" is unused and has been removed.
+   Unused block "rec_matrix_B/data_0" (FF) removed.
+    The signal "rec_matrix_B/n0114<0>" is unused and has been removed.
+     Unused block "rec_matrix_B/Mmux_n011411" (ROM) removed.
+      The signal "rec_matrix_B/_n0122[7:0]<0>" is unused and has been removed.
+       Unused block "rec_matrix_B/inst_LPM_MUX_2_f8" (MUX) removed.
+        The signal "rec_matrix_B/inst_LPM_MUX_4_f7" is unused and has been removed.
+         Unused block "rec_matrix_B/inst_LPM_MUX_4_f7" (MUX) removed.
+          The signal "rec_matrix_B/inst_LPM_MUX_6" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX_6" (ROM) removed.
+            The signal "rec_matrix_B/N33" is unused and has been removed.
+            The signal "rec_matrix_B/N39" is unused and has been removed.
+            The signal "rec_matrix_B/N27" is unused and has been removed.
+            The signal "rec_matrix_B/N21" is unused and has been removed.
+          The signal "rec_matrix_B/inst_LPM_MUX_51" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX_51" (ROM) removed.
+            The signal "rec_matrix_B/N57" is unused and has been removed.
+            The signal "rec_matrix_B/N63" is unused and has been removed.
+            The signal "rec_matrix_B/N51" is unused and has been removed.
+            The signal "rec_matrix_B/N45" is unused and has been removed.
+        The signal "rec_matrix_B/inst_LPM_MUX_3_f7" is unused and has been removed.
+         Unused block "rec_matrix_B/inst_LPM_MUX_3_f7" (MUX) removed.
+          The signal "rec_matrix_B/inst_LPM_MUX_5" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX_5" (ROM) removed.
+            The signal "rec_matrix_B/N81" is unused and has been removed.
+            The signal "rec_matrix_B/N87" is unused and has been removed.
+            The signal "rec_matrix_B/N75" is unused and has been removed.
+            The signal "rec_matrix_B/N69" is unused and has been removed.
+          The signal "rec_matrix_B/inst_LPM_MUX_4" is unused and has been removed.
+           Unused block "rec_matrix_B/inst_LPM_MUX_4" (ROM) removed.
+            The signal "rec_matrix_B/N105" is unused and has been removed.
+            The signal "rec_matrix_B/N111" is unused and has been removed.
+            The signal "rec_matrix_B/N99" is unused and has been removed.
+            The signal "rec_matrix_B/N93" is unused and has been removed.
+The signal "matrix_calc/_n0429_inv" is unused and has been removed.
+ Unused block "matrix_calc/_n0429_inv1" (ROM) removed.
+The signal "matrix_calc/result[7]_GND_26_o_add_67_OUT<0>" is unused and has been
+removed.
+The signal "matrix_calc/result[7]_GND_26_o_add_67_OUT<1>" is unused and has been
+removed.
+The signal "matrix_calc/result[7]_GND_26_o_add_67_OUT<2>" is unused and has been
+removed.
+The signal "matrix_calc/result[7]_GND_26_o_add_67_OUT<3>" is unused and has been
+removed.
+The signal "matrix_calc/result[7]_GND_26_o_add_67_OUT<4>" is unused and has been
+removed.
+The signal "matrix_calc/result[7]_GND_26_o_add_67_OUT<5>" is unused and has been
+removed.
+The signal "matrix_calc/result[7]_GND_26_o_add_67_OUT<6>" is unused and has been
+removed.
+The signal "matrix_calc/result[7]_GND_26_o_add_67_OUT<7>" is unused and has been
+removed.
+The signal "matrix_calc/result[7]_GND_26_o_add_67_OUT<8>" is unused and has been
+removed.
+The signal "matrix_calc/result[7]_GND_26_o_add_67_OUT<9>" is unused and has been
+removed.
+The signal "matrix_calc/result[7]_GND_26_o_add_67_OUT<10>" is unused and has
+been removed.
+The signal "matrix_calc/result[7]_din_A[7]_mux_68_OUT<0>" is unused and has been
+removed.
+ Unused block "matrix_calc/Mmux_result[7]_din_A[7]_mux_68_OUT12" (ROM) removed.
+  The signal "matrix_calc/din_A[7]_din_B[7]_MuLt_65_OUT<0>" is unused and has been
+removed.
+The signal "matrix_calc/result[7]_din_A[7]_mux_68_OUT<1>" is unused and has been
+removed.
+ Unused block "matrix_calc/Mmux_result[7]_din_A[7]_mux_68_OUT31" (ROM) removed.
+  The signal "matrix_calc/din_A[7]_din_B[7]_MuLt_65_OUT<1>" is unused and has been
+removed.
+The signal "matrix_calc/result[7]_din_A[7]_mux_68_OUT<2>" is unused and has been
+removed.
+ Unused block "matrix_calc/Mmux_result[7]_din_A[7]_mux_68_OUT41" (ROM) removed.
+  The signal "matrix_calc/din_A[7]_din_B[7]_MuLt_65_OUT<2>" is unused and has been
+removed.
+The signal "matrix_calc/result[7]_din_A[7]_mux_68_OUT<3>" is unused and has been
+removed.
+ Unused block "matrix_calc/Mmux_result[7]_din_A[7]_mux_68_OUT51" (ROM) removed.
+  The signal "matrix_calc/din_A[7]_din_B[7]_MuLt_65_OUT<3>" is unused and has been
+removed.
+The signal "matrix_calc/result[7]_din_A[7]_mux_68_OUT<4>" is unused and has been
+removed.
+ Unused block "matrix_calc/Mmux_result[7]_din_A[7]_mux_68_OUT61" (ROM) removed.
+  The signal "matrix_calc/din_A[7]_din_B[7]_MuLt_65_OUT<4>" is unused and has been
+removed.
+The signal "matrix_calc/result[7]_din_A[7]_mux_68_OUT<5>" is unused and has been
+removed.
+ Unused block "matrix_calc/Mmux_result[7]_din_A[7]_mux_68_OUT71" (ROM) removed.
+  The signal "matrix_calc/din_A[7]_din_B[7]_MuLt_65_OUT<5>" is unused and has been
+removed.
+The signal "matrix_calc/result[7]_din_A[7]_mux_68_OUT<6>" is unused and has been
+removed.
+ Unused block "matrix_calc/Mmux_result[7]_din_A[7]_mux_68_OUT81" (ROM) removed.
+  The signal "matrix_calc/din_A[7]_din_B[7]_MuLt_65_OUT<6>" is unused and has been
+removed.
+The signal "matrix_calc/result[7]_din_A[7]_mux_68_OUT<7>" is unused and has been
+removed.
+ Unused block "matrix_calc/Mmux_result[7]_din_A[7]_mux_68_OUT91" (ROM) removed.
+  The signal "matrix_calc/din_A[7]_din_B[7]_MuLt_65_OUT<7>" is unused and has been
+removed.
+The signal "matrix_calc/result[7]_din_A[7]_mux_68_OUT<8>" is unused and has been
+removed.
+ Unused block "matrix_calc/Mmux_result[7]_din_A[7]_mux_68_OUT101" (ROM) removed.
+  The signal "matrix_calc/din_A[7]_din_B[7]_MuLt_65_OUT<8>" is unused and has been
+removed.
+The signal "matrix_calc/result[7]_din_A[7]_mux_68_OUT<9>" is unused and has been
+removed.
+ Unused block "matrix_calc/Mmux_result[7]_din_A[7]_mux_68_OUT111" (ROM) removed.
+  The signal "matrix_calc/din_A[7]_din_B[7]_MuLt_65_OUT<9>" is unused and has been
+removed.
+The signal "matrix_calc/result[7]_din_A[7]_mux_68_OUT<10>" is unused and has
+been removed.
+ Unused block "matrix_calc/Mmux_result[7]_din_A[7]_mux_68_OUT21" (ROM) removed.
+  The signal "matrix_calc/din_A[7]_din_B[7]_MuLt_65_OUT<10>" is unused and has
+been removed.
+The signal "matrix_calc/temp2<0>" is unused and has been removed.
+ Unused block "matrix_calc/temp2_0" (FF) removed.
+The signal "matrix_calc/temp2<1>" is unused and has been removed.
+ Unused block "matrix_calc/temp2_1" (FF) removed.
+The signal "matrix_calc/temp2<2>" is unused and has been removed.
+ Unused block "matrix_calc/temp2_2" (FF) removed.
+The signal "matrix_calc/temp2<3>" is unused and has been removed.
+ Unused block "matrix_calc/temp2_3" (FF) removed.
+The signal "matrix_calc/temp2<4>" is unused and has been removed.
+ Unused block "matrix_calc/temp2_4" (FF) removed.
+The signal "matrix_calc/temp2<5>" is unused and has been removed.
+ Unused block "matrix_calc/temp2_5" (FF) removed.
+The signal "matrix_calc/temp2<6>" is unused and has been removed.
+ Unused block "matrix_calc/temp2_6" (FF) removed.
+The signal "matrix_calc/temp2<7>" is unused and has been removed.
+ Unused block "matrix_calc/temp2_7" (FF) removed.
+The signal "matrix_calc/temp2<8>" is unused and has been removed.
+ Unused block "matrix_calc/temp2_8" (FF) removed.
+The signal "matrix_calc/temp2<9>" is unused and has been removed.
+ Unused block "matrix_calc/temp2_9" (FF) removed.
+The signal "matrix_calc/temp2<10>" is unused and has been removed.
+ Unused block "matrix_calc/temp2_10" (FF) removed.
+The signal "rec_matrix_B/write_ctrl15" is unused and has been removed.
+ Unused block "rec_matrix_B/write_ctrl15" (ROM) removed.
+  The signal "rec_matrix_B/register<9>" is unused and has been removed.
+   Unused block "rec_matrix_B/register_9" (SFF) removed.
+  The signal "rec_matrix_B/N17" is unused and has been removed.
+   Unused block "rec_matrix_B/inst_LPM_DECODE151" (ROM) removed.
+  The signal "rec_matrix_B/register<0>" is unused and has been removed.
+   Unused block "rec_matrix_B/register_0" (SFF) removed.
+    The signal "rec_matrix_B/register<1>" is unused and has been removed.
+     Unused block "rec_matrix_B/register_1" (SFF) removed.
+      The signal "rec_matrix_B/register<2>" is unused and has been removed.
+       Unused block "rec_matrix_B/register_2" (SFF) removed.
+        The signal "rec_matrix_B/register<3>" is unused and has been removed.
+         Unused block "rec_matrix_B/register_3" (SFF) removed.
+          The signal "rec_matrix_B/register<4>" is unused and has been removed.
+           Unused block "rec_matrix_B/register_4" (SFF) removed.
+            The signal "rec_matrix_B/register<5>" is unused and has been removed.
+             Unused block "rec_matrix_B/register_5" (SFF) removed.
+              The signal "rec_matrix_B/register<6>" is unused and has been removed.
+               Unused block "rec_matrix_B/register_6" (SFF) removed.
+                The signal "rec_matrix_B/register<7>" is unused and has been removed.
+                 Unused block "rec_matrix_B/register_7" (SFF) removed.
+                  The signal "rec_matrix_B/register<8>" is unused and has been removed.
+                   Unused block "rec_matrix_B/register_8" (SFF) removed.
+The signal "rec_matrix_B/write_ctrl14" is unused and has been removed.
+ Unused block "rec_matrix_B/write_ctrl14" (ROM) removed.
+  The signal "rec_matrix_B/N16" is unused and has been removed.
+   Unused block "rec_matrix_B/inst_LPM_DECODE141" (ROM) removed.
+The signal "rec_matrix_B/write_ctrl13" is unused and has been removed.
+ Unused block "rec_matrix_B/write_ctrl13" (ROM) removed.
+  The signal "rec_matrix_B/N15" is unused and has been removed.
+   Unused block "rec_matrix_B/inst_LPM_DECODE131" (ROM) removed.
+The signal "rec_matrix_B/write_ctrl12" is unused and has been removed.
+ Unused block "rec_matrix_B/write_ctrl12" (ROM) removed.
+  The signal "rec_matrix_B/N14" is unused and has been removed.
+   Unused block "rec_matrix_B/inst_LPM_DECODE121" (ROM) removed.
+The signal "rec_matrix_B/write_ctrl11" is unused and has been removed.
+ Unused block "rec_matrix_B/write_ctrl11" (ROM) removed.
+  The signal "rec_matrix_B/N13" is unused and has been removed.
+   Unused block "rec_matrix_B/inst_LPM_DECODE111" (ROM) removed.
+The signal "rec_matrix_B/write_ctrl10" is unused and has been removed.
+ Unused block "rec_matrix_B/write_ctrl10" (ROM) removed.
+  The signal "rec_matrix_B/N12" is unused and has been removed.
+   Unused block "rec_matrix_B/inst_LPM_DECODE101" (ROM) removed.
+The signal "rec_matrix_B/write_ctrl9" is unused and has been removed.
+ Unused block "rec_matrix_B/write_ctrl9" (ROM) removed.
+  The signal "rec_matrix_B/N11" is unused and has been removed.
+   Unused block "rec_matrix_B/inst_LPM_DECODE91" (ROM) removed.
+The signal "rec_matrix_B/write_ctrl8" is unused and has been removed.
+ Unused block "rec_matrix_B/write_ctrl8" (ROM) removed.
+  The signal "rec_matrix_B/N10" is unused and has been removed.
+   Unused block "rec_matrix_B/inst_LPM_DECODE81" (ROM) removed.
+The signal "rec_matrix_B/write_ctrl7" is unused and has been removed.
+ Unused block "rec_matrix_B/write_ctrl7" (ROM) removed.
+  The signal "rec_matrix_B/N9" is unused and has been removed.
+   Unused block "rec_matrix_B/inst_LPM_DECODE71" (ROM) removed.
+The signal "rec_matrix_B/write_ctrl6" is unused and has been removed.
+ Unused block "rec_matrix_B/write_ctrl6" (ROM) removed.
+  The signal "rec_matrix_B/N8" is unused and has been removed.
+   Unused block "rec_matrix_B/inst_LPM_DECODE61" (ROM) removed.
+The signal "rec_matrix_B/write_ctrl5" is unused and has been removed.
+ Unused block "rec_matrix_B/write_ctrl5" (ROM) removed.
+  The signal "rec_matrix_B/N7" is unused and has been removed.
+   Unused block "rec_matrix_B/inst_LPM_DECODE51" (ROM) removed.
+The signal "rec_matrix_B/write_ctrl4" is unused and has been removed.
+ Unused block "rec_matrix_B/write_ctrl4" (ROM) removed.
+  The signal "rec_matrix_B/N6" is unused and has been removed.
+   Unused block "rec_matrix_B/inst_LPM_DECODE41" (ROM) removed.
+The signal "rec_matrix_B/write_ctrl3" is unused and has been removed.
+ Unused block "rec_matrix_B/write_ctrl3" (ROM) removed.
+  The signal "rec_matrix_B/N5" is unused and has been removed.
+   Unused block "rec_matrix_B/inst_LPM_DECODE31" (ROM) removed.
+The signal "rec_matrix_B/write_ctrl2" is unused and has been removed.
+ Unused block "rec_matrix_B/write_ctrl2" (ROM) removed.
+  The signal "rec_matrix_B/N4" is unused and has been removed.
+   Unused block "rec_matrix_B/inst_LPM_DECODE21" (ROM) removed.
+The signal "rec_matrix_B/write_ctrl1" is unused and has been removed.
+ Unused block "rec_matrix_B/write_ctrl1" (ROM) removed.
+  The signal "rec_matrix_B/N3" is unused and has been removed.
+   Unused block "rec_matrix_B/inst_LPM_DECODE16" (ROM) removed.
+The signal "rec_matrix_B/write_ctrl" is unused and has been removed.
+ Unused block "rec_matrix_B/write_ctrl" (ROM) removed.
+  The signal "rec_matrix_B/N2" is unused and has been removed.
+   Unused block "rec_matrix_B/inst_LPM_DECODE01" (ROM) removed.
+The signal "rec_matrix_A/write_ctrl15" is unused and has been removed.
+ Unused block "rec_matrix_A/write_ctrl15" (ROM) removed.
+  The signal "rec_matrix_A/register<9>" is unused and has been removed.
+   Unused block "rec_matrix_A/register_9" (SFF) removed.
+  The signal "rec_matrix_A/register<0>" is unused and has been removed.
+   Unused block "rec_matrix_A/register_0" (SFF) removed.
+    The signal "rec_matrix_A/register<1>" is unused and has been removed.
+     Unused block "rec_matrix_A/register_1" (SFF) removed.
+      The signal "rec_matrix_A/register<2>" is unused and has been removed.
+       Unused block "rec_matrix_A/register_2" (SFF) removed.
+        The signal "rec_matrix_A/register<3>" is unused and has been removed.
+         Unused block "rec_matrix_A/register_3" (SFF) removed.
+          The signal "rec_matrix_A/register<4>" is unused and has been removed.
+           Unused block "rec_matrix_A/register_4" (SFF) removed.
+            The signal "rec_matrix_A/register<5>" is unused and has been removed.
+             Unused block "rec_matrix_A/register_5" (SFF) removed.
+              The signal "rec_matrix_A/register<6>" is unused and has been removed.
+               Unused block "rec_matrix_A/register_6" (SFF) removed.
+                The signal "rec_matrix_A/register<7>" is unused and has been removed.
+                 Unused block "rec_matrix_A/register_7" (SFF) removed.
+                  The signal "rec_matrix_A/register<8>" is unused and has been removed.
+                   Unused block "rec_matrix_A/register_8" (SFF) removed.
+The signal "rec_matrix_A/write_ctrl14" is unused and has been removed.
+ Unused block "rec_matrix_A/write_ctrl14" (ROM) removed.
+The signal "rec_matrix_A/write_ctrl13" is unused and has been removed.
+ Unused block "rec_matrix_A/write_ctrl13" (ROM) removed.
+The signal "rec_matrix_A/write_ctrl12" is unused and has been removed.
+ Unused block "rec_matrix_A/write_ctrl12" (ROM) removed.
+The signal "rec_matrix_A/write_ctrl11" is unused and has been removed.
+ Unused block "rec_matrix_A/write_ctrl11" (ROM) removed.
+The signal "rec_matrix_A/write_ctrl10" is unused and has been removed.
+ Unused block "rec_matrix_A/write_ctrl10" (ROM) removed.
+The signal "rec_matrix_A/write_ctrl9" is unused and has been removed.
+ Unused block "rec_matrix_A/write_ctrl9" (ROM) removed.
+The signal "rec_matrix_A/write_ctrl8" is unused and has been removed.
+ Unused block "rec_matrix_A/write_ctrl8" (ROM) removed.
+The signal "rec_matrix_A/write_ctrl7" is unused and has been removed.
+ Unused block "rec_matrix_A/write_ctrl7" (ROM) removed.
+The signal "rec_matrix_A/write_ctrl6" is unused and has been removed.
+ Unused block "rec_matrix_A/write_ctrl6" (ROM) removed.
+The signal "rec_matrix_A/write_ctrl5" is unused and has been removed.
+ Unused block "rec_matrix_A/write_ctrl5" (ROM) removed.
+The signal "rec_matrix_A/write_ctrl4" is unused and has been removed.
+ Unused block "rec_matrix_A/write_ctrl4" (ROM) removed.
+The signal "rec_matrix_A/write_ctrl3" is unused and has been removed.
+ Unused block "rec_matrix_A/write_ctrl3" (ROM) removed.
+The signal "rec_matrix_A/write_ctrl2" is unused and has been removed.
+ Unused block "rec_matrix_A/write_ctrl2" (ROM) removed.
+The signal "rec_matrix_A/write_ctrl1" is unused and has been removed.
+ Unused block "rec_matrix_A/write_ctrl1" (ROM) removed.
+The signal "rec_matrix_A/write_ctrl" is unused and has been removed.
+ Unused block "rec_matrix_A/write_ctrl" (ROM) removed.
+Unused block
+"block_a/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[0].ram.r/s6_init.ram/SDP.SIMPLE_PRIM9.ram" (RAMB8BWER) removed.
+Unused block "block_a/XST_GND" (ZERO) removed.
+Unused block "block_a/XST_VCC" (ONE) removed.
+Unused block
+"block_b/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[0].ram.r/s6_init.ram/SDP.SIMPLE_PRIM9.ram" (RAMB8BWER) removed.
+Unused block "block_b/XST_GND" (ZERO) removed.
+Unused block "block_b/XST_VCC" (ONE) removed.
+Unused block
+"block_c/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramlo
+op[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM9.ram" (RAMB8BWER) removed.
+Unused block "block_c/XST_GND" (ZERO) removed.
+Unused block "block_c/XST_VCC" (ONE) removed.
+Unused block "matrix_calc/Maddsub_din_A[7]_din_B[7]_MuLt_66_OUT" (DSP48A1)
+removed.
+Unused block "matrix_calc/Mmult_din_A[7]_din_B[7]_MuLt_65_OUT" (DSP48A1)
+removed.
+Unused block "rec_matrix_A/Mram_matrix1" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix10" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix11" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix12" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix13" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix14" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix15" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix16" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix17" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix18" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix19" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix2" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix20" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix21" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix22" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix23" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix24" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix25" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix26" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix27" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix28" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix29" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix3" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix30" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix31" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix32" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix331" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix332" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix341" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix342" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix351" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix352" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix361" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix362" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix371" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix372" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix381" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix382" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix391" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix392" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix4" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix401" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix402" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix411" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix412" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix421" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix422" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix431" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix432" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix441" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix442" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix451" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix452" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix461" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix462" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix471" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix472" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix481" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix482" (RAM64X1D) removed.
+Unused block "rec_matrix_A/Mram_matrix5" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix6" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix7" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix8" (RAM64M) removed.
+Unused block "rec_matrix_A/Mram_matrix9" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix1" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix10" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix11" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix12" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix13" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix14" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix15" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix16" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix17" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix18" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix19" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix2" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix20" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix21" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix22" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix23" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix24" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix25" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix26" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix27" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix28" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix29" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix3" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix30" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix31" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix32" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix331" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix332" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix341" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix342" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix351" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix352" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix361" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix362" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix371" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix372" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix381" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix382" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix391" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix392" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix4" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix401" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix402" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix411" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix412" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix421" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix422" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix431" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix432" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix441" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix442" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix451" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix452" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix461" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix462" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix471" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix472" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix481" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix482" (RAM64X1D) removed.
+Unused block "rec_matrix_B/Mram_matrix5" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix6" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix7" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix8" (RAM64M) removed.
+Unused block "rec_matrix_B/Mram_matrix9" (RAM64M) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| addr_B<0>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| addr_B<1>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| addr_B<2>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| addr_B<3>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| addr_B<4>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| addr_B<5>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| addr_B<6>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| addr_B<7>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| addr_B<8>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| addr_B<9>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| clk_uart                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| locked                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| op<0>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| op<1>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| op<2>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| op_start                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| transmit_output                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| tx_C                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| write_start                        | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

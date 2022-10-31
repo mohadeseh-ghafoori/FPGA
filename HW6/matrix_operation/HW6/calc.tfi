@@ -1,0 +1,15 @@
+
+
+
+// Instantiate the module
+calc instance_name (
+    .clk(clk), 
+    .Op(Op), 
+    .Op_start(Op_start), 
+    .din_A(din_A), 
+    .din_B(din_B), 
+    .dout_C(dout_C), 
+    .finish(finish)
+    );
+
+

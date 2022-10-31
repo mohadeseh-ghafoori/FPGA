@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "E:/fpga/matrix_operation/test_matrix_isim_beh.exe" -prj "E:/fpga/matrix_operation/test_matrix_beh.prj" "work.test_matrix" "work.glbl" 

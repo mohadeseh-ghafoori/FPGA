@@ -1,0 +1,52 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o E:/fpga/matrix_operation/test_matrix_isim_beh.exe -prj E:/fpga/matrix_operation/test_matrix_beh.prj work.test_matrix work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/fpga/matrix_operation/ipcore_dir/my_dcm.v" into library work
+Analyzing Verilog file "E:/fpga/matrix_operation/UART_trans.v" into library work
+Analyzing Verilog file "E:/fpga/matrix_operation/UART_rec.v" into library work
+WARNING:HDLCompiler:327 - "E:/fpga/matrix_operation/UART_rec.v" Line 44: Concatenation with unsized literal; will interpret as 32 bits
+Analyzing Verilog file "E:/fpga/matrix_operation/ipcore_dir/block_memc.v" into library work
+Analyzing Verilog file "E:/fpga/matrix_operation/ipcore_dir/block_memb.v" into library work
+Analyzing Verilog file "E:/fpga/matrix_operation/ipcore_dir/block_mema.v" into library work
+Analyzing Verilog file "E:/fpga/matrix_operation/clk_gen.v" into library work
+Analyzing Verilog file "E:/fpga/matrix_operation/calc.v" into library work
+Analyzing Verilog file "E:/fpga/matrix_operation/top.v" into library work
+WARNING:HDLCompiler:751 - "E:/fpga/matrix_operation/top.v" Line 36: Redeclaration of ansi port addr_B is not allowed
+WARNING:HDLCompiler:751 - "E:/fpga/matrix_operation/top.v" Line 37: Redeclaration of ansi port clk_uart is not allowed
+Analyzing Verilog file "E:/fpga/matrix_operation/test_matrix.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:189 - "E:/fpga/matrix_operation/test_matrix.v" Line 53: Size mismatch in connection of port <addr_B>. Formal port size is 10-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:327 - "E:/fpga/matrix_operation/UART_rec.v" Line 44: Concatenation with unsized literal; will interpret as 32 bits
+Completed static elaboration
+Compiling module IBUFG
+Compiling module PLL_ADV(BANDWIDTH="OPTIMIZED",CL...
+Compiling module PLL_BASE(CLKFBOUT_MULT=21,CLKIN_...
+Compiling module BUFG
+Compiling module my_dcm
+Compiling module clk_gen
+Compiling module UART_rec
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="spart...
+Compiling module block_mema
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="spart...
+Compiling module block_memb
+Compiling module calc
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="spart...
+Compiling module block_memc
+Compiling module UART_trans
+Compiling module top
+Compiling module test_matrix
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 7 sub-compilation(s) to finish...
+Compiled 23 Verilog Units
+Built simulation executable E:/fpga/matrix_operation/test_matrix_isim_beh.exe
+Fuse Memory Usage: 45224 KB
+Fuse CPU Usage: 718 ms
