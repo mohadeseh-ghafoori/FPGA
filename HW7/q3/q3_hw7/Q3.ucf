@@ -1,0 +1,6 @@
+
+#Created by Constraints Editor (xc6slx9-ftg256-3) - 2020/07/07
+NET "Clk" TNM_NET = Clk;
+#Created by Constraints Editor (xc6slx9-ftg256-3) - 2020/07/07
+NET "clk" TNM_NET = clk;
+TIMESPEC TS_clk = PERIOD "clk" 200 MHz HIGH 50%;

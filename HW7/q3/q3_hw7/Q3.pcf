@@ -1,0 +1,40 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Jul 12 00:02:44 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+PIN Mmult_C_reg[15]_D_reg[15]_MuLt_11_OUT_pins<92> = BEL
+        "Mmult_C_reg[15]_D_reg[15]_MuLt_11_OUT" PINNAME CLK;
+PIN Mmult_G_reg[15]_H_reg[15]_MuLt_13_OUT_pins<92> = BEL
+        "Mmult_G_reg[15]_H_reg[15]_MuLt_13_OUT" PINNAME CLK;
+PIN Maddsub_E_reg[15]_F_reg[15]_MuLt_12_OUT_pins<92> = BEL
+        "Maddsub_E_reg[15]_F_reg[15]_MuLt_12_OUT" PINNAME CLK;
+PIN Maddsub_A_reg[15]_B_reg[15]_MuLt_10_OUT_pins<92> = BEL
+        "Maddsub_A_reg[15]_B_reg[15]_MuLt_10_OUT" PINNAME CLK;
+TIMEGRP Clk = BEL "Out_0" BEL "Out_1" BEL "Out_2" BEL "Out_3" BEL "Out_4" BEL
+        "Out_5" BEL "Out_6" BEL "Out_7" BEL "Out_8" BEL "Out_9" BEL "Out_10"
+        BEL "Out_11" BEL "Out_12" BEL "Out_13" BEL "Out_14" BEL "Out_15" BEL
+        "Out_16" BEL "Out_17" BEL "Out_18" BEL "Out_19" BEL "Out_20" BEL
+        "Out_21" BEL "Out_22" BEL "Out_23" BEL "Out_24" BEL "Out_25" BEL
+        "Out_26" BEL "Out_27" BEL "Out_28" BEL "Out_29" BEL "Out_30" BEL
+        "Out_31" BEL "Out_32" BEL "Out_33" PIN
+        "Mmult_C_reg[15]_D_reg[15]_MuLt_11_OUT_pins<92>" PIN
+        "Mmult_G_reg[15]_H_reg[15]_MuLt_13_OUT_pins<92>" PIN
+        "Maddsub_E_reg[15]_F_reg[15]_MuLt_12_OUT_pins<92>" PIN
+        "Maddsub_A_reg[15]_B_reg[15]_MuLt_10_OUT_pins<92>" BEL
+        "clk_BUFGP/BUFG";
+TIMEGRP clk = BEL "Out_0" BEL "Out_1" BEL "Out_2" BEL "Out_3" BEL "Out_4" BEL
+        "Out_5" BEL "Out_6" BEL "Out_7" BEL "Out_8" BEL "Out_9" BEL "Out_10"
+        BEL "Out_11" BEL "Out_12" BEL "Out_13" BEL "Out_14" BEL "Out_15" BEL
+        "Out_16" BEL "Out_17" BEL "Out_18" BEL "Out_19" BEL "Out_20" BEL
+        "Out_21" BEL "Out_22" BEL "Out_23" BEL "Out_24" BEL "Out_25" BEL
+        "Out_26" BEL "Out_27" BEL "Out_28" BEL "Out_29" BEL "Out_30" BEL
+        "Out_31" BEL "Out_32" BEL "Out_33" PIN
+        "Mmult_C_reg[15]_D_reg[15]_MuLt_11_OUT_pins<92>" PIN
+        "Mmult_G_reg[15]_H_reg[15]_MuLt_13_OUT_pins<92>" PIN
+        "Maddsub_E_reg[15]_F_reg[15]_MuLt_12_OUT_pins<92>" PIN
+        "Maddsub_A_reg[15]_B_reg[15]_MuLt_10_OUT_pins<92>" BEL
+        "clk_BUFGP/BUFG";
+TS_clk = PERIOD TIMEGRP "clk" 200 MHz HIGH 50%;
+SCHEMATIC END;
+

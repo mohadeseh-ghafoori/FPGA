@@ -1,0 +1,112 @@
+xst -intstyle ise -ifn "E:/fpga/q2_hw7/multi.xst" -ofn "E:/fpga/q2_hw7/multi.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 
+xst -intstyle ise -ifn "E:/fpga/q2_hw7/multi.xst" -ofn "E:/fpga/q2_hw7/multi.syr" 
+xst -intstyle ise -ifn "E:/fpga/q2_hw7/multi.xst" -ofn "E:/fpga/q2_hw7/multi.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 
+xst -intstyle ise -ifn "E:/fpga/q2_hw7/multi.xst" -ofn "E:/fpga/q2_hw7/multi.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 
+xst -intstyle ise -ifn "E:/fpga/q2_hw7/multi.xst" -ofn "E:/fpga/q2_hw7/multi.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 
+xst -intstyle ise -ifn "E:/fpga/q2_hw7/multi.xst" -ofn "E:/fpga/q2_hw7/multi.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 
+xst -intstyle ise -ifn "E:/fpga/q2_hw7/multi.xst" -ofn "E:/fpga/q2_hw7/multi.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 
+xst -intstyle ise -ifn "E:/fpga/q2_hw7/multi.xst" -ofn "E:/fpga/q2_hw7/multi.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 
+xst -intstyle ise -ifn "E:/fpga/q2_hw7/multi.xst" -ofn "E:/fpga/q2_hw7/multi.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 
+xst -intstyle ise -ifn "E:/fpga/q2_hw7/multi.xst" -ofn "E:/fpga/q2_hw7/multi.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 
+xst -intstyle ise -ifn "E:/fpga/q2_hw7/multi.xst" -ofn "E:/fpga/q2_hw7/multi.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 
+xst -intstyle ise -ifn "E:/fpga/q2_hw7/multi.xst" -ofn "E:/fpga/q2_hw7/multi.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc multi.ucf -p xc3s50-pq208-5 multi.ngc multi.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o multi_map.ncd multi.ngd multi.pcf 
+par -w -intstyle ise -ol high -t 1 multi_map.ncd multi.ncd multi.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multi.twx multi.ncd -o multi.twr multi.pcf -ucf multi.ucf 

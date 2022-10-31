@@ -1,0 +1,231 @@
+xst -intstyle ise -ifn "E:/fpga/q3_hw7/Q3.xst" -ofn "E:/fpga/q3_hw7/Q3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+xst -intstyle ise -ifn "E:/fpga/q3_hw7/Q3.xst" -ofn "E:/fpga/q3_hw7/Q3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+xst -intstyle ise -ifn "E:/fpga/q3_hw7/Q3.xst" -ofn "E:/fpga/q3_hw7/Q3.syr" 
+xst -intstyle ise -ifn "E:/fpga/q3_hw7/Q3.xst" -ofn "E:/fpga/q3_hw7/Q3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+xst -intstyle ise -ifn "E:/fpga/q3_hw7/Q3.xst" -ofn "E:/fpga/q3_hw7/Q3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+xst -intstyle ise -ifn "E:/fpga/q3_hw7/Q3.xst" -ofn "E:/fpga/q3_hw7/Q3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+xst -intstyle ise -ifn "E:/fpga/q3_hw7/Q3.xst" -ofn "E:/fpga/q3_hw7/Q3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+xst -intstyle ise -ifn "E:/fpga/q3_hw7/Q3.xst" -ofn "E:/fpga/q3_hw7/Q3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -xe n -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -xe n -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -xe n -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr b -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -xe n -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+xst -intstyle ise -ifn "E:/fpga/q3_hw7/Q3.xst" -ofn "E:/fpga/q3_hw7/Q3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Q3.ucf -p xc6slx9-ftg256-3 Q3.ngc Q3.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt off -ir off -pr off -lc off -power off -o Q3_map.ncd Q3.ngd Q3.pcf 
+par -w -intstyle ise -ol high -mt off Q3_map.ncd Q3.ncd Q3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Q3.twx Q3.ncd -o Q3.twr Q3.pcf -ucf Q3.ucf 

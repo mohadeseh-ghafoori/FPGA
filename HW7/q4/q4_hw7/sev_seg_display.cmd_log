@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "E:/fpga/q4_hw7/sev_seg_display.xst" -ofn "E:/fpga/q4_hw7/sev_seg_display.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx9-ftg256-3 sev_seg_display.ngc sev_seg_display.ngd  
+map -intstyle ise -p xc6slx9-ftg256-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sev_seg_display_map.ncd sev_seg_display.ngd sev_seg_display.pcf 
+par -w -intstyle ise -ol high -mt off sev_seg_display_map.ncd sev_seg_display.ncd sev_seg_display.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml sev_seg_display.twx sev_seg_display.ncd -o sev_seg_display.twr sev_seg_display.pcf 

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="ConstraintSystem" num="65" delta="old" >Constraint <arg fmt="%s" index="1">&lt;TIMEGRP Clk = BEL &quot;Out_0&quot; BEL &quot;Out_1&quot; BEL &quot;Out_2&quot; BEL &quot;Out_3&quot; BEL &quot;Out_4&quot; BEL         &quot;Out_5&quot; BEL &quot;Out_6&quot; BEL &quot;Out_7&quot; BEL &quot;Out_8&quot; BEL &quot;Out_9&quot; BEL &quot;Out_10&quot;         BEL &quot;Out_11&quot; BEL &quot;Out_12&quot; BEL &quot;Out...&gt; [Q3.pcf(25)]</arg> overrides constraint <arg fmt="%s" index="2">&lt;TIMEGRP clk = BEL &quot;Out_0&quot; BEL &quot;Out_1&quot; BEL &quot;Out_2&quot; BEL &quot;Out_3&quot; BEL &quot;Out_4&quot; BEL         &quot;Out_5&quot; BEL &quot;Out_6&quot; BEL &quot;Out_7&quot; BEL &quot;Out_8&quot; BEL &quot;Out_9&quot; BEL &quot;Out_10&quot;         BEL &quot;Out_11&quot; BEL &quot;Out_12&quot; BEL &quot;Out...&gt; [Q3.pcf(37)]</arg>.
+</msg>
+
+</messages>
+

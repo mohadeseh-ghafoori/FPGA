@@ -1,0 +1,76 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sat Jul 11 23:44:17 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP clk = BEL "y2_8" BEL "y2_13" BEL "y2_14" BEL "y2_15" BEL "y3_8" BEL
+        "y3_13" BEL "y3_14" BEL "y3_15" BEL "sum1_8" BEL "sum1_9" BEL
+        "sum1_10" BEL "sum1_11" BEL "sum1_12" BEL "sum1_13" BEL "sum1_14" BEL
+        "sum1_15" BEL "sum1_16" BEL "out_0" BEL "out_1" BEL "out_2" BEL
+        "out_3" BEL "out_4" BEL "out_5" BEL "out_6" BEL "out_7" BEL "out_8"
+        BEL "out_9" BEL "out_10" BEL "out_11" BEL "out_12" BEL "out_13" BEL
+        "out_14" BEL "out_15" BEL "out_16" BEL "out_17" BEL "out_18" BEL
+        "out_19" BEL "out_20" BEL "out_21" BEL "out_22" BEL "out_23" BEL
+        "out_24" BEL "out_25" BEL "out_26" BEL "out_27" BEL "out_28" BEL
+        "out_29" BEL "out_30" BEL "out_31" BEL "Mmult_u_mult0000_15" BEL
+        "Mmult_u_mult0000_10" BEL "Mmult_u_mult0000_9" BEL
+        "Mmult_u_mult0000_8" BEL "Mmult_u_mult0000_7" BEL "Mmult_u_mult0000_6"
+        BEL "Mmult_u_mult0000_5" BEL "Mmult_u_mult0000_4" BEL
+        "Mmult_u_mult0000_3" BEL "Mmult_u_mult0000_2" BEL "Mmult_u_mult0000_1"
+        BEL "Mmult_u_mult0000_0" BEL "Mmult_z_mult0000_15" BEL
+        "Mmult_z_mult0000_10" BEL "Mmult_z_mult0000_9" BEL
+        "Mmult_z_mult0000_8" BEL "Mmult_w_mult0000_15" BEL
+        "Mmult_w_mult0000_10" BEL "Mmult_w_mult0000_9" BEL
+        "Mmult_w_mult0000_8" BEL "Mmult_v_mult0000_15" BEL
+        "Mmult_v_mult0000_10" BEL "Mmult_v_mult0000_9" BEL
+        "Mmult_v_mult0000_8" BEL "Mmult_v_mult0000_7" BEL "Mmult_v_mult0000_6"
+        BEL "Mmult_v_mult0000_5" BEL "Mmult_v_mult0000_4" BEL
+        "Mmult_v_mult0000_3" BEL "Mmult_v_mult0000_2" BEL "Mmult_v_mult0000_1"
+        BEL "Mmult_v_mult0000_0" BEL "Mshreg_A_2/SRL16E" BEL "A_2" BEL
+        "Mshreg_A_0/SRL16E" BEL "A_0" BEL "Mshreg_A_1/SRL16E" BEL "A_1" BEL
+        "Mshreg_A_3/SRL16E" BEL "A_3" BEL "Mshreg_A_4/SRL16E" BEL "A_4" BEL
+        "Mshreg_A_5/SRL16E" BEL "A_5" BEL "Mshreg_A_6/SRL16E" BEL "A_6" BEL
+        "Mshreg_A_7/SRL16E" BEL "A_7" BEL "Mshreg_B_0/SRL16E" BEL "B_0" BEL
+        "Mshreg_B_3/SRL16E" BEL "B_3" BEL "Mshreg_B_1/SRL16E" BEL "B_1" BEL
+        "Mshreg_B_2/SRL16E" BEL "B_2" BEL "Mshreg_B_4/SRL16E" BEL "B_4" BEL
+        "Mshreg_B_5/SRL16E" BEL "B_5" BEL "Mshreg_B_6/SRL16E" BEL "B_6" BEL
+        "Mshreg_B_7/SRL16E" BEL "B_7" BEL "Mshreg_C_0/SRL16E" BEL "C_0" BEL
+        "Mshreg_C_1/SRL16E" BEL "C_1" BEL "Mshreg_C_4/SRL16E" BEL "C_4" BEL
+        "Mshreg_C_2/SRL16E" BEL "C_2" BEL "Mshreg_C_3/SRL16E" BEL "C_3" BEL
+        "Mshreg_C_5/SRL16E" BEL "C_5" BEL "Mshreg_C_6/SRL16E" BEL "C_6" BEL
+        "Mshreg_C_7/SRL16E" BEL "C_7" BEL "Mshreg_D_0/SRL16E" BEL "D_0" BEL
+        "Mshreg_D_1/SRL16E" BEL "D_1" BEL "Mshreg_D_2/SRL16E" BEL "D_2" BEL
+        "Mshreg_D_5/SRL16E" BEL "D_5" BEL "Mshreg_D_3/SRL16E" BEL "D_3" BEL
+        "Mshreg_D_4/SRL16E" BEL "D_4" BEL "Mshreg_D_6/SRL16E" BEL "D_6" BEL
+        "Mshreg_D_7/SRL16E" BEL "D_7" BEL "Mshreg_y2_9/SRL16E" BEL "y2_9" BEL
+        "Mshreg_y2_10/SRL16E" BEL "y2_10" BEL "Mshreg_y2_11/SRL16E" BEL
+        "y2_11" BEL "Mshreg_y2_12/SRL16E" BEL "y2_12" BEL
+        "Mshreg_y3_11/SRL16E" BEL "y3_11" BEL "Mshreg_y3_9/SRL16E" BEL "y3_9"
+        BEL "Mshreg_y3_10/SRL16E" BEL "y3_10" BEL "Mshreg_y3_12/SRL16E" BEL
+        "y3_12" BEL "Mshreg_sum2_0/SRL16E" BEL "sum2_0" BEL
+        "Mshreg_sum2_1/SRL16E" BEL "sum2_1" BEL "Mshreg_sum2_2/SRL16E" BEL
+        "sum2_2" BEL "Mshreg_sum2_3/SRL16E" BEL "sum2_3" BEL
+        "Mshreg_sum2_4/SRL16E" BEL "sum2_4" BEL "Mshreg_sum2_7/SRL16E" BEL
+        "sum2_7" BEL "Mshreg_sum2_5/SRL16E" BEL "sum2_5" BEL
+        "Mshreg_sum2_6/SRL16E" BEL "sum2_6" BEL "Mshreg_sum2_8/SRL16E" BEL
+        "sum2_8" BEL "Mshreg_sum2_9/SRL16E" BEL "sum2_9" BEL
+        "Mshreg_sum2_10/SRL16E" BEL "sum2_10" BEL "Mshreg_sum2_11/SRL16E" BEL
+        "sum2_11" BEL "Mshreg_sum2_12/SRL16E" BEL "sum2_12" BEL
+        "Mshreg_sum2_13/SRL16E" BEL "sum2_13" BEL "Mshreg_sum2_16/SRL16E" BEL
+        "sum2_16" BEL "Mshreg_sum2_14/SRL16E" BEL "sum2_14" BEL
+        "Mshreg_sum2_15/SRL16E" BEL "sum2_15" BEL "Mshreg_sum2_17/SRL16E" BEL
+        "sum2_17" BEL "Mshreg_sum2_18/SRL16E" BEL "sum2_18" BEL
+        "Mshreg_sum2_19/SRL16E" BEL "sum2_19" BEL "Mshreg_sum2_20/SRL16E" BEL
+        "sum2_20" BEL "Mshreg_sum2_21/SRL16E" BEL "sum2_21" BEL
+        "Mshreg_sum2_22/SRL16E" BEL "sum2_22" BEL "Mshreg_sum2_25/SRL16E" BEL
+        "sum2_25" BEL "Mshreg_sum2_23/SRL16E" BEL "sum2_23" BEL
+        "Mshreg_sum2_24/SRL16E" BEL "sum2_24" BEL "Mshreg_sum2_26/SRL16E" BEL
+        "sum2_26" BEL "Mshreg_sum2_27/SRL16E" BEL "sum2_27" BEL
+        "Mshreg_sum2_28/SRL16E" BEL "sum2_28" BEL "Mshreg_sum2_29/SRL16E" BEL
+        "sum2_29" BEL "Mshreg_sum2_30/SRL16E" BEL "sum2_30" BEL
+        "Mshreg_sum2_31/SRL16E" BEL "sum2_31" BEL "clk_BUFGP/BUFG.GCLKMUX" BEL
+        "clk_BUFGP/BUFG";
+TS_clk = PERIOD TIMEGRP "clk" 111.5 MHz HIGH 50%;
+SCHEMATIC END;
+

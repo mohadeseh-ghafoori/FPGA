@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "E:/fpga/q4_hw7/test_7seg_isim_beh.exe" -prj "E:/fpga/q4_hw7/test_7seg_beh.prj" "work.test_7seg" "work.glbl" 

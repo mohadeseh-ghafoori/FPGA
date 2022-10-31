@@ -1,0 +1,2 @@
+verilog work "ipcore_dir/my_rom.v"
+verilog work "sev_seg_display.v"

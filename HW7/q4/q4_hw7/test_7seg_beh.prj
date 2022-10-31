@@ -1,0 +1,4 @@
+verilog work "ipcore_dir/my_rom.v"
+verilog work "sev_seg_display.v"
+verilog work "test_7seg.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
