@@ -1,0 +1,451 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: multiplying.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "multiplying.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "multiplying"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : multiplying
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\fpga\q2_hw4\ipcore_dir\block_mem8.v" into library work
+Parsing module <block_mem8>.
+Analyzing Verilog file "E:\fpga\q2_hw4\ipcore_dir\block_mem16.v" into library work
+Parsing module <block_mem16>.
+Analyzing Verilog file "E:\fpga\q2_hw4\multiplying.v" into library work
+Parsing module <multiplying>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <multiplying>.
+
+Elaborating module <block_mem8>.
+WARNING:HDLCompiler:1499 - "E:\fpga\q2_hw4\ipcore_dir\block_mem8.v" Line 39: Empty module <block_mem8> remains a black box.
+
+Elaborating module <block_mem16>.
+WARNING:HDLCompiler:1499 - "E:\fpga\q2_hw4\ipcore_dir\block_mem16.v" Line 39: Empty module <block_mem16> remains a black box.
+WARNING:HDLCompiler:189 - "E:\fpga\q2_hw4\multiplying.v" Line 68: Size mismatch in connection of port <addrb>. Formal port size is 6-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "E:\fpga\q2_hw4\multiplying.v" Line 69: Size mismatch in connection of port <doutb>. Formal port size is 16-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "E:\fpga\q2_hw4\multiplying.v" Line 69: Assignment to doutc ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "E:\fpga\q2_hw4\multiplying.v" Line 85: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\q2_hw4\multiplying.v" Line 102: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\q2_hw4\multiplying.v" Line 103: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\q2_hw4\multiplying.v" Line 108: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\q2_hw4\multiplying.v" Line 109: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\q2_hw4\multiplying.v" Line 110: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:634 - "E:\fpga\q2_hw4\multiplying.v" Line 68: Net <addrcc> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <multiplying>.
+    Related source file is "E:\fpga\q2_hw4\multiplying.v".
+INFO:Xst:3210 - "E:\fpga\q2_hw4\multiplying.v" line 62: Output port <doutb> of the instance <block_c> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <addrcc> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 16-bit register for signal <c>.
+    Found 7-bit register for signal <cntc>.
+    Found 1-bit register for signal <wea>.
+    Found 1-bit register for signal <web>.
+    Found 6-bit register for signal <addra>.
+    Found 6-bit register for signal <addrb>.
+    Found 6-bit register for signal <addrc>.
+    Found 6-bit register for signal <addraa>.
+    Found 6-bit register for signal <addrbb>.
+    Found 1-bit register for signal <wec>.
+    Found 7-bit adder for signal <cntc[6]_GND_1_o_add_6_OUT> created at line 85.
+    Found 6-bit adder for signal <addra[5]_GND_1_o_add_16_OUT> created at line 102.
+    Found 6-bit adder for signal <addrb[5]_GND_1_o_add_19_OUT> created at line 103.
+    Found 6-bit adder for signal <addrc[5]_GND_1_o_add_24_OUT> created at line 108.
+    Found 6-bit adder for signal <addraa[5]_GND_1_o_add_25_OUT> created at line 109.
+    Found 6-bit adder for signal <addrbb[5]_GND_1_o_add_26_OUT> created at line 110.
+    Found 8x8-bit multiplier for signal <dinc> created at line 84.
+    Found 7-bit comparator greater for signal <cntc[6]_PWR_1_o_LessThan_5_o> created at line 83
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred  56 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <multiplying> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 8x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 6
+ 6-bit adder                                           : 5
+ 7-bit adder                                           : 1
+# Registers                                            : 10
+ 1-bit register                                        : 3
+ 16-bit register                                       : 1
+ 6-bit register                                        : 5
+ 7-bit register                                        : 1
+# Comparators                                          : 1
+ 7-bit comparator greater                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/block_mem8.ngc>.
+Reading core <ipcore_dir/block_mem16.ngc>.
+Loading core <block_mem8> for timing and area information for instance <block_a>.
+Loading core <block_mem8> for timing and area information for instance <block_b>.
+Loading core <block_mem16> for timing and area information for instance <block_c>.
+
+Synthesizing (advanced) Unit <multiplying>.
+The following registers are absorbed into counter <addra>: 1 register on signal <addra>.
+The following registers are absorbed into counter <addrb>: 1 register on signal <addrb>.
+The following registers are absorbed into counter <addraa>: 1 register on signal <addraa>.
+The following registers are absorbed into counter <addrc>: 1 register on signal <addrc>.
+The following registers are absorbed into counter <addrbb>: 1 register on signal <addrbb>.
+The following registers are absorbed into counter <cntc>: 1 register on signal <cntc>.
+Unit <multiplying> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 8x8-bit multiplier                                    : 1
+# Counters                                             : 6
+ 6-bit up counter                                      : 5
+ 7-bit up counter                                      : 1
+# Registers                                            : 19
+ Flip-Flops                                            : 19
+# Comparators                                          : 1
+ 7-bit comparator greater                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2146 - In block <multiplying>, Counter <addrc> <addraa> <addrbb> are equivalent, XST will keep only <addrc>.
+
+Optimizing unit <multiplying> ...
+WARNING:Xst:1293 - FF/Latch <cntc_6> has a constant value of 0 in block <multiplying>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block multiplying, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 43
+ Flip-Flops                                            : 43
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : multiplying.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 39
+#      GND                         : 4
+#      INV                         : 5
+#      LUT2                        : 4
+#      LUT3                        : 7
+#      LUT4                        : 4
+#      LUT5                        : 4
+#      LUT6                        : 7
+#      VCC                         : 4
+# FlipFlops/Latches                : 43
+#      FD                          : 1
+#      FD_1                        : 2
+#      FDE                         : 34
+#      FDRE                        : 6
+# RAMS                             : 3
+#      RAMB8BWER                   : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 34
+#      IBUF                        : 18
+#      OBUF                        : 16
+# DSPs                             : 1
+#      DSP48A1                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              43  out of  11440     0%  
+ Number of Slice LUTs:                   31  out of   5720     0%  
+    Number used as Logic:                31  out of   5720     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     47
+   Number with an unused Flip Flop:       4  out of     47     8%  
+   Number with an unused LUT:            16  out of     47    34%  
+   Number of fully used LUT-FF pairs:    27  out of     47    57%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          35
+ Number of bonded IOBs:                  35  out of    102    34%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                2  out of     32     6%  
+    Number using Block RAM only:          2
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                      1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 46    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 6.709ns (Maximum Frequency: 149.051MHz)
+   Minimum input arrival time before clock: 2.146ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.709ns (frequency: 149.051MHz)
+  Total number of paths / destination ports: 735 / 147
+-------------------------------------------------------------------------
+Delay:               6.709ns (Levels of Logic = 2)
+  Source:            block_a/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram (RAM)
+  Destination:       block_c/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram (RAM)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: block_a/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram to block_c/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB8BWER:CLKBRDCLK->DOBDO9    1   1.850   0.579  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram (doutb<7>)
+     end scope: 'block_a:doutb<7>'
+     DSP48A1:B7->M15       2   3.364   0.616  Mmult_dinc (dinc<15>)
+     begin scope: 'block_c:dina<15>'
+     RAMB8BWER:DIBDI11         0.300          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram
+    ----------------------------------------
+    Total                      6.709ns (5.514ns logic, 1.195ns route)
+                                       (82.2% logic, 17.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 19 / 19
+-------------------------------------------------------------------------
+Offset:              2.146ns (Levels of Logic = 2)
+  Source:            start_initialize (PAD)
+  Destination:       wea (FF)
+  Destination Clock: clk falling
+
+  Data Path: start_initialize to wea
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.617  start_initialize_IBUF (start_initialize_IBUF)
+     LUT3:I2->O            1   0.205   0.000  wea_rstpot1 (wea_rstpot1)
+     FD_1:D                    0.102          wea
+    ----------------------------------------
+    Total                      2.146ns (1.529ns logic, 0.617ns route)
+                                       (71.2% logic, 28.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            c_15 (FF)
+  Destination:       c<15> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: c_15 to c<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.579  c_15 (c_15)
+     OBUF:I->O                 2.571          c_15_OBUF (c<15>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.709|    1.626|    2.792|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.33 secs
+ 
+--> 
+
+Total memory usage is 4508528 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   14 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

@@ -1,0 +1,28 @@
+Command line:
+   vector_dot_test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  3290
+
+Thu May 07 20:34:06 2020
+
+
+ Elaboration Time: 0.078125 sec
+
+ Current Memory Usage: 5178.25 Meg
+
+ Total Signals          : 318
+ Total Nets             : 803
+ Total Signal Drivers   : 134
+ Total Blocks           : 37
+ Total Primitive Blocks : 29
+ Total Processes        : 161
+ Total Traceable Variables  : 671
+ Total Scalar Nets and Variables : 35988
+
+ Total Simulation Time: 2.5625 sec
+
+ Current Memory Usage: 5492.83 Meg
+
+Thu May 07 20:34:39 2020
+

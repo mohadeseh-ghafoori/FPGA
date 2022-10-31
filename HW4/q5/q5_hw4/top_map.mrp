@@ -1,0 +1,191 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'top'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o top_map.ncd top.ngd top.pcf 
+Target Device  : xc6slx9
+Target Package : tqg144
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Thu May 07 13:31:57 2020
+
+Interim Summary
+---------------
+Slice Logic Utilization:
+  Number of Slice Registers:                   115 out of  11,440    1%
+    Number used as Flip Flops:                 115
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                         55 out of   5,720    1%
+    Number used as logic:                       54 out of   5,720    1%
+      Number using O6 output only:              39
+      Number using O5 output only:               1
+      Number using O5 and O6:                   14
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of   1,440    0%
+    Number used exclusively as route-thrus:      1
+      Number with same-slice register load:      0
+      Number with same-slice carry load:         1
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of MUXCYs used:                        12 out of   2,860    1%
+  Number of LUT Flip Flop pairs used:          123
+    Number with an unused Flip Flop:            19 out of     123   15%
+    Number with an unused LUT:                  68 out of     123   55%
+    Number of fully used LUT-FF pairs:          36 out of     123   29%
+    Number of unique control sets:              16
+    Number of slice register sites lost
+      to control set restrictions:              69 out of  11,440    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        25 out of     102   24%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      32    0%
+  Number of RAMB8BWERs:                          1 out of      64    1%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             1 out of      32    3%
+    Number used as BUFIO2FBs:                    1
+    Number used as BUFIO2FB_2CLKs:               0
+  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     1 out of       4   25%
+    Number used as DCMs:                         1
+    Number used as DCM_CLKGENs:                  0
+  Number of ILOGIC2/ISERDES2s:                   0 out of     200    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     200    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      16    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Design Summary
+--------------
+Number of errors   :   5
+Number of warnings :   0
+
+Section 1 - Errors
+------------------
+ERROR:Place:1205 - This design contains a global buffer instance,
+   <dcm/clkout2_buf>, driving the net, <clk_250_OBUF>, that is driving the
+   following (first 30) non-clock load pins off chip.
+   < PIN: clk_250.O; >
+   This design practice, in Spartan-6, can lead to an unroutable situation due
+   to limitations in the global routing. If the design does route there may be
+   excessive delay or skew on this net. It is recommended to use a Clock
+   Forwarding technique to create a reliable and repeatable low skew solution:
+   instantiate an ODDR2 component; tie the .D0 pin to Logic1; tie the .D1 pin to
+   Logic0; tie the clock net to be forwarded to .C0; tie the inverted clock to
+   .C1. If you wish to override this recommendation, you may use the
+   CLOCK_DEDICATED_ROUTE constraint (given below) in the .ucf file to demote
+   this message to a WARNING and allow your design to continue. Although the net
+   may still not route, you will be able to analyze the failure in FPGA_Editor.
+   < PIN "dcm/clkout2_buf.O" CLOCK_DEDICATED_ROUTE = FALSE; >
+
+ERROR:Place:1205 - This design contains a global buffer instance,
+   <dcm/clkout1_buf>, driving the net, <clk_100_OBUF>, that is driving the
+   following (first 30) non-clock load pins off chip.
+   < PIN: clk_100.O; >
+   This design practice, in Spartan-6, can lead to an unroutable situation due
+   to limitations in the global routing. If the design does route there may be
+   excessive delay or skew on this net. It is recommended to use a Clock
+   Forwarding technique to create a reliable and repeatable low skew solution:
+   instantiate an ODDR2 component; tie the .D0 pin to Logic1; tie the .D1 pin to
+   Logic0; tie the clock net to be forwarded to .C0; tie the inverted clock to
+   .C1. If you wish to override this recommendation, you may use the
+   CLOCK_DEDICATED_ROUTE constraint (given below) in the .ucf file to demote
+   this message to a WARNING and allow your design to continue. Although the net
+   may still not route, you will be able to analyze the failure in FPGA_Editor.
+   < PIN "dcm/clkout1_buf.O" CLOCK_DEDICATED_ROUTE = FALSE; >
+
+ERROR:Place:1136 - This design contains a global buffer instance,
+   <dcm/clkout2_buf>, driving the net, <clk_250_OBUF>, that is driving the
+   following (first 30) non-clock load pins.
+   < PIN: clk_250.O; >
+   This is not a recommended design practice in Spartan-6 due to limitations in
+   the global routing that may cause excessive delay, skew or unroutable
+   situations.  It is recommended to only use a BUFG resource to drive clock
+   loads. If you wish to override this recommendation, you may use the
+   CLOCK_DEDICATED_ROUTE constraint (given below) in the .ucf file to demote
+   this message to a WARNING and allow your design to continue.
+   < PIN "dcm/clkout2_buf.O" CLOCK_DEDICATED_ROUTE = FALSE; >
+
+ERROR:Place:1136 - This design contains a global buffer instance,
+   <dcm/clkout1_buf>, driving the net, <clk_100_OBUF>, that is driving the
+   following (first 30) non-clock load pins.
+   < PIN: clk_100.O; >
+   This is not a recommended design practice in Spartan-6 due to limitations in
+   the global routing that may cause excessive delay, skew or unroutable
+   situations.  It is recommended to only use a BUFG resource to drive clock
+   loads. If you wish to override this recommendation, you may use the
+   CLOCK_DEDICATED_ROUTE constraint (given below) in the .ucf file to demote
+   this message to a WARNING and allow your design to continue.
+   < PIN "dcm/clkout1_buf.O" CLOCK_DEDICATED_ROUTE = FALSE; >
+
+ERROR:Pack:1654 - The timing-driven placement phase encountered an error.
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   3 block(s) optimized away
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+GND
+		fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.
+gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND
+GND 		fifo/XST_GND
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 12 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 13 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.

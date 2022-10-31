@@ -1,0 +1,437 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: vectors_dot.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "vectors_dot.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "vectors_dot"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : vectors_dot
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\fpga\vector_dot\ipcore_dir\my_vectors.v" into library work
+Parsing module <my_vectors>.
+Analyzing Verilog file "E:\fpga\vector_dot\vectors_dot.v" into library work
+Parsing module <vectors_dot>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <vectors_dot>.
+
+Elaborating module <my_vectors>.
+WARNING:HDLCompiler:1499 - "E:\fpga\vector_dot\ipcore_dir\my_vectors.v" Line 39: Empty module <my_vectors> remains a black box.
+WARNING:HDLCompiler:413 - "E:\fpga\vector_dot\vectors_dot.v" Line 73: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\vector_dot\vectors_dot.v" Line 94: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\vector_dot\vectors_dot.v" Line 95: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\vector_dot\vectors_dot.v" Line 100: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "E:\fpga\vector_dot\vectors_dot.v" Line 101: Result of 7-bit expression is truncated to fit in 6-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <vectors_dot>.
+    Related source file is "E:\fpga\vector_dot\vectors_dot.v".
+    Found 1-bit register for signal <start>.
+    Found 22-bit register for signal <register>.
+    Found 7-bit register for signal <cntc>.
+    Found 22-bit register for signal <c>.
+    Found 1-bit register for signal <wea>.
+    Found 1-bit register for signal <web>.
+    Found 6-bit register for signal <addra>.
+    Found 6-bit register for signal <addrb>.
+    Found 6-bit register for signal <addraa>.
+    Found 6-bit register for signal <addrbb>.
+    Found 1-bit register for signal <data_valid>.
+    Found 22-bit adder for signal <register[21]_GND_1_o_add_5_OUT> created at line 72.
+    Found 7-bit adder for signal <cntc[6]_GND_1_o_add_6_OUT> created at line 73.
+    Found 6-bit adder for signal <addra[5]_GND_1_o_add_19_OUT> created at line 94.
+    Found 6-bit adder for signal <addrb[5]_GND_1_o_add_22_OUT> created at line 95.
+    Found 6-bit adder for signal <addraa[5]_GND_1_o_add_27_OUT> created at line 100.
+    Found 6-bit adder for signal <addrbb[5]_GND_1_o_add_28_OUT> created at line 101.
+    Found 8x8-bit multiplier for signal <douta[7]_doutb[7]_MuLt_4_OUT> created at line 72.
+    Found 7-bit comparator greater for signal <cntc[6]_PWR_1_o_LessThan_4_o> created at line 71
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred  79 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <vectors_dot> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 8x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 6
+ 22-bit adder                                          : 1
+ 6-bit adder                                           : 4
+ 7-bit adder                                           : 1
+# Registers                                            : 11
+ 1-bit register                                        : 4
+ 22-bit register                                       : 2
+ 6-bit register                                        : 4
+ 7-bit register                                        : 1
+# Comparators                                          : 1
+ 7-bit comparator greater                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/my_vectors.ngc>.
+Loading core <my_vectors> for timing and area information for instance <block_a>.
+Loading core <my_vectors> for timing and area information for instance <block_b>.
+
+Synthesizing (advanced) Unit <vectors_dot>.
+The following registers are absorbed into accumulator <register>: 1 register on signal <register>.
+The following registers are absorbed into counter <addra>: 1 register on signal <addra>.
+The following registers are absorbed into counter <addrb>: 1 register on signal <addrb>.
+The following registers are absorbed into counter <addrbb>: 1 register on signal <addrbb>.
+The following registers are absorbed into counter <addraa>: 1 register on signal <addraa>.
+The following registers are absorbed into counter <cntc>: 1 register on signal <cntc>.
+	Multiplier <Mmult_douta[7]_doutb[7]_MuLt_4_OUT> in block <vectors_dot> and accumulator <register> in block <vectors_dot> are combined into a MAC<Mmac_douta[7]_doutb[7]_MuLt_4_OUT>.
+Unit <vectors_dot> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# MACs                                                 : 1
+ 8x8-to-22-bit MAC                                     : 1
+# Counters                                             : 5
+ 6-bit up counter                                      : 4
+ 7-bit up counter                                      : 1
+# Registers                                            : 26
+ Flip-Flops                                            : 26
+# Comparators                                          : 1
+ 7-bit comparator greater                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2146 - In block <vectors_dot>, Counter <addrbb> <addraa> are equivalent, XST will keep only <addrbb>.
+
+Optimizing unit <vectors_dot> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block vectors_dot, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 51
+ Flip-Flops                                            : 51
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : vectors_dot.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 41
+#      GND                         : 3
+#      INV                         : 5
+#      LUT2                        : 6
+#      LUT3                        : 8
+#      LUT4                        : 4
+#      LUT5                        : 5
+#      LUT6                        : 7
+#      VCC                         : 3
+# FlipFlops/Latches                : 51
+#      FD                          : 2
+#      FD_1                        : 2
+#      FDE                         : 40
+#      FDRE                        : 7
+# RAMS                             : 2
+#      RAMB8BWER                   : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 41
+#      IBUF                        : 18
+#      OBUF                        : 23
+# DSPs                             : 1
+#      DSP48A1                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              51  out of  11440     0%  
+ Number of Slice LUTs:                   35  out of   5720     0%  
+    Number used as Logic:                35  out of   5720     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     57
+   Number with an unused Flip Flop:       6  out of     57    10%  
+   Number with an unused LUT:            22  out of     57    38%  
+   Number of fully used LUT-FF pairs:    29  out of     57    50%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          42
+ Number of bonded IOBs:                  42  out of    102    41%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                      1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 54    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 6.745ns (Maximum Frequency: 148.261MHz)
+   Minimum input arrival time before clock: 2.146ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.745ns (frequency: 148.261MHz)
+  Total number of paths / destination ports: 434 / 155
+-------------------------------------------------------------------------
+Delay:               6.745ns (Levels of Logic = 1)
+  Source:            block_b/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram (RAM)
+  Destination:       Mmac_douta[7]_doutb[7]_MuLt_4_OUT (DSP)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: block_b/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram to Mmac_douta[7]_doutb[7]_MuLt_4_OUT
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB8BWER:CLKBRDCLK->DOBDO9    1   1.850   0.579  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram (doutb<7>)
+     end scope: 'block_b:doutb<7>'
+     DSP48A1:A7                4.316          Mmac_douta[7]_doutb[7]_MuLt_4_OUT
+    ----------------------------------------
+    Total                      6.745ns (6.166ns logic, 0.579ns route)
+                                       (91.4% logic, 8.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 19 / 19
+-------------------------------------------------------------------------
+Offset:              2.146ns (Levels of Logic = 2)
+  Source:            start_initialize (PAD)
+  Destination:       web (FF)
+  Destination Clock: clk falling
+
+  Data Path: start_initialize to web
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.617  start_initialize_IBUF (start_initialize_IBUF)
+     LUT3:I2->O            1   0.205   0.000  web_rstpot1 (web_rstpot1)
+     FD_1:D                    0.102          web
+    ----------------------------------------
+    Total                      2.146ns (1.529ns logic, 0.617ns route)
+                                       (71.2% logic, 28.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 23 / 23
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            c_21 (FF)
+  Destination:       c<21> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: c_21 to c<21>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.579  c_21 (c_21)
+     OBUF:I->O                 2.571          c_21_OBUF (c<21>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.745|    1.599|    2.792|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.12 secs
+ 
+--> 
+
+Total memory usage is 4507412 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

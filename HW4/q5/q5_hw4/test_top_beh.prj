@@ -1,0 +1,5 @@
+verilog work "ipcore_dir/my_dcm.v"
+verilog work "ipcore_dir/my_fifo.v"
+verilog work "top.v"
+verilog work "test_top.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

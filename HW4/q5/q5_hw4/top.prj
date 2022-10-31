@@ -1,0 +1,3 @@
+verilog work "ipcore_dir/my_dcm.v"
+verilog work "ipcore_dir/my_fifo.v"
+verilog work "top.v"

@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "E:/fpga/vector_dot/vectors_dot.xst" -ofn "E:/fpga/vector_dot/vectors_dot.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx9-tqg144-3 vectors_dot.ngc vectors_dot.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o vectors_dot_map.ncd vectors_dot.ngd vectors_dot.pcf 
+par -w -intstyle ise -ol high -mt off vectors_dot_map.ncd vectors_dot.ncd vectors_dot.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml vectors_dot.twx vectors_dot.ncd -o vectors_dot.twr vectors_dot.pcf 

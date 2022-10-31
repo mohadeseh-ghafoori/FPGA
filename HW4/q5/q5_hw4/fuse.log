@@ -1,0 +1,34 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o E:/fpga/q5_hw4/test_top_isim_beh.exe -prj E:/fpga/q5_hw4/test_top_beh.prj work.test_top work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/fpga/q5_hw4/ipcore_dir/my_dcm.v" into library work
+Analyzing Verilog file "E:/fpga/q5_hw4/ipcore_dir/my_fifo.v" into library work
+Analyzing Verilog file "E:/fpga/q5_hw4/top.v" into library work
+Analyzing Verilog file "E:/fpga/q5_hw4/test_top.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module IBUFG
+Compiling module dcm_sp_clock_divide_by_2
+Compiling module dcm_sp_maximum_period_check(cloc...
+Compiling module dcm_sp_maximum_period_check(cloc...
+Compiling module dcm_sp_clock_lost
+Compiling module DCM_SP(CLKFX_DIVIDE=2,CLKFX_MULT...
+Compiling module BUFG
+Compiling module my_dcm
+Compiling module fifo_generator_v9_3_sync_stage(C...
+Compiling module fifo_generator_v9_3_bhv_ver_as(C...
+Compiling module FIFO_GENERATOR_V9_3_CONV_VER(C_C...
+Compiling module FIFO_GENERATOR_V9_3(C_DATA_COUNT...
+Compiling module my_fifo
+Compiling module top
+Compiling module test_top
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 16 Verilog Units
+Built simulation executable E:/fpga/q5_hw4/test_top_isim_beh.exe
+Fuse Memory Usage: 35256 KB
+Fuse CPU Usage: 437 ms

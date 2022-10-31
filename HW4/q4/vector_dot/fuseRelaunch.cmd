@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "E:/fpga/vector_dot/vector_dot_test_isim_beh.exe" -prj "E:/fpga/vector_dot/vector_dot_test_beh.prj" "work.vector_dot_test" "work.glbl" 

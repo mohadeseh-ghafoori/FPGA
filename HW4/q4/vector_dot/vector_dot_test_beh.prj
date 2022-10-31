@@ -1,0 +1,4 @@
+verilog work "ipcore_dir/my_vectors.v"
+verilog work "vectors_dot.v"
+verilog work "vector_dot_test.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
