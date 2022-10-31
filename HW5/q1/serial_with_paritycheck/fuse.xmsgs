@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1454" delta="unknown" >"E:/fpga/serial_with_paritycheck/sender.v" Line 56: Unexpected <arg fmt="%s" index="1">automatic</arg>, violates IEEE 1800 syntax
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1300" delta="unknown" >"E:/fpga/serial_with_paritycheck/sender.v" Line 59: Non-module variable <arg fmt="%s" index="1">p3</arg> cannot be initialized at declaration
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1454" delta="unknown" >"E:/fpga/serial_with_paritycheck/reciever.v" Line 27: Unexpected <arg fmt="%s" index="1">automatic</arg>, violates IEEE 1800 syntax
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="unknown" >"E:/fpga/serial_with_paritycheck/reciever.v" Line 36: Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">9</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"E:/fpga/serial_with_paritycheck/test.v" Line 51: Target &lt;<arg fmt="%s" index="1">RX</arg>&gt; of concurrent assignment or output port connection should be a net type.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="329" delta="unknown" >"E:/fpga/serial_with_paritycheck/test.v" Line 51: Target &lt;<arg fmt="%s" index="1">RX</arg>&gt; of concurrent assignment or output port connection should be a net type.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"E:/fpga/serial_with_paritycheck/test.v" Line 48: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">valid_data</arg>&gt;. Formal port size is <arg fmt="%d" index="2">4</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
+</msg>
+
+<msg type="error" file="Simulator" num="807" delta="unknown" >Variable declaration assignments are only allowed at the module level or if the variables are automatic
+</msg>
+
+</messages>
+

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "E:/fpga/generating_fifo/test_fifo_isim_beh.exe" -prj "E:/fpga/generating_fifo/test_fifo_beh.prj" "work.test_fifo" "work.glbl" 

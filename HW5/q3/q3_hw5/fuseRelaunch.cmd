@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "E:/fpga/q3_hw5/test_fsm_isim_beh.exe" -prj "E:/fpga/q3_hw5/test_fsm_beh.prj" "work.test_fsm" "work.glbl" 

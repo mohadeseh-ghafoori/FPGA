@@ -1,0 +1,20 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o E:/fpga/serial_with_paritycheck/test_isim_beh.exe -prj E:/fpga/serial_with_paritycheck/test_beh.prj work.test work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/fpga/serial_with_paritycheck/sender.v" into library work
+WARNING:HDLCompiler:1454 - "E:/fpga/serial_with_paritycheck/sender.v" Line 56: Unexpected automatic, violates IEEE 1800 syntax
+WARNING:HDLCompiler:1300 - "E:/fpga/serial_with_paritycheck/sender.v" Line 59: Non-module variable p3 cannot be initialized at declaration
+Analyzing Verilog file "E:/fpga/serial_with_paritycheck/reciever.v" into library work
+WARNING:HDLCompiler:1454 - "E:/fpga/serial_with_paritycheck/reciever.v" Line 27: Unexpected automatic, violates IEEE 1800 syntax
+WARNING:HDLCompiler:568 - "E:/fpga/serial_with_paritycheck/reciever.v" Line 36: Constant value is truncated to fit in <9> bits.
+Analyzing Verilog file "E:/fpga/serial_with_paritycheck/test.v" into library work
+WARNING:HDLCompiler:329 - "E:/fpga/serial_with_paritycheck/test.v" Line 51: Target <RX> of concurrent assignment or output port connection should be a net type.
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:329 - "E:/fpga/serial_with_paritycheck/test.v" Line 51: Target <RX> of concurrent assignment or output port connection should be a net type.
+WARNING:HDLCompiler:189 - "E:/fpga/serial_with_paritycheck/test.v" Line 48: Size mismatch in connection of port <valid_data>. Formal port size is 4-bit while actual signal size is 1-bit.
+Completed static elaboration
+Compiling module sender
+ERROR:Simulator:807 - Variable declaration assignments are only allowed at the module level or if the variables are automatic
